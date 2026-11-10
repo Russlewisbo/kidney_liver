@@ -1,0 +1,145 @@
+"stratum","regimen","MIC","PTA"
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",0.25,1
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",0.5,1
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",1,1
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",2,0.9996
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",4,0.9986
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",8,0.982
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",16,0.8666
+"Low clearance
+(2.9 L/h; kidney failure)","0.5-h infusion",32,0.3838
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",0.25,1
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",0.5,1
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",1,1
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",2,1
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",4,0.9996
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",8,0.995
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",16,0.935
+"Low clearance
+(2.9 L/h; kidney failure)","3-h infusion",32,0.505
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",0.25,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",0.5,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",1,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",2,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",4,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",8,1
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",16,0.9996
+"Low clearance
+(2.9 L/h; kidney failure)","Continuous",32,0.837
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",0.25,0.9786
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",0.5,0.952
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",1,0.8906
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",2,0.7426
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",4,0.4912
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",8,0.1776
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",16,0.0166
+"Typical clearance
+(8.4 L/h)","0.5-h infusion",32,4e-04
+"Typical clearance
+(8.4 L/h)","3-h infusion",0.25,0.9956
+"Typical clearance
+(8.4 L/h)","3-h infusion",0.5,0.986
+"Typical clearance
+(8.4 L/h)","3-h infusion",1,0.9642
+"Typical clearance
+(8.4 L/h)","3-h infusion",2,0.8908
+"Typical clearance
+(8.4 L/h)","3-h infusion",4,0.682
+"Typical clearance
+(8.4 L/h)","3-h infusion",8,0.3256
+"Typical clearance
+(8.4 L/h)","3-h infusion",16,0.037
+"Typical clearance
+(8.4 L/h)","3-h infusion",32,4e-04
+"Typical clearance
+(8.4 L/h)","Continuous",0.25,1
+"Typical clearance
+(8.4 L/h)","Continuous",0.5,1
+"Typical clearance
+(8.4 L/h)","Continuous",1,1
+"Typical clearance
+(8.4 L/h)","Continuous",2,1
+"Typical clearance
+(8.4 L/h)","Continuous",4,0.9998
+"Typical clearance
+(8.4 L/h)","Continuous",8,0.982
+"Typical clearance
+(8.4 L/h)","Continuous",16,0.4094
+"Typical clearance
+(8.4 L/h)","Continuous",32,0.0058
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",0.25,0.5688
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",0.5,0.4154
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",1,0.2446
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",2,0.0946
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",4,0.0246
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",8,0.0014
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",16,0
+"High clearance
+(16.7 L/h; augmented)","0.5-h infusion",32,0
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",0.25,0.7746
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",0.5,0.635
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",1,0.4396
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",2,0.2264
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",4,0.0618
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",8,0.0068
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",16,0
+"High clearance
+(16.7 L/h; augmented)","3-h infusion",32,0
+"High clearance
+(16.7 L/h; augmented)","Continuous",0.25,1
+"High clearance
+(16.7 L/h; augmented)","Continuous",0.5,1
+"High clearance
+(16.7 L/h; augmented)","Continuous",1,1
+"High clearance
+(16.7 L/h; augmented)","Continuous",2,1
+"High clearance
+(16.7 L/h; augmented)","Continuous",4,0.983
+"High clearance
+(16.7 L/h; augmented)","Continuous",8,0.4006
+"High clearance
+(16.7 L/h; augmented)","Continuous",16,0.0068
+"High clearance
+(16.7 L/h; augmented)","Continuous",32,0

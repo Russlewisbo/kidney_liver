@@ -39,16 +39,15 @@ $presentation-h3-font-size: 1.0em;
   max-width: 95%;
 }
 
-// Push slide content to top instead of vertically centered (AE convention)
-.reveal .slides > section,
-.reveal .slides > section > section {
-  top: 4% !important;
-  height: 92% !important;
-}
-
 // Center figures
 .reveal .slide figure {
   text-align: center;
+  margin: 0.4em auto;
+}
+
+.reveal .slide img {
+  max-height: 520px;
+  display: block;
   margin: 0.4em auto;
 }
 
@@ -83,15 +82,12 @@ $presentation-h3-font-size: 1.0em;
   font-weight: 400;
 }
 
-// Section divider slides
-.reveal .section-divider {
-  background-color: #1f3a5f;
+// Section divider slides (level-1 headings with a dark background)
+.reveal .slides section.has-dark-background h1 {
   color: white;
-}
-
-.reveal .section-divider h2 {
-  color: white;
-  border-bottom: 2px solid #5a8ac0;
+  text-align: center;
+  border: none;
+  font-size: 2em;
 }
 
 // Footer
@@ -117,4 +113,17 @@ $presentation-h3-font-size: 1.0em;
   background: #f0f5fa;
   margin-top: 0.6em;
   max-width: 90%;
+}
+
+// Source / citation line at the foot of a slide
+.reveal .source {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  font-size: 0.45em;
+  color: #7a7a7a;
+}
+
+.reveal .source a {
+  color: #7a7a7a;
 }

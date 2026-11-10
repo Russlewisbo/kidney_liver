@@ -20,7 +20,7 @@ measured <- pmax(5, rnorm(n, mean = 95, sd = 55))
 # overestimation at low measured values, with substantial random noise.
 # Mimic Baptista et al., Udy et al. reports.
 bias_systematic <- 25 - 0.35 * measured     # nonzero structure
-noise           <- rnorm(n, 0, 18)
+noise           <- rnorm(n, 0, 22)
 estimated       <- pmax(5, measured + bias_systematic + noise)
 
 df <- tibble(
@@ -45,15 +45,15 @@ p <- ggplot(df, aes(x = mean_cl, y = diff)) +
   geom_hline(yintercept = c(loa_low, loa_high),
              color = "#1f77b4", linetype = "dashed", linewidth = 0.8) +
   geom_point(alpha = 0.55, size = 2.2, color = "#333333") +
-  annotate("text", x = 5, y = mean_diff + 4,
+  annotate("text", x = 232, y = mean_diff + 4,
            label = sprintf("Bias = %+.1f mL/min", mean_diff),
-           hjust = 0, color = "#1f77b4", size = 4.2, fontface = "bold") +
-  annotate("text", x = 5, y = loa_high - 5,
+           hjust = 1, color = "#1f77b4", size = 4.2, fontface = "bold") +
+  annotate("text", x = 232, y = loa_high - 5,
            label = sprintf("Upper LoA = %+.1f", loa_high),
-           hjust = 0, color = "#1f77b4", size = 3.8) +
-  annotate("text", x = 5, y = loa_low + 5,
+           hjust = 1, color = "#1f77b4", size = 3.8) +
+  annotate("text", x = 232, y = loa_low + 5,
            label = sprintf("Lower LoA = %.1f", loa_low),
-           hjust = 0, color = "#1f77b4", size = 3.8) +
+           hjust = 1, color = "#1f77b4", size = 3.8) +
   labs(
     x = "Mean of estimated and measured CrCl (mL/min)",
     y = "Cockcroft-Gault − measured CrCl (mL/min)"
@@ -65,5 +65,5 @@ p <- ggplot(df, aes(x = mean_cl, y = diff)) +
   )
 
 ggsave("figures/bland_altman_crcl.png", p,
-       width = 10, height = 5.5, dpi = 200, bg = "white")
+       width = 11.2, height = 4.9, dpi = 200, bg = "white")
 message("Saved figures/bland_altman_crcl.png")
