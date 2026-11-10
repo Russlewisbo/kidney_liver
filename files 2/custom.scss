@@ -1,0 +1,120 @@
+/*-- scss:defaults --*/
+
+// Assertion-Evidence (Alley) styling for RevealJS
+// Key principles:
+//   - Sentence headline, left-aligned, top of slide
+//   - Sans-serif, large, ~28pt
+//   - Body = single visual, generous whitespace
+//   - No bullet lists in body of slides
+
+$font-family-sans-serif: "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$presentation-font-size-root: 30px;
+$presentation-heading-font: "Helvetica Neue", sans-serif;
+$presentation-heading-color: #1f3a5f;
+$body-color: #2c3e50;
+$link-color: #1f77b4;
+
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.15em;   // slide headlines
+$presentation-h3-font-size: 1.0em;
+
+/*-- scss:rules --*/
+
+.reveal {
+  font-family: $font-family-sans-serif;
+  color: $body-color;
+}
+
+// Slide headline: full-sentence assertion, top-aligned, left-aligned
+.reveal h2 {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.15em;
+  line-height: 1.25;
+  color: $presentation-heading-color;
+  margin-top: 0;
+  margin-bottom: 0.55em;
+  border-bottom: 2px solid #e6eaf0;
+  padding-bottom: 0.25em;
+  max-width: 95%;
+}
+
+// Push slide content to top instead of vertically centered (AE convention)
+.reveal .slides > section,
+.reveal .slides > section > section {
+  top: 4% !important;
+  height: 92% !important;
+}
+
+// Center figures
+.reveal .slide figure {
+  text-align: center;
+  margin: 0.4em auto;
+}
+
+.reveal .slide figcaption {
+  font-size: 0.55em;
+  color: #7a7a7a;
+  margin-top: 0.4em;
+  font-style: italic;
+}
+
+// Tone down default bullet styling — used sparingly in section dividers only
+.reveal ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.reveal ul li {
+  margin-bottom: 0.3em;
+}
+
+// Title slide
+.reveal .title-slide h1 {
+  font-size: 1.6em;
+  color: $presentation-heading-color;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.reveal .title-slide .subtitle {
+  font-size: 0.85em;
+  color: #5a6a7a;
+  font-weight: 400;
+}
+
+// Section divider slides
+.reveal .section-divider {
+  background-color: #1f3a5f;
+  color: white;
+}
+
+.reveal .section-divider h2 {
+  color: white;
+  border-bottom: 2px solid #5a8ac0;
+}
+
+// Footer
+.reveal .footer {
+  font-size: 0.45em;
+  color: #999;
+}
+
+// Code blocks (rarely used in AE; kept clean)
+.reveal pre {
+  font-size: 0.65em;
+  box-shadow: none;
+  border-left: 3px solid #1f77b4;
+  background: #f7f9fc;
+}
+
+// Callout for take-home text
+.reveal .takeaway {
+  font-size: 0.9em;
+  color: #1f3a5f;
+  border-left: 4px solid #1f77b4;
+  padding: 0.4em 0.8em;
+  background: #f0f5fa;
+  margin-top: 0.6em;
+  max-width: 90%;
+}
