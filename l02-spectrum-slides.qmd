@@ -1,0 +1,1329 @@
+---
+title: "Antimicrobial Spectrum, Potency and Susceptibility Testing"
+subtitle: "Lecture 2 — Antibiotic Discovery and Development"
+author: "Russell E. Lewis, Pharm.D."
+date: today
+format:
+  revealjs:
+    theme: custom.scss
+    slide-number: true
+    transition: fade
+    incremental: false
+    title-slide-attributes:
+      data-background-color: "#b20e10"
+bibliography: bib/l02-spectrum.bib
+csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
+---
+
+## Antimicrobial Spectrum, Potency <br> and Susceptibility Testing {.light-text background-color="#b20e10"}
+
+<center>
+
+**Russell E. Lewis, Pharm.D.** <br> Associate Professor of Infectious Diseases <br> Department of Molecular Medicine, University of Padua <br>
+
+<br>
+
+![](l02-spectrum-images/DMM_newlogo.png){fig-align="center" width="330"}
+
+<br> {{< fa solid envelope size=1x >}} russelledward.lewis\@unipd.it
+
+</center>
+
+::: notes
+This lecture and the next one together cover the two measurements on which all antibacterial therapy rests: how much drug is needed to inhibit the organism, and how much drug the patient actually gets. Today is the first of those. It looks like a laboratory methods lecture, and in part it is — but the real subject is what a number produced in a laboratory can and cannot tell you about a patient.
+:::
+
+## Learning objectives
+
+<br>
+
+**By the end of this lecture you should be able to:**
+
+- Explain what determines the spectrum of activity of an antibacterial agent
+- Describe how the MIC and MBC are measured, and what data are needed to interpret them clinically
+- Describe the limitations of the MIC test, and the resistance phenotypes it fails to detect
+- Explain how susceptibility breakpoints are set, and by whom
+- Distinguish an epidemiological cut-off value from a clinical breakpoint
+
+::: notes
+Objective three is the one students most often underestimate. The MIC is a robust, cheap, reproducible measurement that has survived eighty years, and it is also a static, artificial, low-precision estimate made under conditions that resemble no infection site in the body. Both statements are true, and holding them simultaneously is what separates a competent interpretation from a naive one.
+:::
+
+## Why antibacterial pharmacology is unusual
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/abx.png)
+:::
+
+::: {.column width="50%"}
+- Dosed against a **pathogen's** target, not a human receptor
+- Administered in **grams per day**, not micrograms — the safety margin must be wide
+- Must penetrate and remain active at **multiple body sites**
+- Efficacy **decreases over time**, within a patient and across a population
+- Therapy is routinely altered on the basis of a **laboratory test** — the MIC — and its relation to pharmacokinetics
+:::
+:::::
+
+<br>
+
+::: notes
+The last point is what makes this lecture necessary and is genuinely unusual in medicine. We do not adjust antihypertensive therapy on the basis of an in vitro assay of the patient's arterioles. In infection we take an organism out of the patient, grow it in artificial conditions, measure a concentration, and use that number to choose a drug and a dose. The whole edifice depends on that number meaning something.
+:::
+
+# Concept 1: Spectrum of Activity {background-color="#b20e10"}
+
+## What determines spectrum?
+
+<br>
+
+- The **spectrum of activity** is the range of bacterial species an agent can inhibit or kill
+- **Narrow-spectrum** agents target defined subsets of organisms; **broad-spectrum** agents cover many
+- Spectrum is determined principally by the structure of the **bacterial cell envelope**
+- Envelope structure governs whether a drug can reach its target at all
+- Secondary determinants: presence of the target, intrinsic enzymes, constitutive efflux
+
+::: notes
+Emphasise that spectrum is mostly an access problem rather than a target problem. Vancomycin's target — the D-Ala-D-Ala terminus — is present in Gram-negative peptidoglycan too. Vancomycin has no useful Gram-negative activity because at roughly 1,450 Da it cannot cross the outer membrane. The target is there; the drug cannot get to it. That single example makes the point better than any list.
+:::
+
+## The Gram-positive cell wall
+
+<br>
+
+::::: columns
+::: {.column width="52%"}
+![](l02-spectrum-images/gram-positive-cell-wall.jpg){width="470"}
+:::
+
+::: {.column width="48%"}
+- Thick peptidoglycan, **30–100 nm**, many layers
+- **Teichoic acids** thread through and beyond the peptidoglycan, increasing rigidity
+- Teichoic acids also mediate adhesion to host cell surfaces
+- No outer membrane — the peptidoglycan is porous to most small molecules
+- Examples: *Staphylococcus aureus*, *Streptococcus pneumoniae*, *Enterococcus faecalis*
+:::
+:::::
+
+::: aside
+The counterintuitive point: a thick wall is not a barrier. Peptidoglycan is a loose, hydrated mesh that excludes essentially nothing below about 50 kDa. That is why large, complex natural products such as the glycopeptides work against Gram-positives and why Gram-positive drug discovery has always been comparatively easy. The thick wall is a mechanical structure, not a permeability barrier.
+:::
+
+## The Gram-negative cell envelope
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/gram-negative-cell-wall.jpg){width="450"}
+:::
+
+::: {.column width="50%"}
+- Thin peptidoglycan, plus a **periplasmic space** and an **outer membrane**
+- The outer leaflet is **lipopolysaccharide** — the endotoxin of Gram-negative sepsis
+- LPS confers a highly ordered, low-fluidity barrier to hydrophobic molecules
+- The **O antigen** side chain varies between species and serotypes and is used for serological typing
+:::
+:::::
+
+::: aside
+LPS is worth understanding structurally because it explains the barrier. The lipid A anchor carries six or seven saturated acyl chains rather than the two of a phospholipid, and adjacent LPS molecules are cross-bridged by divalent cations. The result is a tightly packed, rigid, strongly anionic outer leaflet with far lower fluidity than a normal bilayer — through which hydrophobic compounds diffuse extremely slowly. This is also the target of the polymyxins, which displace those cations and destabilise the whole structure.
+:::
+
+## The barrier in detail
+
+![](l02-spectrum-images/gram-negative-cell-wall-efflux-pumps.png){fig-align="center" width="500"}
+
+- LPS excludes hydrophobic compounds; polar molecules enter through **porins**
+- Compounds too polar to cross the inner membrane are removed by **RND efflux** (AcrAB-TolC and relatives)
+- Cytoplasmic compounds face a further set of efflux pumps
+
+::: aside
+Note the geometry of the problem: to reach a cytoplasmic target a molecule must be polar enough to transit a porin, then lipophilic enough to cross the inner membrane, while avoiding recognition by pumps that have evolved to recognise almost anything amphipathic. Those requirements are close to mutually exclusive, which is why no new Gram-negative class has emerged in decades.
+:::
+
+## The Gram stain
+
+<br>
+
+::::: columns
+::: {.column width="55%"}
+![](l02-spectrum-images/gram-stain-procedure.jpg){width="490"}
+:::
+
+::: {.column width="45%"}
+- Crystal violet, then iodine → large violet–iodine complexes
+- **Decolorisation** with alcohol or acetone is the discriminating step
+- Gram-positives: thick peptidoglycan retains the complex → violet
+- Gram-negatives: outer membrane dissolved, thin wall does not retain it → counterstained pink by safranin
+:::
+:::::
+
+::: notes
+The stain works because of the same wall architecture that governs spectrum, which is a genuinely satisfying coincidence and worth pointing out — the diagnostic test and the drug's access problem are reading the same structure. Note that the decolorisation step is operator-dependent and time-critical; over-decolorisation of Gram-positives is the most common error in a clinical laboratory.
+:::
+
+## Gram stain plus morphology
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![*S. aureus* and *E. coli*](l02-spectrum-images/gram-stain-staph-ecoli.jpg){width="440"}
+:::
+
+::: {.column width="50%"}
+![Gram-positive cocci surrounded by pus](l02-spectrum-images/gram-positive-cocci-in-pus.jpg){width="440"}
+:::
+:::::
+
+- Stain reaction plus shape and arrangement gives a presumptive identification within minutes
+- Cocci in clusters, cocci in chains, bacilli, coccobacilli, diplococci
+
+::: notes
+This is the fastest actionable information in clinical microbiology and it arrives hours to days before an MIC. Note the second image: the presence of neutrophils matters as much as the organism, because it distinguishes infection from colonisation or contamination — a sputum sample with squamous epithelial cells and no neutrophils is saliva, whatever grows from it. That is a diagnostic stewardship point we return to in lecture 9.
+:::
+
+## When the stain is nearly diagnostic
+
+<br>
+
+:::::: columns
+::: {.column width="34%"}
+![](l02-spectrum-images/neisseria-gram-stain.jpg){width="300"}
+:::
+
+::: {.column width="33%"}
+![](l02-spectrum-images/meningococcal-rash.jpg){width="290"}
+:::
+
+::: {.column width="33%"}
+![](l02-spectrum-images/meningitis-symptoms.jpg){width="290"}
+:::
+::::::
+
+- Gram-negative diplococci in cerebrospinal fluid, with fever, meningism and a petechial rash
+- *Neisseria meningitidis* — treatment must begin before any MIC exists
+
+::: notes
+Use this to make the timing argument concretely. Meningococcal sepsis can kill within hours; the MIC will be available in two to three days. Every antibiotic decision that matters clinically is made before susceptibility data exist, on the basis of the stain, the syndrome, the host, and local epidemiology. Susceptibility testing does not choose the initial therapy — it confirms or refutes it, and allows de-escalation. That is worth saying explicitly because the rest of this lecture is about a test that arrives too late to make the first decision.
+:::
+
+## Intrinsic resistance defines the edges of spectrum
+
+<br>
+
+- **Intrinsic resistance** is a property of the species, present in every wild-type isolate
+- Vancomycin against Gram-negatives — the molecule cannot cross the outer membrane
+- Aminoglycosides against anaerobes — uptake requires oxygen-dependent active transport
+- *Klebsiella* and ampicillin — a chromosomal SHV β-lactamase in every strain
+- *Enterococcus* and cephalosporins — low-affinity PBP5
+- A susceptibility report showing an organism susceptible to an agent it is intrinsically resistant to is a **laboratory error**, not a discovery
+
+::: notes
+Intrinsic resistance is the reason "expert rules" exist in laboratory software: the system checks results against a table of known intrinsic resistances and flags impossible combinations. Note the aminoglycoside example, because it explains a clinical rule students often memorise without reason — aminoglycosides do not work against anaerobes, and they lose activity in the anaerobic, acidic environment of an abscess, because the drug requires a proton-motive force to enter the cell.
+:::
+
+## Organisms outside the Gram framework
+
+<br>
+
+- ***Mycoplasma*** — no cell wall at all, therefore intrinsically resistant to every β-lactam and glycopeptide
+
+- ***Chlamydia***, ***Legionella***, ***Rickettsia*** — obligate or facultative **intracellular** organisms
+
+- These pathogens require antibiotics that accumulate inside human cells: macrolides, tetracyclines, fluoroquinolones
+
+- Anaerobes require agents active in the absence of oxygen and stable in an acidic, reduced environment
+
+::: aside
+The intracellular organisms are a useful demonstration that spectrum is an access problem at two levels: the drug must first enter the human cell and then the bacterium. Azithromycin achieves intracellular concentrations tens to hundreds of times higher than plasma, which is why it works against these organisms and why its plasma concentrations look uselessly low. That disconnect between plasma concentration and site activity is a preview of lecture 3.
+:::
+
+## Acid-fast organisms
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/mycobacterium-cell-wall.png){fig-align="center" width="350"}
+:::
+
+::: {.column width="50%"}
+![](l02-spectrum-images/acid-fast-stain.jpg){width="440"}
+:::
+:::::
+
+- *Mycobacterium* spp.: peptidoglycan covalently linked to arabinogalactan and to **mycolic acids**
+- An extremely hydrophobic, waxy, low-permeability envelope
+- Resists Gram staining; requires carbol fuchsin with acid-alcohol decolorisation
+
+::: notes
+The mycobacterial envelope is the most formidable permeability barrier in bacteriology, and it explains almost everything about tuberculosis therapy: why so few antibacterial classes work, why the drugs that do work are unusually lipophilic, why treatment takes months rather than days, and why combination therapy is mandatory. Growth rate compounds this — a generation time of 20 hours or more means susceptibility testing takes weeks, not days.
+:::
+
+## Using spectrum in practice
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![](l02-spectrum-images/spectrum-of-activity-table.jpg){width="420"}
+:::
+
+::: {.column width="55%"}
+- Clinicians combine three things: the **stain**, knowledge of **likely pathogens** for the clinical signs and symptoms, and **local resistance patterns**
+- Spectrum tables — the Sanford Guide and equivalents — map agents to organisms or local susceptibility reports
+- Direct visualisation guides therapy in sputum, urine, CSF and positive blood culture bottles
+- <https://web.sanfordguide.com/>
+:::
+:::::
+
+::: aside
+Spectrum tables are a decision aid, not a substitute for the antibiogram. A table telling you that ciprofloxacin covers *E. coli* is describing the wild-type organism; in many Italian hospitals a substantial proportion of *E. coli* urinary isolates are fluoroquinolone resistant, so the table is locally wrong. Every institution should publish its own cumulative antibiogram, which is the empirical answer to the question the table answers theoretically.
+:::
+
+## The local (hospital) antibiogram
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![](l02-spectrum-images/antibiogram.png){fig-align="center" width="800"}
+:::
+
+::: {.column width="55%"}
+- A **cumulative antibiogram** reports the percentage of isolates of each species susceptible to each agent, for one institution over one year
+- Standardised methods for development and interpretation
+- It is the empirical answer to the question a spectrum table answers theoretically
+- Should be stratified by unit — intensive care differs sharply from outpatients
+- Conventionally requires **≥30 isolates** per species before a percentage is meaningful
+- Used to choose empirical therapy, not to treat an individual patient
+:::
+:::::
+
+::: notes
+Two rules for reading an antibiogram. First, it counts isolates, not patients, and repeat isolates from the same patient inflate resistance because sick, heavily treated patients are cultured repeatedly — good laboratories deduplicate. Second, it is a snapshot of who was cultured, which is a biased sample: patients doing well are not cultured at all, so the antibiogram overstates resistance in the general population and understates nothing.
+:::
+
+## Empirical, targeted, de-escalated
+
+<br>
+
+- **Empirical therapy** — chosen before the organism is known, from syndrome, host and local epidemiology; deliberately broad
+- **Targeted therapy** — narrowed once identification and susceptibility are available
+- **De-escalation** — the transition between them, ideally at 48–72 hours
+- The initial broad choice is a hedge against uncertainty; leaving it in place after the uncertainty resolves is simply overtreatment
+
+::: notes
+This is the practical resolution of the tension in this lecture. The evidence that inadequate empirical therapy increases mortality in severe sepsis is strong, which justifies breadth at the start. The evidence that prolonged broad-spectrum therapy causes harm is also strong, which justifies narrowing. There is no contradiction — the two apply at different times, and the failure mode in practice is almost always failing to make the second move. Lecture 9 covers how stewardship programmes force that decision to be revisited.
+:::
+
+## Why not always use the broadest agent?
+
+<br>
+
+- Broad-spectrum therapy is appropriate as **empirical** therapy while awaiting identification
+- Justifiable for polymicrobial infection, immunocompromised patients, and some surgical prophylaxis
+- But broader coverage means greater damage to the **normal microbiota**
+- The consequence of broader spectrum therapy is **superinfection** with organisms selected by the therapy itself
+- And selection of resistance in organisms that were never the target
+
+::: notes
+This is the intellectual justification for de-escalation and therefore for the whole of lecture 9. The key move is to stop thinking of the antibiotic as acting only on the pathogen. It acts on every organism in the patient, and the gut carries something like 10^14^ bacteria — the largest and most consequential population exposed to the drug. Almost all resistance selection happens there, in organisms that had nothing to do with the infection being treated.
+:::
+
+## Collateral damage to the microbiota
+
+![](l02-spectrum-images/c-difficile-simplified-figure.png){fig-align="center" width="600"}
+
+- Clostridiodes (Clostridium) difficile: Gram positive, spore forming, obligate anaerobe that produces toxins
+- Loss of colonisation resistance, loss of diversity, expansion of resistant taxa
+- Recovery is incomplete and may take months; some taxa never return
+
+::: aside
+[@deNies2023]
+:::
+
+::: notes
+Colonisation resistance is the mechanism worth naming: the intact anaerobic flora suppresses expansion of pathogens through competition for nutrients and adhesion sites, production of short-chain fatty acids and bacteriocins, and modification of bile acids. Remove it and you get *C. difficile*, VRE domination of the gut, and expansion of resistant Enterobacterales — after which bloodstream invasion becomes possible. This is precisely why faecal microbiota transplantation works for recurrent *C. difficile*: it restores the community rather than killing the organism.
+:::
+
+## Antibiotic-associated *Clostridioides difficile* colitis
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![](l02-spectrum-images/cdifficile-colitis.jpg){width="410"}
+:::
+
+::: {.column width="55%"}
+<br> <br>
+
+- The classic consequence of disrupted colonisation resistance
+- Highest-risk agents: clindamycin, third-generation cephalosporins, co-amoxiclav, fluoroquinolones
+- Risk relates to **anti-anaerobic activity** and **biliary excretion** into the colon
+- An adverse drug reaction mediated entirely through the microbiota, not through host toxicity
+- The reason why penicillin was toxic in the Guinae pig!
+:::
+:::::
+
+::: notes
+This is a good illustration of a drug property that no toxicology screen would detect. *C. difficile* colitis is not a toxic effect of the molecule on human tissue — it is an ecological effect, and it is invisible to every assay in lecture 5. Note that the agents used to treat it, vancomycin given orally and fidaxomicin, are chosen precisely because they are *not* absorbed and have narrow anti-anaerobic spectra.
+:::
+
+## A brave German surgical resident
+
+<br>
+
+::::: columns
+::: {.column width="30%"}
+![](l02-spectrum-images/krause-1969-candida-persorption.jpg){width="270"}
+:::
+
+::: {.column width="70%"}
+<br> <br>
+
+- Conventional wisdom held that *Candida* was too large to cross intact gut mucosa
+- A surgical resident hypothesised that overgrowth during antibiotic therapy could allow **persorption** into the bloodstream
+- He drank 10^12^ *C. albicans* cells suspended in water, watched by two colleagues
+- Candidaemia and candiduria followed within hours
+:::
+:::::
+
+::: aside
+[@Krause1969]
+:::
+
+::: notes
+Krause developed fever, rigors and a temperature of 38.7°C, with *Candida* recovered from blood at three hours and from urine later — then recovered fully. This experiment would not receive ethical approval today and it is the most memorable slide in the lecture. The serious point is on the next slide: we reproduce the first half of this experiment routinely.
+:::
+
+## Krause's results
+
+<br>
+
+::::: columns
+::: {.column width="46%"}
+![](l02-spectrum-images/krause-1969-results.jpg){width="430"}
+:::
+
+::: {.column width="54%"}
+<br> <br>
+
+- Blood cultures positive for *C. albicans* at **3 and 6 hours**
+- *Candida* recovered from urine at 2¾ and 3⅓ hours
+- Transient toxic reaction at two hours: rigors, temperature 38.7 °C, headache
+- Blood and urine cultures negative by 14 days; no lasting harm
+- Concluded that *Candida* can cross intact intestinal mucosa and reach the bloodstream — and that antibiotic-induced fungal overgrowth may cause fungaemia
+:::
+:::::
+
+::: aside
+[@Krause1969]
+:::
+
+::: notes
+The kinetics are the interesting part: organisms in blood within three hours of ingestion, far too fast for replication, so this is physical translocation of intact cells across the mucosa. Krause coined "persorption" for it. The reason to spend a second slide on a self-experiment from 1969 is that it establishes the mechanism directly, in a way no observational study of ICU patients ever could.
+:::
+
+## We repeat this experiment daily in hospitals
+
+<br>
+
+::::: columns
+::: {.column width="40%"}
+![](l02-spectrum-images/icu-patient.jpg){width="380"}
+:::
+
+::: {.column width="60%"}
+- Broad-spectrum therapy suppresses the anaerobic flora
+- *Candida* and resistant Gram-negatives expand to high density in the gut
+- Mucosal integrity is compromised by critical illness, chemotherapy or surgery
+- Translocation follows
+:::
+:::::
+
+::: notes
+Every element of Krause's experiment is present in an intensive care patient: the inoculum, the disrupted flora, and the compromised barrier. He supplied the inoculum deliberately; we generate it pharmacologically. This is the mechanistic case for narrowing therapy as soon as culture results allow, and it should land harder than any statistic about resistance rates.
+:::
+
+## Antibiotic-resistant superinfections
+
+<br>
+
+:::::::: columns
+::: {.column width="20%"}
+![MRSA](l02-spectrum-images/mrsa-sem.jpg){width="200"}
+:::
+
+::: {.column width="20%"}
+![VRE](l02-spectrum-images/vre-sem.jpg){width="200"}
+:::
+
+::: {.column width="20%"}
+![*P. aeruginosa*](l02-spectrum-images/pseudomonas-sem.jpg){width="200"}
+:::
+
+::: {.column width="20%"}
+![*C. difficile*](l02-spectrum-images/cdifficile-sem.jpg){width="200"}
+:::
+
+::: {.column width="20%"}
+![*Candida*](l02-spectrum-images/candida-sem.jpg){width="200"}
+:::
+::::::::
+
+<br>
+
+- Each is selected by, rather than caused by, antibacterial therapy
+
+::: aside
+Images: CDC
+:::
+
+::: notes
+Note the mixture: two Gram-positives, one Gram-negative, one anaerobe and a fungus. What unites them is not taxonomy but ecology — each occupies a niche vacated by therapy. This is also the reason the WHO priority list on the next slide is a list of organisms that thrive in treated patients rather than a list of the most virulent organisms.
+:::
+
+## WHO priority pathogens
+
+![](l02-spectrum-images/who-priority-pathogens.jpg){fig-align="center" width="520"}
+
+::: aside
+[@WHO2017]
+:::
+
+::: notes
+Revisited from lecture 1, now with the mechanism in view. The critical tier is entirely Gram-negative and carbapenem-resistant, which follows directly from the permeability slide earlier: these are the organisms for which we have both the fewest agents and the least prospect of new ones.
+:::
+
+# Concept 2: Potency {background-color="#b20e10"}
+
+## The minimum inhibitory concentration
+
+<br>
+
+- **MIC** — the lowest concentration of an antimicrobial that prevents **visible growth** of an organism after a defined incubation period, conventionally 16–20 hours
+- **MBC** — the lowest concentration that kills; formally, the lowest concentration producing a ≥3 log~10~ (99.9%) reduction in viable count on subculture
+- Both are reported in **mg/L** (equivalently µg/mL) — **the same units as serum drug concentrations**
+- That unit correspondence is what makes the MIC pharmacologically useful
+
+::: notes
+Stress the last point. The MIC is not just a potency ranking; it is expressed in the same units as a measurable plasma concentration, which is what permits the entire PK/PD framework of lecture 3. Compare with an IC~50~ in an enzyme assay, which tells you about the molecule but not directly about a dose. This unit correspondence is the reason a test devised in the 1920s is still central in 2026.
+:::
+
+## Measuring the MIC
+
+![](l02-spectrum-images/MIC_measurement_figure-edited.png){fig-align="center" width="800"}
+
+::: aside
+Note the doubling dilution series — 0.125, 0.25, 0.5, 1, 2, 4, 8 mg/L. Every MIC you will ever see is a power of two, because the assay cannot report anything else. This is the source of the test's limited precision and it is not a defect that better technique can fix; it is built into the design. An organism with a true MIC of 1.4 mg/L will be reported as either 1 or 2 depending on the day.
+:::
+
+## Where the test came from
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![](l02-spectrum-images/zone-of-inhibition.jpg){width="400"}
+:::
+
+::: {.column width="55%"}
+- Fleming characterised penicillin's spectrum in 1929 by **serial broth dilution** — the direct ancestor of the modern MIC
+- Disk diffusion was standardised by **Bauer and Kirby** in 1966
+- The core method has changed remarkably little in a century
+- What has changed is standardisation: medium, inoculum, incubation, reading rules and quality control
+:::
+:::::
+
+::: aside
+The continuity is genuinely striking — a microbiologist from 1930 would recognise a modern microtitre plate immediately. The innovation of the intervening century was not a better measurement but agreement about how to make the measurement, which is what allows a result from Padua to be compared with one from Boston. Standardisation, not technology, is what made the number useful.
+:::
+
+## Quantifying the inoculum
+
+![](l02-spectrum-images/inoculum-figure-final.png){fig-align="center"}
+
+::: aside
+The inoculum is the most important controlled variable in the assay, and getting it wrong moves the MIC. Too heavy an inoculum raises apparent MICs — dramatically so for β-lactams against β-lactamase producers, because more organisms means more enzyme. This is the "inoculum effect", and it is one reason a laboratory MIC can understate the difficulty of treating a high-burden infection such as an abscess or endocarditis vegetation, where local densities reach 10^9^–10^10^ CFU/g.
+:::
+
+## The inoculum effect
+
+<br>
+
+- Raising the inoculum raises the apparent MIC, sometimes by many dilutions
+- Most pronounced for **β-lactams against β-lactamase producers** — more cells means more enzyme
+- Classically demonstrated for cefazolin against *S. aureus* strains producing type A β-lactamase
+- Relevant because infected sites reach far higher densities than the standard 5 × 10^5^ CFU/mL
+
+| Site                             | Approximate bacterial density |
+|:---------------------------------|:------------------------------|
+| Standard MIC inoculum            | 5 × 10^5^ CFU/mL              |
+| Bacteraemia                      | 1–100 CFU/mL                  |
+| Pneumonia                        | 10^6^–10^8^ CFU/g             |
+| Abscess, endocarditis vegetation | 10^9^–10^10^ CFU/g            |
+
+: The test inoculum resembles no clinical site
+
+::: aside
+Look at the table for the two directions of error. Bacteraemia is a far *lower* density than the test — often only a few organisms per millilitre, which is why blood culture bottles need large volumes. Abscesses and vegetations are four to five orders of magnitude *higher*, which is where the inoculum effect bites and where source control matters more than drug choice. Neither condition resembles the assay, which is the honest summary of this whole section.
+:::
+
+## MIC versus MBC
+
+<br>
+
+![](l02-spectrum-images/MBC_measurement_figure.png){fig-align="center" width="800"}
+
+::: aside
+You will see the bacteriostatic threshold given as MBC/MIC greater than 4 in some sources and 16 in others, and neither number has a clinical outcome study behind it. We return to whether the distinction matters at all in lecture 3, where the answer is largely no — with the important exceptions of endocarditis, meningitis and infection in profound neutropenia, where host clearance cannot compensate.
+:::
+
+## Does bactericidal versus bacteriostatic matter?
+
+<br>
+
+- The MBC/MIC ratio is a laboratory classification with a weak clinical mandate
+- Randomised comparisons of "static" and "cidal" agents in pneumonia and skin infection generally show **no difference**
+- It matters where host clearance cannot compensate:
+  - **Endocarditis** — avascular vegetation, no phagocytes
+  - **Meningitis** — limited immune effector function in CSF
+  - **Profound neutropenia**
+- Outside these settings, penetration and exposure matter far more than the classification
+
+::: aside
+This is one of the most persistent pieces of received wisdom in infectious diseases and the evidence for it is thin. Linezolid, formally bacteriostatic, performs at least as well as vancomycin in pneumonia. The distinction is also agent- and organism-dependent rather than a fixed property: vancomycin is bactericidal against staphylococci and bacteriostatic against enterococci. Teach it as a rule with three exceptions rather than as a principle.
+:::
+
+## Methods for susceptibility testing
+
+![](l02-spectrum-images/ast-method-comparison.jpg){fig-align="center" width="600"}
+
+- Broth microdilution, agar dilution, macrodilution, gradient strips, disk diffusion
+- Different methods suit different agents; not all are interchangeable
+
+::: aside
+Method choice is not arbitrary. Daptomycin requires calcium supplementation of the medium to physiological levels or the MIC is meaningless. Colistin cannot be tested by gradient strip or disk diffusion at all, because the molecule is large and cationic and diffuses poorly through agar while binding to plastic surfaces — broth microdilution is the only acceptable method, and it took years for laboratories to standardise this after colistin returned to use [@Wenzler2023].
+:::
+
+## Agar dilution and macrodilution
+
+![](l02-spectrum-images/agar-dilution-susceptibility-testing.png){fig-align="center" width="400"}
+
+- **Agar dilution** — antibiotic incorporated into the agar at each concentration; many isolates tested per plate
+- Still the reference method for **anaerobes** and for *Neisseria gonorrhoeae*
+- **Macrodilution** — the same principle as microdilution in test-tube volumes; laborious, now largely historical
+- Both are labour-intensive, which is why broth microdilution in a 96-well format became the standard
+
+::: aside
+Agar dilution survives where it does for a practical reason: it lets you test dozens of isolates against one concentration series simultaneously, which suits reference laboratories and surveillance studies rather than routine diagnostics. Anaerobe testing is worth flagging separately — it is slow, technically demanding, and performed by very few laboratories, so anaerobic therapy is nearly always empirical and guideline-driven rather than susceptibility-guided.
+:::
+
+## Disk diffusion
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/disk-diffusion-principle.jpg){width="450"}
+:::
+
+::: {.column width="50%"}
+![](l02-spectrum-images/kirby-bauer.jpg){width="420"}
+:::
+:::::
+
+- Antibiotic diffuses radially from an impregnated paper disk, forming a concentration gradient
+- The zone of inhibition diameter correlates inversely with the MIC
+- Cheap, robust, and still the most widely used method worldwide
+
+::: notes
+The zone diameter is a function of both potency and diffusion rate through agar, so it is only interpretable against species-specific and agent-specific criteria derived by correlating zones with MICs in large collections. Note also what this method gives you that broth microdilution does not: a visual display of the whole population, in which resistant subpopulations appear as colonies growing inside the zone.
+:::
+
+## Gradient strips
+
+<br>
+
+::::: columns
+::: {.column width="42%"}
+![](l02-spectrum-images/etest-gradient-strip.jpg){width="380"}
+:::
+
+::: {.column width="58%"}
+- A plastic strip carrying a predefined exponential antibiotic gradient
+- The MIC is read where the elliptical zone of inhibition intersects the strip
+- Gives an MIC directly, on solid medium, with minimal equipment
+- Reads in half-dilution increments — apparently more precise than broth dilution, though the underlying uncertainty is unchanged
+:::
+:::::
+
+::: aside
+Gradient strips are convenient and widely used, but be careful with the apparent precision: reporting 0.75 mg/L does not mean the measurement is accurate to 0.75. Values also tend to differ systematically from broth microdilution for some agent–organism combinations, which matters when the result sits close to a breakpoint. When a gradient strip result would change management at a breakpoint, the reference method should be used.
+:::
+
+## When the endpoint is not clean
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![](l02-spectrum-images/trailing-growth-microtitre.jpg){width="420"}
+:::
+
+::: {.column width="55%"}
+Some agent–organism combinations do not give a clear endpoint:
+
+- **Trailing growth** — partial inhibition across several wells
+- **Skipped wells** — growth returning at a higher concentration
+- **Paradoxical (Eagle) effect** — reduced killing at very high concentrations
+- Turbidity without a pellet
+:::
+:::::
+
+::: aside
+Trailing is a real biological phenomenon rather than a technical failure, and it is why the reading rules on the next slides exist. The Eagle effect — first described for penicillin against streptococci — occurs because β-lactams need actively dividing cells, and very high concentrations inhibit growth so completely that the autolytic killing machinery is never triggered. It is a nice reminder that more drug is not always more killing.
+:::
+
+## Standardised reading rules
+
+<br>
+
+:::::: columns
+::: {.column width="33%"}
+![](l02-spectrum-images/eucast-gram-positive-endpoints.jpg){width="300"}
+:::
+
+::: {.column width="33%"}
+![](l02-spectrum-images/eucast-gram-negative-endpoints.jpg){width="300"}
+:::
+
+::: {.column width="34%"}
+![](l02-spectrum-images/eucast-tmp-smx-endpoint.jpg){width="300"}
+:::
+::::::
+
+- Disregard faint pinpoint growth with bacteriostatic agents against Gram-positives and Gram-negatives
+- For trimethoprim–sulfamethoxazole, read the MIC at **≥80% inhibition** relative to the growth control
+
+::: aside
+[@EUCASTTechnicalGuide]
+:::
+
+::: notes
+These rules exist because reproducibility requires that everyone reads the same well as the endpoint. They are also a reminder that the MIC is partly a convention: for co-trimoxazole the endpoint is defined as 80% inhibition rather than complete inhibition, because the folate pathway blockade leaves residual growth from pre-formed thymidine. The number reported depends on an agreed rule, not only on the biology.
+:::
+
+## Improving endpoint reading with viability dyes
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![Resazurin reduction](l02-spectrum-images/resazurin-reduction.jpg){width="450"}
+:::
+
+::: {.column width="50%"}
+![Live/dead fluorescence](l02-spectrum-images/live-dead-staining.jpg){width="430"}
+:::
+:::::
+
+- **Resazurin** is reduced to fluorescent resorufin by metabolically active cells — a colour change rather than a turbidity judgement
+- **SYTO 9 / propidium iodide**: intact cells fluoresce green, membrane-compromised cells red
+
+::: notes
+These convert a subjective visual endpoint into a quantitative signal, which matters most for organisms and agents that trail. The caveat is that metabolic activity and viability are not identical — persister cells are metabolically quiescent but alive, and will read as dead by resazurin. That is a real limitation when the question is whether an agent has actually sterilised the population.
+:::
+
+## Automated systems
+
+<br>
+
+:::::: columns
+::: {.column width="33%"}
+![](l02-spectrum-images/automated-ast-panel.jpg){width="290"}
+:::
+
+::: {.column width="33%"}
+![](l02-spectrum-images/vitek-card.jpg){width="290"}
+:::
+
+::: {.column width="34%"}
+![](l02-spectrum-images/sensititre-plate.jpg){width="290"}
+:::
+::::::
+
+- Vitek 2, Phoenix, MicroScan WalkAway, Sensititre — dehydrated antibiotic in prepared panels
+- MicroScan, Phoenix and Sensititre **measure** growth in each well directly
+- Vitek 2 **calculates** the MIC by comparing growth kinetics against a reference isolate, using a limited dilution range
+
+::: aside
+The measured-versus-calculated distinction has practical consequences. A calculated MIC reported as "≤0.5" or "≥16" reflects the limits of a narrow dilution range, not a measurement, and the algorithm is proprietary. For an unusual organism–agent combination, or a result that will determine therapy for a difficult infection, the reference method remains the arbiter [@Wenzler2023].
+:::
+
+## Throughput, and its cost
+
+<br>
+
+::::: columns
+::: {.column width="42%"}
+![](l02-spectrum-images/vitek-cassette.jpg){width="380"}
+:::
+
+::: {.column width="58%"}
+- Automated systems process hundreds of isolates per day with minimal hands-on time
+- Standardised, auditable, and far less operator-dependent
+- But: fixed panels, narrow dilution ranges, proprietary algorithms
+- New agents take years to appear on commercial panels — the laboratory cannot report what the panel does not contain
+- Newly approved antibiotics are therefore often unavailable for testing precisely when they are most needed
+:::
+:::::
+
+::: aside
+This is an underappreciated barrier to the uptake of new antibiotics and it connects directly to lecture 10. A hospital cannot use ceftazidime–avibactam rationally until its laboratory can test for it, and getting an agent onto an automated panel requires regulatory clearance of the device, not just of the drug. That interval — often several years after approval — is dead time during which a new agent is used blind or not at all, and during which it generates no revenue.
+:::
+
+## Vitek 2: calculated MICs
+
+<br>
+
+::::: columns
+::: {.column width="52%"}
+![](l02-spectrum-images/vitek-growth-kinetics.jpg){width="470"}
+:::
+
+::: {.column width="48%"}
+- Optical density is monitored over time in each well
+- Growth-curve parameters — lag length, maximum slope, area under the curve — are compared with stored reference patterns
+- An MIC is inferred rather than observed
+:::
+:::::
+
+::: notes
+This is a clever approach that gives results in 6–10 hours rather than overnight, which is a real clinical benefit. The cost is that the answer depends on an algorithm trained against particular resistance mechanisms. When a novel mechanism appears — as with the carbapenemases — automated systems have historically been slow to detect it, and there is usually an interval of a year or more before the databases catch up.
+:::
+
+## Testing *Mycobacterium tuberculosis*
+
+<br>
+
+::::: columns
+::: {.column width="40%"}
+![](l02-spectrum-images/acid-fast-bacilli.jpg){width="360"}
+:::
+
+::: {.column width="60%"}
+- Generation time of 18–24 hours; culture takes **2–6 weeks**, phenotypic susceptibility a further 1–3 weeks
+- Testing is **critical-concentration** based — growth or no growth at a single defined concentration — rather than a full MIC
+- Molecular detection of *rpoB* (rifampicin) and *katG*/*inhA* (isoniazid) mutations gives an answer in **two hours**
+- One of the few settings where genotype has largely displaced phenotype in routine practice
+:::
+:::::
+
+::: notes
+Tuberculosis is the exception that proves the rule about genotype and phenotype. It works here because the genetics are unusually tractable — over 95% of rifampicin resistance is caused by mutations in an 81-base-pair region of *rpoB* — and because the phenotypic alternative takes six weeks, during which an untreated or wrongly treated patient remains infectious. When the phenotypic test is slow enough, an imperfect fast test wins.
+:::
+
+## Colistin: when the method is the problem
+
+<br>
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/Colistin.svg)
+:::
+
+::: {.column width="50%"}
+- Colistin is a large, cationic, amphipathic polypeptide
+- It **diffuses poorly through agar** — gradient strips and disk diffusion give unreliable results and must not be used
+- It **adsorbs to polystyrene**, lowering the effective concentration in the well
+- Broth microdilution without surfactant, in plain polystyrene plates, is the only accepted reference method
+- Laboratories reported colistin susceptibility for years by methods now known to be invalid
+:::
+:::::
+
+::: notes
+This is a good cautionary example of what happens when an old drug returns to use. Colistin was abandoned in the 1970s over toxicity and came back in the 2000s for carbapenem-resistant organisms, at which point laboratories tested it using whatever method their workflow supported. A joint CLSI–EUCAST working group had to state explicitly in 2016 that only broth microdilution is acceptable. The lesson generalises: methods must be revalidated for each agent, and convenience is not validation [@Wenzler2023].
+:::
+
+## Reference methods
+
+<br>
+
+:::::: columns
+::: {.column width="30%"}
+![](l02-spectrum-images/eucast-logo.jpg){width="270"}
+:::
+
+::: {.column width="30%"}
+![](l02-spectrum-images/clsi-logo.jpg){width="270"}
+:::
+
+::: {.column width="40%"}
+- **CLSI** — Clinical and Laboratory Standards Institute (United States)
+- **EUCAST** — European Committee on Antimicrobial Susceptibility Testing
+- Broth microdilution is the reference method against which all others are validated
+- National regulators approve commercial susceptibility products — AIFA in Italy, FDA in the United States
+:::
+::::::
+
+::: aside
+[@EUCASTBreakpoints; @CLSIM100]
+:::
+
+::: aside
+Two committees, two sets of breakpoints, and they are not always the same — which means an isolate can be susceptible in Europe and resistant in the United States, or the reverse. EUCAST breakpoints are freely available and revised annually; CLSI operates a subscription model. The divergence matters for multinational trials and for reading the literature, and it is a recurring source of confusion when comparing resistance rates between continents.
+:::
+
+# Limitations of the MIC {background-color="#b20e10"}
+
+## What the MIC does not tell you
+
+<br>
+
+- Requires a **pure isolate** grown from the patient — which takes time
+- Artificial conditions: defined medium, fixed inoculum, fixed temperature and atmosphere
+- **Static** drug concentration, whereas concentrations in a patient rise and fall
+- **No immune cells**, no protein binding as in serum, no biofilm
+- Not a direct physical measurement — an estimate from a doubling dilution series
+- Some resistance phenotypes are invisible to it
+
+::: aside
+The static concentration is the largest conceptual gap and it is what lecture 3 exists to bridge. The absence of an immune system means the MIC systematically overstates what is needed in an immunocompetent host and understates what is needed in neutropenia. The absence of biofilm is why prosthetic joint and catheter infections fail to respond to agents that look perfectly active in vitro — sessile organisms can be a thousandfold less susceptible than their planktonic counterparts, and no routine test reports this.
+:::
+
+## Precision
+
+<br>
+
+- Doubling dilutions mean the accepted error is **± one dilution**
+- A "true" MIC of 2 mg/L may be reported as 1, 2 or 4 on different days
+- In principle the test has poor accuracy unless performed in replicates — in clinical practice it is performed once
+- This imprecision is **built into breakpoint setting-i.e. what MIC defines "susceptible vs. resistant"**, which is why breakpoints avoid splitting a wild-type population
+
+::: aside
+This is the most useful practical point in the lecture. When a result sits one dilution from the breakpoint, the correct interpretation is that you do not know which side of the line the organism is on. That uncertainty is exactly what the EUCAST "area of technical uncertainty" was created to acknowledge, and it is also why chasing a single MIC value between laboratories is usually futile.
+:::
+
+## Factors that change the result
+
+<br>
+
+::::: columns
+::: {.column width="52%"}
+- Inoculum size
+- Quality and composition of the medium
+- Labware — non-specific binding of the drug to plastic
+- Antibiotic stability during incubation
+- Incubation atmosphere, temperature and duration
+- Endpoint reading rule, and inter-observer variation
+:::
+
+::: {.column width="48%"}
+![](l02-spectrum-images/mic-reading-variability.jpg){width="420"}
+:::
+:::::
+
+::: aside
+Plastic binding is the underappreciated one and it is agent-specific: daptomycin, the polymyxins and some lipoglycopeptides adsorb substantially to polystyrene, so MICs vary with plate type and with the presence of surfactant. It is a nice reminder that a physicochemical property of the molecule — the same lipophilicity that determines its pharmacokinetics in lecture 3 — also perturbs the assay used to characterise it.
+:::
+
+## Controlling those factors
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/eucast-qc-document.jpg){width="300"}
+:::
+
+::: {.column width="50%"}
+![](l02-spectrum-images/eucast-qc-ranges-table.jpg){width="400"}
+:::
+:::::
+
+- Reference strains from recognised collections — **ATCC** and equivalents
+- Published **quality control ranges**: a defined strain–agent pair must give an MIC within a stated range
+- Results outside the range invalidate the run, not merely the isolate
+
+::: aside
+The QC system is what converts a fragile assay into a reproducible one, and it is the reason MICs from different laboratories can be compared at all. Note the logic: rather than trying to make every variable perfect, the system defines an expected answer for a known organism and uses deviation from it to detect that something has drifted. That is a general design pattern worth recognising — it reappears as the reference-strain control in every assay in lecture 5 [@EUCASTBreakpoints].
+:::
+
+## Resistance the MIC can miss: inducible resistance
+
+<br>
+
+::::: columns
+::: {.column width="45%"}
+![The D-test](l02-spectrum-images/d-test-inducible-mlsb.jpg){width="400"}
+:::
+
+::: {.column width="55%"}
+- *erm* genes encode a ribosomal methylase modifying a single adenine in 23S rRNA
+- Produces the **MLS~B~** phenotype — resistance to macrolides, lincosamides and streptogramin B
+- May be **constitutive** or **inducible**
+- Inducible strains test clindamycin-susceptible but fail in vivo as resistant mutants are selected
+- Detected by the **D-test**: flattening of the clindamycin zone adjacent to an erythromycin disk
+:::
+:::::
+
+::: aside
+[@Lewis1999]
+:::
+
+::: aside
+The D-test is the most elegant assay in routine microbiology: erythromycin diffusing from the neighbouring disk or Etest strip induces the methylase, and clindamycin resistance appears only on the side facing it, blunting the elipse zone into a D. It is also the clearest demonstration that a single MIC value can be actively misleading — the number is correct and the clinical inference drawn from it is wrong.
+:::
+
+## Detecting inducible resistance with a antibiotic disks
+
+<br>
+
+::::: columns
+::: {.column width="46%"}
+![](l02-spectrum-images/etest-inducible-resistance.jpg){width="420"}
+:::
+
+::: {.column width="54%"}
+- Resistant subpopulations appear as discrete colonies **within** the inhibition ellipse
+- The arrow marks the induced growth that a broth MIC would never reveal
+- Solid-medium methods display the whole population; broth methods report a single summary value
+- An argument for keeping visual methods alongside automated ones
+:::
+:::::
+
+::: aside
+[@Lewis1999]
+:::
+
+::: aside
+This is the practical advantage of solid-medium testing and it is easy to lose sight of in a fully automated laboratory. A broth microdilution well is turbid or it is not; the plate shows you the population structure. Colonies inside an inhibition zone are exactly what heteroresistance and inducible resistance look like, and they are the signal that the reported number does not describe the whole population.
+:::
+
+## Resistance the MIC can miss: heteroresistance
+
+<br>
+
+::::: columns
+::: {.column width="48%"}
+![](l02-spectrum-images/heteroresistance-pap.jpg){width="440"}
+:::
+
+::: {.column width="52%"}
+- A **resistant subpopulation** within an otherwise susceptible isolate, often at 10^-6^ or lower
+- Invisible at a standard inoculum of 5 × 10^5^ CFU/mL — there are simply not enough cells present
+- Detected by **population analysis profiling** at high inoculum
+- Increasingly described for colistin, and for β-lactams in *Enterobacter* and *Acinetobacter*
+:::
+:::::
+
+::: aside
+[@StojowskaSwedrzynska2021]
+:::
+
+::: notes
+The arithmetic is the whole story. At a subpopulation frequency of 10^-6^ and a test inoculum of 5 × 10^5^, the resistant cells are statistically absent from the well — so the test cannot see them. But an infected site may contain 10^9^ organisms, in which case thousands of resistant cells are present from the outset and therapy selects them within days. This is one of the best explanations available for the clinical failure of an agent reported as fully susceptible.
+:::
+
+## Biofilm: susceptibility the test cannot see
+
+<br> <br>
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/biofilm.png){fig-align="center" width="300"}
+:::
+
+::: {.column width="50%"}
+- Organisms attached to a surface within a self-produced matrix behave nothing like planktonic cells
+- Susceptibility can fall **100- to 1000-fold** relative to the MIC of the same isolate
+- Mechanisms: restricted penetration through the matrix, nutrient and oxygen gradients, a metabolically dormant subpopulation
+- Relevant to prosthetic joints, cardiac devices, vascular catheters, endotracheal tubes
+- The **MBEC** — minimum biofilm eradication concentration — exists but is not routinely reported
+:::
+:::::
+
+::: notes
+This explains one of the most common clinical scenarios in which a fully susceptible organism cannot be cured: device-associated infection. The therapeutic implication is not a different antibiotic but removal of the device, plus agents with some anti-biofilm activity such as rifampicin for staphylococci. No routine susceptibility report contains any of this information, which is worth stating plainly.
+:::
+
+## Tolerance and persisters
+
+<br>
+
+- **Tolerance** — the population survives prolonged exposure without any change in MIC
+- **Persisters** — "zombies"- a small, metabolically dormant subpopulation that is not killed by bactericidal agents
+- Distinct from resistance: persisters regrow into a fully susceptible population
+- Explains relapse after apparently adequate therapy
+- Invisible to every method described in this lecture, because the MIC is unchanged
+
+::: notes
+Keep the distinction sharp, because students conflate these constantly. Resistance means the organism grows at a higher drug concentration; tolerance means it dies more slowly at the same concentration; persistence means a subpopulation does not die at all while remaining genetically susceptible. Only the first changes the MIC. The other two are among the better explanations for treatment failure and relapse in endocarditis and osteomyelitis, and they are the reason those infections are treated for weeks.
+:::
+
+## Phenotypic testing is slow
+
+<br>
+
+![](l02-spectrum-images/time-to-result-workflow.jpg){fig-align="center" width="740"}
+
+- Culture, isolation, identification, then susceptibility testing — typically **48–72 hours** from sampling
+- MALDI-TOF mass spectrometry has compressed identification to minutes once growth is available
+- Rapid molecular methods detect **resistance genes**, not phenotype
+
+::: aside
+[@Wenzler2023]
+:::
+
+::: notes
+MALDI-TOF was the largest single advance in diagnostic microbiology in decades, but note what it did and did not solve: it identifies the organism in minutes and says nothing about susceptibility. Molecular panels detect specific genes — *mecA*, *vanA*, KPC, NDM — which is enormously useful when positive, but a negative result excludes only the genes on the panel. The phenotype remains the reference, and it still takes a day.
+:::
+
+## Genotypic detection of resistance
+
+<br>
+
+- Molecular panels detect defined determinants directly from blood culture bottles or clinical samples
+- *mecA*/*mecC* for MRSA; *vanA*/*vanB* for VRE; KPC, NDM, VIM, IMP, OXA-48 for carbapenemases
+- Turnaround of **one to two hours** rather than two to three days
+- A positive result is highly actionable; a **negative result excludes only the genes on the panel**
+- Genotype predicts phenotype well for some mechanisms and poorly for others — efflux and porin loss have no single gene to detect
+
+::: notes
+The asymmetry between positive and negative results is the key teaching point. Detecting *mecA* in a *S. aureus* bacteraemia at hour two allows you to start the right agent a day early, and that changes outcomes. A negative carbapenemase panel does not mean the organism is carbapenem-susceptible, because carbapenem resistance in *Pseudomonas* is frequently caused by porin loss plus efflux plus AmpC, none of which the panel interrogates. Genotype and phenotype answer different questions.
+:::
+
+## Rapid phenotypic testing
+
+<br>
+
+- Direct-from-positive-blood-culture AST, morphokinetic imaging, microfluidic single-cell growth measurement
+- Results in **4–8 hours** rather than 18–24
+- Measures the phenotype rather than inferring it from genes
+- The limiting factor is no longer the measurement but the need to grow the organism at all
+- The clinical value depends entirely on whether the result reaches someone who acts on it- *The most important laboratory technology is the phone*
+
+::: notes
+That last point is more important than the technology and it is the theme of diagnostic stewardship in lecture 9. A rapid result delivered at three in the morning into an electronic record that nobody reads until the ward round has the same clinical value as a slow one. Studies of rapid diagnostics consistently show benefit only when they are coupled to an active stewardship intervention — a person who receives the result and changes the prescription.
+:::
+
+## Why the MIC survives
+
+<br>
+
+- Simple, inexpensive, and requires no specialised instrumentation
+- Reproducible **within** a laboratory when standardised methods and QC are used
+- Expressed in the **same units as serum concentrations**, so it links directly to pharmacokinetics
+- Eighty years of accumulated correlation with clinical outcome
+- Nothing proposed as a replacement has matched that combination
+
+::: notes
+It is worth defending the test after criticising it for ten slides. Every proposed successor — genotypic prediction, single-cell methods, growth-rate kinetics — either measures something other than the phenotype or has not accumulated the outcome correlations that make a number actionable. The MIC persists not because microbiologists are conservative but because it is the only measurement that connects a laboratory result to a dose.
+:::
+
+# Interpretation and Breakpoints {background-color="#b20e10"}
+
+## From a number to a category
+
+<br>
+
+- **S — susceptible**, standard dosing regimen: high likelihood of therapeutic success
+- **I — susceptible, increased exposure**: success likely if exposure is increased by dose or infusion strategy
+- **R — resistant**: high likelihood of failure
+- Additional categories: **SDD** (susceptible dose-dependent, CLSI), and the EUCAST **area of technical uncertainty**
+- The category, not the number, is what most clinicians act on
+
+::: notes
+The redefinition of "I" is recent and important. It used to mean an uncomfortable middle ground; since 2019 EUCAST defines it as *susceptible, increased exposure* — a positive statement that the organism can be treated if you give more drug, infuse it for longer, or the drug concentrates at the site. That change was made precisely because clinicians were reading "I" as "avoid", which discarded usable agents and pushed prescribing toward broader ones.
+:::
+
+## Reading a susceptibility report
+
+<br>
+
+::::: columns
+::: {.column width="46%"}
+![](l02-spectrum-images/ast-report-example.jpg){width="430"}
+:::
+
+::: {.column width="54%"}
+- Organism, MIC for each agent, and the S/I/R interpretation
+- The panel tested is chosen by the laboratory, not by the clinician
+- **Selective reporting** — narrow-spectrum agents are shown, broad-spectrum results suppressed unless needed
+- **Cascade reporting** — second-line results released only if first-line agents are resistant
+- What appears on the report shapes prescribing as much as the underlying result does
+:::
+:::::
+
+::: notes
+Selective and cascade reporting are stewardship interventions disguised as laboratory formatting, and they are among the most effective and least resented. If ciprofloxacin susceptibility is simply not displayed for a urinary *E. coli* that is susceptible to nitrofurantoin, ciprofloxacin prescribing falls — without any restriction, argument or approval process. It is worth noting to students that this is a deliberate nudge, and that the laboratory is therefore a participant in prescribing rather than a neutral reporter.
+:::
+
+## Who sets breakpoints?
+
+<br>
+
+- **EUCAST** in Europe; **CLSI** in the United States; national bodies elsewhere
+- Regulators approve susceptibility testing devices and the breakpoints they report — **AIFA** in Italy, **FDA** in the United States
+- Breakpoints are revised as new data accumulate, and are sometimes **lowered**
+- A change in breakpoint can change a hospital's resistance rate overnight, with no change in the organisms
+
+::: notes
+The last point is worth dwelling on. When CLSI lowered the carbapenem breakpoints for Enterobacterales in 2010, resistance rates appeared to rise sharply — not because anything had changed biologically, but because the line moved. Anyone comparing resistance rates across time or across countries must check which breakpoint version was in use. This is a common error in the published literature.
+:::
+
+## What information sets a breakpoint?
+
+![](l02-spectrum-images/breakpoint-three-legged-stool.png){fig-align="center"}
+
+::: notes
+This slide is the hinge between this lecture and the next. The microbiological leg we have covered today. The PK/PD leg is the whole of lecture 3, and in modern breakpoint setting it does most of the work, because clinical outcome data stratified by MIC are so scarce. The clinical leg is the weakest in practice, for reasons on a later slide.
+:::
+
+## The MIC distribution
+
+![](l02-spectrum-images/mic-wild-type-ecoff.png){fig-align="center" width="800"}
+
+- Wild-type organisms form a **unimodal** distribution spanning two to three dilutions
+- The **epidemiological cut-off value (ECOFF)** is the upper limit of that wild-type distribution
+- Organisms above it carry an acquired or mutational **resistance mechanism**
+
+::: notes
+The ECOFF is a purely microbiological construct: it says nothing about whether a patient will respond, only whether the organism has a resistance mechanism. It is enormously useful for surveillance and for detecting emerging resistance early, because a shift in the distribution appears before clinical failures do. Students should be clear that ECOFF and clinical breakpoint answer different questions and often differ numerically.
+:::
+
+## ECOFF and clinical breakpoint are different questions
+
+<br>
+
+|   | **Epidemiological cut-off** | **Clinical breakpoint** |
+|:-----------------------|:-----------------------|:-----------------------|
+| Question | Does this isolate have a resistance mechanism? | Will this patient respond to treatment? |
+| Derived from | MIC distributions alone | MIC distributions + PK/PD + clinical outcome |
+| Depends on dose? | No | Yes |
+| Used for | Surveillance, detecting emergence | Guiding therapy |
+
+: Two cut-offs, two purposes
+
+::: notes
+The two can diverge in either direction. A breakpoint above the ECOFF means some organisms with a resistance mechanism can still be treated, usually by increasing exposure — which is exactly what the "I, increased exposure" category encodes. A breakpoint below the ECOFF would mean wild-type organisms are classified resistant, which is a signal that the drug is inadequate at any tolerable dose. That situation is a strong argument for abandoning an agent for that organism entirely.
+:::
+
+## Clinical outcome data are the weakest leg
+
+<br>
+
+- Registration trials rarely enroll patients infected with **resistant** organisms
+- Trials also exclude the sickest patients — precisely those in whom failure is most likely
+- The general expectation is the **90/60 rule**: about 90% clinical response for susceptible organisms, and about 60% even for resistant ones
+- The 60% reflects host defences, source control, and spontaneous resolution
+- The relationship is hardest to demonstrate in self-limiting infections and in rapidly fatal ones
+
+::: aside
+[@Rex2002]
+:::
+
+::: notes
+The 90/60 rule is deflating and important: roughly 60% of patients infected with an organism reported resistant will nonetheless appear to respond. That is why demonstrating the clinical value of susceptibility testing is statistically difficult, and it is also why clinical trials are a poor instrument for setting breakpoints. If a substantial proportion of patients recover regardless of what you give them, the signal linking MIC to outcome is heavily diluted.
+:::
+
+## Example: cellulitis
+
+<br>
+
+::::: columns
+::: {.column width="42%"}
+![](l02-spectrum-images/cellulitis.jpg){width="380"}
+:::
+
+::: {.column width="58%"}
+- Uncomplicated abscess frequently resolves with **incision and drainage** alone
+- Antibiotic therapy adds a modest absolute benefit
+- Source control, host immunity and time do much of the work
+- An infection like this is a poor setting in which to demonstrate the value of a susceptibility result
+:::
+:::::
+
+::: notes
+This is the concrete version of the 90/60 problem. If drainage alone cures most patients, then a trial in this population has very little room to detect a difference between agents, however different their in vitro activity. The general lesson, which returns in lecture 7, is that the choice of indication determines whether a trial can demonstrate anything at all — and that the easiest indications to enrol are often the least informative.
+:::
+
+## When breakpoints change
+
+<br>
+
+- Carbapenem breakpoints for Enterobacterales were **lowered** by CLSI in 2010 and by EUCAST subsequently
+- Reason: PK/PD analysis and clinical data showed failures at MICs previously called susceptible, particularly in carbapenemase producers
+- Consequence: reported carbapenem resistance rose sharply with no biological change
+- Any comparison of resistance rates across time or between countries must state which breakpoint version was applied
+
+::: notes
+This is a genuine trap in the published literature and in hospital reporting. A unit can appear to have a worsening resistance problem purely because its laboratory updated to a new EUCAST version. It also cuts the other way: before the revision, laboratories were reporting carbapenemase producers as susceptible, and patients were being treated with carbapenems and failing. The revision was correct; the discontinuity it produced in the surveillance data is an artefact that has to be handled.
+:::
+
+## Species-specific and non-species-related breakpoints
+
+<br>
+
+- Most breakpoints are **species-specific**, because MIC distributions and clinical data differ by organism
+- EUCAST also publishes **PK/PD (non-species-related) breakpoints**, derived from exposure alone
+- These are used for organisms with too little data to set a species breakpoint
+- They are a pure statement of what the drug can achieve at a standard dose, independent of any particular organism
+- Their existence makes explicit that a breakpoint is a statement about a **dose**, not only about an organism
+
+::: notes
+The PK/PD breakpoint is conceptually the purest object in this lecture and worth pausing on. It asks: given human pharmacokinetics at a standard regimen and a known PK/PD target, what is the highest MIC that can reliably be treated? No organism enters the calculation. Everything needed to compute it is in lecture 3, and it is the clearest demonstration that susceptibility is a property of a drug–dose–organism triple rather than of the organism alone.
+:::
+
+## Site-specific breakpoints: Example ciprofloxacin
+
+::::: columns
+::: {.column width="50%"}
+![](l02-spectrum-images/urinary-concentrations-table.jpg){fig-align="center" width="200"}
+
+urinary tract vs. serum?
+:::
+
+::: {.column width="50%"}
+![](l02-spectrum-images/cipro_PK_sanford.png)
+:::
+:::::
+
+- Many agents reach urinary concentrations **10–100 times** those in serum
+- Nitrofurantoin and fosfomycin are useful in cystitis and useless in bacteraemia
+- Conversely, agents that fail to cross the blood–brain barrier require separate, **lower meningitis breakpoints**
+
+::: aside
+[@Gilbert2006]
+:::
+
+## Summary
+
+<br>
+
+- **Spectrum** is largely determined by the cell envelope, and is mostly a problem of drug **access**
+- Broad-spectrum therapy damages the microbiota and selects the organisms that cause the next infection
+- The **MIC** is the central measurement of potency, expressed in units that connect it to pharmacokinetics
+- It is imprecise by design, artificial in its conditions, and blind to inducible resistance, heteroresistance and biofilm
+- **Breakpoints** rest on microbiology, PK/PD and clinical outcome — and the PK/PD leg carries most of the weight
+
+## Questions for discussion
+
+<br>
+
+- An isolate is reported susceptible and the patient fails. What are the possible explanations, in order of likelihood?
+- Should laboratories report MIC values, or only S/I/R categories? What does each choice assume about the reader?
+- If molecular methods could detect all known resistance genes in an hour, would phenotypic testing still be necessary?
+- A hospital's carbapenem resistance rate doubles after a breakpoint revision. What has actually changed?
+
+::: notes
+The first question is the best diagnostic of whether the lecture landed. A good answer should include: wrong organism or a polymicrobial infection, inadequate source control, an inducible or heteroresistant phenotype, biofilm, inadequate penetration to the site, inadequate dose or interval, and — last, not first — a laboratory error. The instinct is usually to blame the laboratory, and it is usually the least likely explanation.
+:::
+
+## References {.smaller}
+
+::: {#refs}
+:::

@@ -1,0 +1,113 @@
+/*-- scss:defaults --*/
+
+// UniPD red, matching the RevealJS custom.scss used for the slides
+$primary:        #b20e10;
+$link-color:     #b20e10;
+$body-color:     #222;
+$font-family-sans-serif: 'Noto Sans', 'DejaVu Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+$headings-font-weight: 600;
+$toc-color: #b20e10;
+
+/*-- scss:rules --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+h1, h2, h3, h4, h5, h6 {
+  color: #9B0014;
+  letter-spacing: -0.01em;
+}
+
+h1.title {
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #7D7F7C;
+  font-weight: 300;
+}
+
+body {
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+// Readable measure for long-form chapter text
+main {
+  max-width: 52rem;
+}
+
+// Tables: quiet borders, clear header
+table {
+  font-size: 0.92rem;
+}
+
+thead th {
+  border-bottom: 2px solid #b20e10 !important;
+  font-weight: 600;
+}
+
+caption, .caption {
+  color: #555;
+  font-size: 0.88rem;
+}
+
+// Figures
+figure img, .figure img {
+  border-radius: 4px;
+}
+
+figcaption {
+  color: #555;
+  font-size: 0.88rem;
+  padding-top: 0.35rem;
+}
+
+// Callouts — align accent colours with the course palette
+div.callout-tip.callout {
+  border-left-color: #1B7A4B;
+}
+
+div.callout-important.callout {
+  border-left-color: #b20e10;
+}
+
+// A styled block for the "Objectives" list that opens every chapter
+.objectives {
+  background-color: #faf5f5;
+  border-left: 4px solid #b20e10;
+  padding: 1rem 1.25rem 0.6rem 1.25rem;
+  border-radius: 4px;
+  margin-bottom: 1.75rem;
+}
+
+.objectives p:first-child {
+  font-weight: 600;
+  color: #9B0014;
+  margin-bottom: 0.4rem;
+}
+
+// Slide-link button on each chapter header
+.slidelink {
+  display: inline-block;
+  background-color: #b20e10;
+  color: #fff !important;
+  padding: 0.35rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+.slidelink:hover {
+  background-color: #8c0b0d;
+  color: #fff !important;
+}
+
+// Reference list
+#refs {
+  font-size: 0.9rem;
+}
+
+#refs div.csl-entry {
+  margin-bottom: 0.55rem;
+}
