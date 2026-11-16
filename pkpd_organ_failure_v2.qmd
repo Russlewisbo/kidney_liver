@@ -124,7 +124,7 @@ Label precautions (section 5.1): [@fda_zerbaxa2022; @fda_avycaz2025]; rationale:
 Association, not proof. Both FDA labels carry a precaution that cIAI cure was lower at CrCl 30-50 mL/min: ceftolozane/tazobactam 47.8% (11/23) vs meropenem 69.2% (9/13), against 85.2% vs 87.9% above 50; ceftazidime/avibactam 45% (14/31) vs 74% (26/35). The ceftazidime/avibactam label adds that these patients received a 33% lower daily dose than is now recommended: the renal adjustment itself was revised upward. Caveats: small subgroups (36 and 66 patients); Kullar 2017 showed the ceftolozane difference disappears in the microbiologically evaluable population (72.7% vs 71.4%). Horstink 2025: 11 studies, 1,407 patients, high risk of bias. Aldardeer 2024: prospective observational, 84 early vs 140 late adjusters, HR 0.588 (0.355-0.974). Wide-therapeutic-index drugs only.
 :::
 
-## Prolonged infusion after a loading dose lowers mortality in pooled trials; <br> the two largest single trials were neutral
+## Prolonged infusion after a loading dose lowers mortality in pooled trials; the two largest single trials were neutral
 
 ![](figures/prolonged_infusion_forest.png){fig-align="center" width="950"}
 
