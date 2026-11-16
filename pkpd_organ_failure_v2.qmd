@@ -37,6 +37,10 @@ format:
      A hypothetical patient is introduced on slide 1 and revisited on slide 13. -->
 
 <style>
+/* Source line and callouts are defined here so the deck does not depend on the theme file. */
+.reveal .source {position: absolute; bottom: 60px; left: 0; font-size: 0.45em; color: #7a7a7a;}
+.reveal .source a {color: #7a7a7a;}
+.reveal .takeaway {font-size: 0.9em; color: #1f3a5f; border-left: 4px solid #1f77b4; padding: 0.4em 0.8em; background: #f0f5fa; margin-top: 0.6em; max-width: 90%;}
 .todo-fig {border: 2px dashed #9aa3ad; border-radius: 8px; padding: 1.2em 1.4em; margin: 1.2em auto; width: 82%;
            font-size: 0.72em; color: #4a4a4a; background: #fafbfc; text-align: left;}
 .vignette {font-size: 0.58em; color: #1f3a5f; background: #f0f5fa; border-left: 4px solid #1f77b4;
