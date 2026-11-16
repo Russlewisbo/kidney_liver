@@ -16,6 +16,7 @@ bibliography: [refs.bib, refs_additions.bib]
 csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
 ---
 
+```{=html}
 <!-- v2, restructured 16 Nov 2026 to the assertion-evidence form (Alley) in the house style of
      l02-spectrum-slides.qmd. Three sections, each opened by an image that appears on the mapping
      slide and again on the closing slide. Headlines are sentence assertions, left-aligned, <= 2 lines
@@ -24,8 +25,10 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
      except the labelled simulation inset on the prolonged-infusion slide (script 11/18).
      Original contribution (section 3): the false precision of fixed protein binding and how it
      could alter breakpoints and target attainment in PK/PD analysis.
-     One slide (creatinine equations) still carries a "Figure to draw" box (needs Baptista 2014 full text). -->
+     All main-deck figures are drawn; the two backup slides still carry "Figure to draw" boxes. -->
+```
 
+```{=html}
 <style>
 /* Assertion-evidence headline rules (Alley): sentence headline, left-justified, at most two lines. */
 .reveal h2 {text-align: left; font-size: 1.2em; line-height: 1.2; margin-bottom: 0.45em;}
@@ -39,6 +42,7 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
 .mapcap b {color: #9B0014;}
 .light-text, .light-text h2 {color: #fff;}
 </style>
+```
 
 ## Optimizing antimicrobial therapy in patients <br> with liver and kidney failure {.light-text background-color="#b20e10"}
 
@@ -60,11 +64,11 @@ Scope, said aloud: this talk is about β-lactams and the drugs for which under-d
 
 ## This talk makes three claims about dosing when the kidney or the liver fails
 
-::::: columns
+::::::::: columns
 :::: {.column width="33%"}
 ![](figures/aki_resolution.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **1 · Dose for the infection first.** Kidney injury present at diagnosis is usually transient; dose reductions in the first 48 h cost cures.
 :::
 ::::
@@ -72,7 +76,7 @@ Scope, said aloud: this talk is about β-lactams and the drugs for which under-d
 :::: {.column width="33%"}
 ![](figures/child_pugh_caspofungin.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **2 · Measure, do not estimate.** Creatinine equations, Child-Pugh class and label tables estimate exposure badly in the ICU.
 :::
 ::::
@@ -80,11 +84,11 @@ Scope, said aloud: this talk is about β-lactams and the drugs for which under-d
 :::: {.column width="33%"}
 ![](figures/unbound_fraction_range.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **3 · Binding is not a constant.** The unbound fraction cannot be assumed or calculated; it has to be measured or modelled.
 :::
 ::::
-:::::
+:::::::::
 
 ::: notes
 Mapping slide. The same three images return at the end. Each section opens with the image shown here.
@@ -94,7 +98,7 @@ Mapping slide. The same three images return at the end. Each section opens with 
 
 ## More than half of the acute kidney injury present when infection is diagnosed resolves within 48 hours
 
-::: {.vignette}
+::: vignette
 **Hypothetical patient.** 58-year-old, alcohol-related cirrhosis (Child-Pugh B, albumin 22 g/L), septic shock from secondary peritonitis. Creatinine 2.1 mg/dL (baseline 0.8), no urine for 6 h. Meropenem is ordered; the renal-dosing table proposes 1 g q12h.
 :::
 
@@ -120,7 +124,7 @@ Label precautions (section 5.1): [@fda_zerbaxa2022; @fda_avycaz2025]; rationale:
 Association, not proof. Both FDA labels carry a precaution that cIAI cure was lower at CrCl 30-50 mL/min: ceftolozane/tazobactam 47.8% (11/23) vs meropenem 69.2% (9/13), against 85.2% vs 87.9% above 50; ceftazidime/avibactam 45% (14/31) vs 74% (26/35). The ceftazidime/avibactam label adds that these patients received a 33% lower daily dose than is now recommended: the renal adjustment itself was revised upward. Caveats: small subgroups (36 and 66 patients); Kullar 2017 showed the ceftolozane difference disappears in the microbiologically evaluable population (72.7% vs 71.4%). Horstink 2025: 11 studies, 1,407 patients, high risk of bias. Aldardeer 2024: prospective observational, 84 early vs 140 late adjusters, HR 0.588 (0.355-0.974). Wide-therapeutic-index drugs only.
 :::
 
-## Prolonged infusion after a loading dose lowers mortality in pooled trials; the two largest single trials were neutral
+## Prolonged infusion after a loading dose lowers mortality in pooled trials; <br> the two largest single trials were neutral
 
 ![](figures/prolonged_infusion_forest.png){fig-align="center" width="950"}
 
@@ -129,10 +133,10 @@ Trials and syntheses: [@monti2023; @dulhunty2024; @abdulaziz2024; @hong2026]. Gu
 :::
 
 ::: notes
-How to dose in the first 48 h: a full loading dose, then prolonged infusion. MERCY (n = 607): RR 0.96 (0.81-1.13). BLING III (n = 7,031): 90-day mortality 24.9% vs 26.8%, OR 0.91 (0.81-1.01), P = 0.08; clinical cure 55.7% vs 50.0%. Meta-analysis of 18 RCTs (n = 9,108): RR 0.86 (95% CrI 0.72-0.98). 2026 focused update: 28 RCTs, RR 0.91 (0.85-0.97). Surviving Sepsis 2026: strong recommendation, moderate certainty, prolonged infusion for maintenance after a loading dose. Note the mixed effect measures (OR for BLING III). The inset is OUR simulation, not data: at MIC 2 mg/L, short vs 3-h vs continuous infusion reach 100% fT>MIC in 74% / 89% / 100% of simulated patients at typical clearance and 9% / 23% / 100% at high clearance. It explains why a pooled effect can coexist with neutral trials in mixed populations.
+How to dose in the first 48 h: a full loading dose, then prolonged infusion. MERCY (n = 607): RR 0.96 (0.81-1.13). BLING III (n = 7,031): 90-day mortality 24.9% vs 26.8%, OR 0.91 (0.81-1.01), P = 0.08; clinical cure 55.7% vs 50.0%. Meta-analysis of 18 RCTs (n = 9,108): RR 0.86 (95% CrI 0.72-0.98). 2026 focused update: 28 RCTs, RR 0.91 (0.85-0.97). Surviving Sepsis 2026: strong recommendation, moderate certainty, prolonged infusion for maintenance after a loading dose. Note the mixed effect measures (OR for BLING III). The inset is OUR simulation, not data: at MIC 2 mg/L, short vs 3-h vs continuous infusion reach 100% fT\>MIC in 74% / 89% / 100% of simulated patients at typical clearance and 9% / 23% / 100% at high clearance. It explains why a pooled effect can coexist with neutral trials in mixed populations.
 :::
 
-## In kidney failure, overexposure is measurable harm: cefepime neurotoxicity tracks the trough concentration
+## In kidney failure, overexposure is measurable harm: <br> cefepime neurotoxicity tracks the trough concentration
 
 ![](figures/cefepime_neurotoxicity.png){fig-align="center" width="950"}
 
@@ -146,6 +150,8 @@ The counterweight: the first-48-h argument is not a licence for sustained overex
 
 # 2 · Measure, do not estimate {background-color="#b20e10"}
 
+<br> <br>
+
 ## Child-Pugh class does not predict caspofungin exposure in critically ill patients
 
 ![](figures/child_pugh_caspofungin.png){fig-align="center" width="950"}
@@ -158,7 +164,7 @@ ICU cohort: [@kurland2019]. Simulated regimens: [@martial2016]
 Section image. Kurland 2019: 40 of 46 ICU patients were Child-Pugh B, so the label would reduce the dose in most of them, yet the score did not correlate with AUC, clearance or volume (r = 0.03, P = 0.84); hypoalbuminaemia correlated with LOW AUC (r = 0.45, P = 0.005). Martial 2016 (n = 21, all Child-Pugh B through low albumin): the label 70/35 mg regimen gave the lowest exposure. Both groups advise against dose reduction in ICU patients without cirrhosis.
 :::
 
-## Few antimicrobials carry a hepatic dose adjustment; for β-lactams, kidney function and albumin matter more
+## Few antimicrobials carry a hepatic dose adjustment; <br> for β-lactams, kidney function and albumin matter more
 
 ![](figures/hepatic_adjustment_table.png){fig-align="center" width="980"}
 
@@ -170,7 +176,7 @@ Reviews: [@halilovic2014; @verbeeck2008]. Systematic review in cirrhosis: [@comc
 Halilovic & Heintz 2014 reviewed 22 antibiotics with hepatic or mixed renal-hepatobiliary clearance and found the data sparse; many studies predate routine Child-Pugh classification. Verbeeck 2008: no endogenous marker of hepatic clearance exists; Child-Pugh was built to predict surgical mortality, not drug exposure. Comce 2024 (ceftriaxone, gentamicin, meropenem, vancomycin): alterations in AUC and clearance were found, but the evidence does not support specific dosing recommendations. The point of the table is how short the blue column is. CHECK each label cell against the current PI/SmPC before presenting.
 :::
 
-## Liver failure enlarges the distribution volume, so first-day β-lactam exposure falls short
+## Liver failure enlarges the distribution volume, <br> so first-day β-lactam exposure falls short
 
 ![](figures/aclf_day1_pta.png){fig-align="center" width="950"}
 
@@ -179,21 +185,19 @@ ACLF on CVVHD: [@grensemann2020]. Decompensated cirrhosis: [@bastida2020]. Outco
 :::
 
 ::: notes
-This slide carries the loading-dose message. Grensemann 2020: 19 patients on continuous haemodialysis, 8 with ACLF; peripheral volume 38.6 vs 19.7 L (P = 0.05); Monte Carlo simulation from a small cohort. Day-1 PTA for 100% fT > 8 mg/L: 18% vs 48% with 1 g q8h short infusion; 94% vs 91% with a 2 g loading dose plus 1 g q8h prolonged infusion. Bastida 2020 (n = 54): ACLF affected V; creatinine clearance and MELD affected clearance. Bartoletti 2019 (n = 119, observational): continuous/extended infusion 30-day mortality 16% vs 36%; adjusted HR 0.41. Our patient: Child-Pugh B with ascites and low albumin, so a full loading dose regardless of the creatinine.
+This slide carries the loading-dose message. Grensemann 2020: 19 patients on continuous haemodialysis, 8 with ACLF; peripheral volume 38.6 vs 19.7 L (P = 0.05); Monte Carlo simulation from a small cohort. Day-1 PTA for 100% fT \> 8 mg/L: 18% vs 48% with 1 g q8h short infusion; 94% vs 91% with a 2 g loading dose plus 1 g q8h prolonged infusion. Bastida 2020 (n = 54): ACLF affected V; creatinine clearance and MELD affected clearance. Bartoletti 2019 (n = 119, observational): continuous/extended infusion 30-day mortality 16% vs 36%; adjusted HR 0.41. Our patient: Child-Pugh B with ascites and low albumin, so a full loading dose regardless of the creatinine.
 :::
 
 ## Creatinine-based equations get the average right and the individual patient wrong in critical illness
 
-::: {.todo-fig}
-**Figure to draw (needs the full text).** The abstract of Baptista 2014 gives only summary statistics (8-h measured CrCl vs Cockcroft-Gault: means 135.5 vs 135.7 mL/min/1.73 m², R = 0.2, precision ±40.9%); a scatter cannot be reconstructed from them honestly. Two options: (a) obtain the full text and digitise the published Bland-Altman panel, labelled "redrawn from Fig. X"; or (b) plot what the abstract supports: Hanna 2023 bars (cystatin C eGFR >30% below creatinine eGFR in 29%; vancomycin >30 mg/L in 24% vs 9%) with the Baptista statistics as a text panel. Do not simulate a scatter with the published R.
-:::
+![](figures/gfr_estimates_baptista.png){fig-align="center" width="980"}
 
 ::: aside
-ICU agreement: [@baptista2014; @carlier2015]. Cystatin C and cefepime clearance: [@barreto2023]. Cancer cohort: [@hanna2023]
+Redrawn from [@baptista2014]: Fig. 3 medians digitised from the published chart (about 0.3 mL/min resolution), Fig. 2 values as printed. Inulin reference: [@carlier2015]. Cystatin C: [@barreto2023; @hanna2023]
 :::
 
 ::: notes
-Baptista 2014: no difference in means (8-h CrCl 135.5 vs CG 135.7), but R = 0.2 and all equations underestimated when measured CrCl >120 and overestimated when <120. Carlier 2015 (inulin reference, n = 68): creatinine equations biased and imprecise; measured urinary CrCl overestimated GFR; cystatin C equations unbiased but still imprecise. Barreto 2023: eGFRcr-cysC was the best predictor of cefepime clearance (n = 120). Hanna 2023 (n = 1,869 cancer patients): eGFRcys >30% lower than eGFRcr in 29%; vancomycin >30 mg/L 24% vs 9%, adjusted OR 2.59 (1.08-7.03). Present measured CrCl and cystatin C as better, not as the answer.
+Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary clearances; 12 nested cut-off subgroups): no difference in means (8-h CrCl 135.5 vs CG 135.7), but R = 0.2 and all equations underestimated when measured CrCl \>120 and overestimated when \<120. Carlier 2015 (inulin reference, n = 68): creatinine equations biased and imprecise; measured urinary CrCl overestimated GFR; cystatin C equations unbiased but still imprecise. Barreto 2023: eGFRcr-cysC was the best predictor of cefepime clearance (n = 120). Hanna 2023 (n = 1,869 cancer patients): eGFRcys \>30% lower than eGFRcr in 29%; vancomycin \>30 mg/L 24% vs 9%, adjusted OR 2.59 (1.08-7.03). Present measured CrCl and cystatin C as better, not as the answer.
 :::
 
 ## Four in ten ICU patients have augmented renal clearance, which predicts sub-MIC β-lactam troughs
@@ -205,7 +209,7 @@ Prevalence: [@hefny2022; @udy2014]. Exposure: [@udy2012; @abdulla2020; @wong2018
 :::
 
 ::: notes
-Udy 2012 (n = 52): trough >= MIC in only 58% overall; CrCl >= 130 associated with trough < MIC in 82% and < 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT>MIC(ECOFF); eGFR >= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
+Udy 2012 (n = 52): trough \>= MIC in only 58% overall; CrCl \>= 130 associated with trough \< MIC in 82% and \< 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT\>MIC(ECOFF); eGFR \>= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT\>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
 :::
 
 ## TDM-guided dosing raised target attainment in two of three randomised trials but improved no clinical outcome
@@ -243,7 +247,7 @@ Arithmetic on published values: [@schleibinger2015; @gijsen2021]. Bias in popula
 :::
 
 ::: notes
-The original angle of the talk. At a total trough of 20 mg/L the assumed 10% gives 2.0 mg/L free (below a 4 mg/L target); the ICU-measured fraction gives 6.6 mg/L (IQR 4.0-8.9). Toutain 2023: scaling total concentrations by a single fu biases PTA and underestimates the PK/PD cutoff, because total concentrations are more variable than free ones. Heffernan 2022: albumin <= 20 g/L lowered ceftriaxone PTA by up to 20%; binding is saturable, so the band understates the spread at high totals. Jager 2020: flucloxacillin binding is non-linear; dose on unbound concentrations.
+The original angle of the talk. At a total trough of 20 mg/L the assumed 10% gives 2.0 mg/L free (below a 4 mg/L target); the ICU-measured fraction gives 6.6 mg/L (IQR 4.0-8.9). Toutain 2023: scaling total concentrations by a single fu biases PTA and underestimates the PK/PD cutoff, because total concentrations are more variable than free ones. Heffernan 2022: albumin \<= 20 g/L lowered ceftriaxone PTA by up to 20%; binding is saturable, so the band understates the spread at high totals. Jager 2020: flucloxacillin binding is non-linear; dose on unbound concentrations.
 :::
 
 ## An albumin correction of the phenytoin type fails for β-lactams, and performs poorly even for phenytoin in the ICU
@@ -255,14 +259,14 @@ The original angle of the talk. At a total trough of 20 mg/L the assumed 10% giv
 :::
 
 ::: notes
-The question every pharmacist asks: why not a Sheiner-Tozer correction, as taught for phenytoin? Three answers. (1) The equation assumes linear binding to one site with albumin as the only variable. Wong 2013 (ICU, 7 β-lactams): unbound concentrations predicted from published binding were biased by +83.3% for ceftriaxone, +56.8% for flucloxacillin, +25% for benzylpenicillin and -12.1% for meropenem; total and unbound were linearly related for every drug EXCEPT ceftriaxone and flucloxacillin, whose binding is saturable. (2) Even the textbook case fails in our patients: Cheng 2016 found albumin explained 9% and total phenytoin 53% of the variance in free phenytoin, and all equations performed poorly in critical care; Parikh 2018 tested four equations in a medical ICU, R² < 0.4 for all, biased and imprecise. ter Heine 2019 showed phenytoin binding itself is concentration-dependent; a mechanistic non-linear model beat Winter-Tozer in 4 of 5 external datasets. (3) What does work is a binding model built in the right population with albumin AND concentration as covariates (Gijsen 2021 for ceftriaxone) - that is model-informed dosing, not a bedside formula. Practical message: for highly bound drugs in hypoalbuminaemic ICU patients, measure the unbound concentration or use a validated saturable-binding model; do not divide by a textbook fraction and do not apply a Sheiner-Tozer-style correction. Antifungals: voriconazole (~58% bound) and posaconazole (~98%) have the same problem and even fewer data.
+The question every pharmacist asks: why not a Sheiner-Tozer correction, as taught for phenytoin? Three answers. (1) The equation assumes linear binding to one site with albumin as the only variable. Wong 2013 (ICU, 7 β-lactams): unbound concentrations predicted from published binding were biased by +83.3% for ceftriaxone, +56.8% for flucloxacillin, +25% for benzylpenicillin and -12.1% for meropenem; total and unbound were linearly related for every drug EXCEPT ceftriaxone and flucloxacillin, whose binding is saturable. (2) Even the textbook case fails in our patients: Cheng 2016 found albumin explained 9% and total phenytoin 53% of the variance in free phenytoin, and all equations performed poorly in critical care; Parikh 2018 tested four equations in a medical ICU, R² \< 0.4 for all, biased and imprecise. ter Heine 2019 showed phenytoin binding itself is concentration-dependent; a mechanistic non-linear model beat Winter-Tozer in 4 of 5 external datasets. (3) What does work is a binding model built in the right population with albumin AND concentration as covariates (Gijsen 2021 for ceftriaxone) - that is model-informed dosing, not a bedside formula. Practical message: for highly bound drugs in hypoalbuminaemic ICU patients, measure the unbound concentration or use a validated saturable-binding model; do not divide by a textbook fraction and do not apply a Sheiner-Tozer-style correction. Antifungals: voriconazole (\~58% bound) and posaconazole (\~98%) have the same problem and even fewer data.
 :::
 
 ## In the first 48 hours dose for the infection; after 48 hours dose for the measured organ function
 
 ![](figures/dosing_timeline.png){fig-align="center" width="980"}
 
-::: {.vignette}
+::: vignette
 **The same patient at 48 h:** creatinine 1.2 mg/dL, urine output 90 mL/h — the AKI resolved; the q12h table dose would have under-dosed her for two days. **At 72 h:** creatinine rising again, CRRT started — measure (urine output, effluent dose, hours on the filter) and re-dose.
 :::
 
@@ -272,11 +276,11 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 
 ## Three claims to take home
 
-::::: columns
+::::::::: columns
 :::: {.column width="33%"}
 ![](figures/aki_resolution.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **1 · Dose for the infection first.** Full loading dose, unreduced wide-index β-lactam, prolonged infusion; re-measure at 48 h.
 :::
 ::::
@@ -284,7 +288,7 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 :::: {.column width="33%"}
 ![](figures/child_pugh_caspofungin.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **2 · Measure, do not estimate.** Urinary CrCl or cystatin C, urine output and RRT dose; not Cockcroft-Gault, Child-Pugh or the label table.
 :::
 ::::
@@ -292,11 +296,11 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 :::: {.column width="33%"}
 ![](figures/unbound_fraction_range.png){width="100%"}
 
-::: {.mapcap}
+::: mapcap
 **3 · Binding is not a constant.** For highly bound drugs, measure unbound drug or use a saturable-binding model; no fixed fraction, no albumin formula.
 :::
 ::::
-:::::
+:::::::::
 
 ::: notes
 Closing slide repeats the mapping images (assertion-evidence convention). Thank you; questions.
@@ -304,7 +308,7 @@ Closing slide repeats the mapping images (assertion-evidence convention). Thank 
 
 ## Backup: During renal replacement therapy, urine output and RRT intensity set the dose requirement {visibility="uncounted"}
 
-::: {.todo-fig}
+::: todo-fig
 **Figure to draw.** Redraw the meropenem or piperacillin dosing nomogram from Roberts 2025 (dose by urine output and RRT intensity; needs the full text and permission or a "redrawn from" statement), or the SMARRT trough distributions: troughs failed to reach the lower target in 4% (meropenem), 4% (piperacillin) and 55% (vancomycin), and failed to reach the higher target in 26%, 36% and 72%.
 :::
 
@@ -318,8 +322,8 @@ SMARRT (381 patients, 29 ICUs, 14 countries): 4- to 8-fold variability in dose, 
 
 ## Backup: In cirrhosis, creatinine-based equations overestimate GFR by about 20 mL/min when true GFR is below 60 {visibility="uncounted"}
 
-::: {.todo-fig}
-**Figure to draw.** Forest-style bias plot from Singapura 2021 (25 studies, n = 4,565): overestimate at measured GFR < 60: all equations +21.7 (17.7-25.7); CKD-EPI cystatin C +10.3 (2.1-18.4); GRAIL +12.6 (7.2-18.0) mL/min/1.73 m².
+::: todo-fig
+**Figure to draw.** Forest-style bias plot from Singapura 2021 (25 studies, n = 4,565): overestimate at measured GFR \< 60: all equations +21.7 (17.7-25.7); CKD-EPI cystatin C +10.3 (2.1-18.4); GRAIL +12.6 (7.2-18.0) mL/min/1.73 m².
 :::
 
 ::: aside
