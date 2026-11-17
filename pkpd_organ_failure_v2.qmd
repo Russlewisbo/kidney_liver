@@ -26,7 +26,8 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
      RRT nomogram now a main-deck slide in section 2. Section 3 has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
      Original contribution (section 3): the false precision of fixed protein binding and how it
      could alter breakpoints and target attainment in PK/PD analysis.
-     All main-deck figures are drawn; the two backup slides still carry "Figure to draw" boxes. -->
+     All main-deck figures are drawn; only the cirrhosis-GFR backup slide still carries a "Figure to draw" box
+     (needs the Singapura 2021 full text). -->
 ```
 
 ```{=html}
