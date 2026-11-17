@@ -73,7 +73,7 @@ p <- ggplot(d, aes(regimen, PTA, fill = regimen)) +
   scale_fill_manual(values = c(col_grey, col_blue, "#5fa8d3", col_navy), guide = "none") +
   scale_y_continuous(limits = c(0, 118), breaks = seq(0, 100, 50), expand = c(0, 0), labels = \(x) paste0(x, "%")) +
   labs(x = NULL, y = "Probability of target attainment (MIC 2 mg/L)",
-       title = "Continuous beats extended infusion only under the strictest target",
+       title = "Extended and continuous infusion separate only under the strictest target",
        subtitle = "Meropenem, every arm 3 g/day; 20,000 simulated patients per cell; model from Bastida 2020, variability assumed",
        caption = "At 50% fT>MIC all three prolonged regimens are equivalent. The gap at 100% fT>MIC is a TROUGH effect, not an infusion-mode effect:\nat the same daily dose, shortening the interval from q8h to q6h closes much of it. Published extended-vs-continuous comparisons\nthat use 50-60% fT>MIC, or q6h dosing, accordingly find little or no difference.") +
   theme_minimal(base_size = 16) +

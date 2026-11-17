@@ -341,7 +341,7 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 Closing slide repeats the mapping images (assertion-evidence convention). Thank you; questions.
 :::
 
-## Backup: continuous beats extended infusion only under the strictest target {visibility="uncounted"}
+## Backup: extended and continuous infusion are equivalent at 50% fT>MIC; they separate only under stricter targets {visibility="uncounted"}
 
 ![](figures/infusion_benefit_by_clearance.png){fig-align="center" height="540"}
 
