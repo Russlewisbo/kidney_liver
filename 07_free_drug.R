@@ -68,5 +68,5 @@ p <- ggplot() +
   coord_cartesian(xlim = c(-0.1, 10.1), ylim = c(-1.7, 5.9), expand = FALSE) +
   theme_void(base_family = "sans")
 
-ggsave("figures/free_drug.png", p, width = 11.2, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/free_drug.png", p, width = 11.2, height = 5.6, dpi = 300, bg = "white")
 message("Saved figures/free_drug.png")

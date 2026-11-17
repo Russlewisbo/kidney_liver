@@ -74,5 +74,5 @@ p <- ggplot(df, aes(x = match(dose, c(1000, 1500, 2000, 3000)), y = auc)) +
   )
 
 ggsave("figures/empirical_dosing.png", p,
-       width = 11.2, height = 5.6, dpi = 200, bg = "white")
+       width = 11.2, height = 5.6, dpi = 300, bg = "white")
 message("Saved figures/empirical_dosing.png")

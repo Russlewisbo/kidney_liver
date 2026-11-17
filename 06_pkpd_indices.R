@@ -74,5 +74,5 @@ p <- ggplot(df, aes(t, c)) +
   )
 
 ggsave("figures/pkpd_indices.png", p,
-       width = 11.2, height = 5.6, dpi = 200, bg = "white")
+       width = 11.2, height = 5.6, dpi = 300, bg = "white")
 message("Saved figures/pkpd_indices.png")

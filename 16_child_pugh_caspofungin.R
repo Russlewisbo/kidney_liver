@@ -60,4 +60,4 @@ p2 <- ggplot(m, aes(reg, pta, fill = kind)) +
   base_theme(16) + theme(panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 10.5, lineheight = 0.95))
 
 p <- p1 + p2 + plot_layout(widths = c(1, 1.45))
-ggsave("figures/child_pugh_caspofungin.png", p, width = 13.4, height = 5.9, dpi = 200, bg = "white")
+ggsave("figures/child_pugh_caspofungin.png", p, width = 13.4, height = 5.9, dpi = 300, bg = "white")

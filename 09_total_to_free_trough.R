@@ -44,4 +44,4 @@ p <- ggplot(df, aes(total)) +
   theme(panel.grid.minor = element_blank(),
         axis.title = element_text(face = "bold"), plot.margin = margin(10, 14, 8, 8))
 
-ggsave("figures/total_to_free_trough.png", p, width = 10.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/total_to_free_trough.png", p, width = 10.5, height = 5.6, dpi = 300, bg = "white")

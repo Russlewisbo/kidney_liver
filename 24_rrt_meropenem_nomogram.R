@@ -104,4 +104,4 @@ p <- ggplot(d, aes(col, intensity, fill = mid)) +
         plot.subtitle = element_text(color = col_dark, size = 12.5),
         plot.caption = element_text(hjust = 0, size = 12, color = col_red, lineheight = 1.0, margin = margin(t = 12)),
         plot.margin = margin(8, 10, 8, 8))
-ggsave("figures/rrt_meropenem_nomogram.png", p, width = 13, height = 6.8, dpi = 200, bg = "white")
+ggsave("figures/rrt_meropenem_nomogram.png", p, width = 13, height = 6.8, dpi = 300, bg = "white")

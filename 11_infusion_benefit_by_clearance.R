@@ -86,4 +86,4 @@ p <- ggplot(d, aes(regimen, PTA, fill = regimen)) +
         plot.subtitle = element_text(color = col_dark, size = 12),
         plot.caption = element_text(hjust = 0, size = 10.5, color = col_red, lineheight = 1.15, margin = margin(t = 10)),
         panel.spacing = unit(1.1, "lines"), plot.margin = margin(8, 10, 8, 8))
-ggsave("figures/infusion_benefit_by_clearance.png", p, width = 13, height = 7.2, dpi = 200, bg = "white")
+ggsave("figures/infusion_benefit_by_clearance.png", p, width = 13, height = 7.2, dpi = 300, bg = "white")

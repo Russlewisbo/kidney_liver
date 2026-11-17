@@ -65,5 +65,5 @@ p <- ggplot(df, aes(x = mean_cl, y = diff)) +
   )
 
 ggsave("figures/bland_altman_crcl.png", p,
-       width = 11.2, height = 4.9, dpi = 200, bg = "white")
+       width = 11.2, height = 4.9, dpi = 300, bg = "white")
 message("Saved figures/bland_altman_crcl.png")

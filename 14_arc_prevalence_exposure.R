@@ -36,4 +36,4 @@ p2 <- ggplot(exp, aes(grp, pct, fill = metric)) +
   base_theme(17) + theme(legend.position = "bottom", panel.grid.major.x = element_blank(),
                          axis.text.x = element_text(size = 13.5, lineheight = 0.9))
 p <- p1 + p2 + plot_layout(widths = c(1, 1.25))
-ggsave("figures/arc_prevalence_exposure.png", p, width = 12.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/arc_prevalence_exposure.png", p, width = 12.5, height = 5.6, dpi = 300, bg = "white")

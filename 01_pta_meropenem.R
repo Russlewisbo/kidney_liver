@@ -136,5 +136,5 @@ p <- ggplot(results, aes(x = MIC, y = PTA, color = Regimen, group = Regimen)) +
     axis.title = element_text(face = "bold")
   )
 
-ggsave("figures/pta_meropenem.png", p, width = 10, height = 5.5, dpi = 200, bg = "white")
+ggsave("figures/pta_meropenem.png", p, width = 10, height = 5.5, dpi = 300, bg = "white")
 message("Saved figures/pta_meropenem.png")

@@ -53,4 +53,4 @@ p <- ggplot(d, aes(arm, pct, fill = arm)) +
         axis.title.y = element_text(face = "bold", hjust = 0.35),
         panel.spacing = unit(1.6, "lines"), plot.margin = margin(8, 10, 8, 8))
 
-ggsave("figures/tdm_rct_target_attainment.png", p, width = 12.5, height = 5.8, dpi = 200, bg = "white")
+ggsave("figures/tdm_rct_target_attainment.png", p, width = 12.5, height = 5.8, dpi = 300, bg = "white")

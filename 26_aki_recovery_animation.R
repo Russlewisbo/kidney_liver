@@ -172,6 +172,6 @@ for (i in seq_along(frames)) {
   a <- frames[[i]]
   ggsave(sprintf("figures/aki_sim_%02d.png", i),
          make_frame(a$tmax, isTRUE(a$shade), isTRUE(a$comp), isTRUE(a$summary), isTRUE(a$hi)),
-         width = 12.5, height = 6.6, dpi = 200, bg = "white")
+         width = 12.5, height = 6.6, dpi = 300, bg = "white")
 }
 cat("frames written\n")

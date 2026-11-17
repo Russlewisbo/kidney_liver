@@ -52,4 +52,4 @@ p2 <- ggplot(ba, aes(y = eq)) +
        subtitle = "Bland-Altman values as printed in Fig. 2; mean 135.5 vs 135.7 (CG), R = 0.2") +
   base_theme(15) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 14, face = "bold", color = col_navy))
 p <- p1 + p2 + plot_layout(widths = c(1.05, 1))
-ggsave("figures/gfr_estimates_baptista.png", p, width = 13.5, height = 6.2, dpi = 200, bg = "white")
+ggsave("figures/gfr_estimates_baptista.png", p, width = 13.5, height = 6.2, dpi = 300, bg = "white")

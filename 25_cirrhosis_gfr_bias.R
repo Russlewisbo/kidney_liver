@@ -55,4 +55,4 @@ p <- ggplot(d, aes(est, eq, color = grp)) +
         plot.subtitle = element_text(color = col_dark, size = 12.5),
         plot.caption = element_text(hjust = 0, size = 12, color = col_red, lineheight = 1.05, margin = margin(t = 10)),
         plot.margin = margin(8, 10, 8, 8))
-ggsave("figures/cirrhosis_gfr_bias.png", p, width = 13.2, height = 6.4, dpi = 200, bg = "white")
+ggsave("figures/cirrhosis_gfr_bias.png", p, width = 13.2, height = 6.4, dpi = 300, bg = "white")

@@ -60,5 +60,5 @@ p <- ggplot(df, aes(x = condition, y = prev, fill = population)) +
   )
 
 ggsave("figures/prevalence.png", p,
-       width = 11.2, height = 4.9, dpi = 200, bg = "white")
+       width = 11.2, height = 4.9, dpi = 300, bg = "white")
 message("Saved figures/prevalence.png")

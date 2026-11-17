@@ -31,4 +31,4 @@ p <- ggplot(d, aes(y = grp)) +
        caption = "Time course (Payne 2017, 135 cases): onset a median of 4 days (IQR 2-6) after starting cefepime - late enough to be blamed on\nthe sepsis - and improvement a median of 2 days (IQR 1-3) after stopping it. One in four cases occurred on renally appropriate doses.") +
   base_theme(17) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 15, lineheight = 0.9, color = col_dark),
                          plot.caption = element_text(hjust = 0, size = 11.5, color = col_red, lineheight = 1.1, margin = margin(t = 10)))
-ggsave("figures/cefepime_neurotoxicity.png", p, width = 13, height = 5.9, dpi = 200, bg = "white")
+ggsave("figures/cefepime_neurotoxicity.png", p, width = 13, height = 5.9, dpi = 300, bg = "white")

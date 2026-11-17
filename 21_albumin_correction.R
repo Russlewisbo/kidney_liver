@@ -49,4 +49,4 @@ p2 <- ggplot(ph, aes(pred, r2)) +
        subtitle = "Cheng 2016; Parikh 2018") +
   base_theme(16) + theme(panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 12.5, lineheight = 0.9))
 p <- p1 + p2 + plot_layout(widths = c(1.3, 1))
-ggsave("figures/albumin_correction.png", p, width = 13, height = 5.8, dpi = 200, bg = "white")
+ggsave("figures/albumin_correction.png", p, width = 13, height = 5.8, dpi = 300, bg = "white")

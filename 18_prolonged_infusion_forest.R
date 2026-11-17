@@ -55,4 +55,4 @@ pb <- ggplot(sim, aes(group, PTA, fill = short)) +
                          panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 9.5, lineheight = 0.9))
 
 p <- pa + pb + plot_layout(widths = c(1.8, 1))
-ggsave("figures/prolonged_infusion_forest.png", p, width = 13.5, height = 5.8, dpi = 200, bg = "white")
+ggsave("figures/prolonged_infusion_forest.png", p, width = 13.5, height = 5.8, dpi = 300, bg = "white")

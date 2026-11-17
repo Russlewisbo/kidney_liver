@@ -35,4 +35,4 @@ p <- ggplot() +
   scale_x_continuous(limits = c(-0.1, 13.8), expand = c(0, 0)) +
   scale_y_continuous(limits = c(0.4, max(tab$row) + 1.5), expand = c(0, 0)) +
   theme_void() + theme(plot.margin = margin(6, 8, 6, 8))
-ggsave("figures/hepatic_adjustment_table.png", p, width = 14, height = 5.2, dpi = 200, bg = "white")
+ggsave("figures/hepatic_adjustment_table.png", p, width = 14, height = 5.2, dpi = 300, bg = "white")

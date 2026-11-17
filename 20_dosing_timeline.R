@@ -31,4 +31,4 @@ p <- ggplot() +
   theme_minimal(base_size = 17) +
   theme(panel.grid = element_blank(), axis.text.y = element_blank(), axis.text.x = element_text(size = 14, color = col_dark, face = "bold"),
         axis.title.x = element_text(size = 14, color = col_dark), plot.margin = margin(8, 10, 8, 8))
-ggsave("figures/dosing_timeline.png", p, width = 13, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/dosing_timeline.png", p, width = 13, height = 5.6, dpi = 300, bg = "white")

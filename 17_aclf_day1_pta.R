@@ -30,4 +30,4 @@ p <- ggplot(d, aes(regimen, pta, fill = grp)) +
        subtitle = "Meropenem on continuous haemodialysis; 19 patients, 8 with ACLF (Grensemann 2020)") +
   base_theme(17) + theme(legend.position = "bottom", panel.grid.major.x = element_blank(),
                          axis.text.x = element_text(size = 15, lineheight = 0.9))
-ggsave("figures/aclf_day1_pta.png", p, width = 12.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/aclf_day1_pta.png", p, width = 12.5, height = 5.6, dpi = 300, bg = "white")

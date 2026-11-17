@@ -36,4 +36,4 @@ p2 <- ggplot(aki, aes(pct, site)) +
   base_theme(17) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 15, color = col_dark))
 
 p <- p1 + p2 + plot_layout(widths = c(1, 1.15))
-ggsave("figures/aki_resolution.png", p, width = 12.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/aki_resolution.png", p, width = 12.5, height = 5.6, dpi = 300, bg = "white")

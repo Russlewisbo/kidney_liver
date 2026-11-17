@@ -60,4 +60,4 @@ p <- ggplot() +
         axis.title.x = element_text(hjust = 0.34, face = "bold"),
         plot.margin = margin(8, 8, 8, 8))
 
-ggsave("figures/unbound_fraction_range.png", p, width = 12.5, height = 5.6, dpi = 200, bg = "white")
+ggsave("figures/unbound_fraction_range.png", p, width = 12.5, height = 5.6, dpi = 300, bg = "white")

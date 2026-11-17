@@ -53,4 +53,4 @@ pb <- ggplot(fo, aes(hr, study)) +
   base_theme(16) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 12.5, lineheight = 0.9, color = col_dark))
 
 p <- pa + pb + plot_layout(widths = c(1.5, 1))
-ggsave("figures/early_dose_reduction.png", p, width = 13, height = 6, dpi = 200, bg = "white")
+ggsave("figures/early_dose_reduction.png", p, width = 13, height = 6, dpi = 300, bg = "white")

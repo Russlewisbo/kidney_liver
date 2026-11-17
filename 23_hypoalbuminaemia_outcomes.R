@@ -70,4 +70,4 @@ pb <- ggplot(pc, aes(study, pct, fill = grp)) +
        subtitle = "Outcome = treatment failure, except Gavaghan (30-day death); retrospective, two are conference abstracts") +
   base_theme(15) + theme(legend.position = "bottom", panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 11.5, lineheight = 0.9))
 p <- free(pa) / free(pb) + plot_layout(heights = c(1, 1.05))
-ggsave("figures/hypoalbuminaemia_outcomes.png", p, width = 13.5, height = 9.2, dpi = 200, bg = "white")
+ggsave("figures/hypoalbuminaemia_outcomes.png", p, width = 13.5, height = 9.2, dpi = 300, bg = "white")
