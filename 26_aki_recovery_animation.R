@@ -10,8 +10,10 @@
 #
 # MECHANISTIC SIMULATION OF ONE PATIENT - not data, no variability.
 # Three coupled models, all deterministic:
-#  (1) Kidney. Measured creatinine clearance rises 20 -> 160 mL/min, logistic,
-#      half-recovery at 24 h. ASSUMED BY ME. The 160 plateau is augmented renal
+#  (1) Kidney. Measured creatinine clearance rises 20 -> 190 mL/min, logistic,
+#      half-recovery at 22 h, most of it between hours 16 and 28 - the abrupt
+#      return of urine output when septic shock reverses. ASSUMED BY ME. The 190
+#      plateau is augmented renal
 #      clearance (CrCl >= 130), reported in ~4 of 10 ICU patients - the deck's
 #      own ARC slide - and favoured by the hyperdynamic circulation of cirrhosis.
 #  (2) Creatinine. One compartment, V = 42 L (0.6 x 70 kg), constant production
@@ -40,15 +42,28 @@ base_theme <- function(bs = 17) theme_minimal(base_size = bs) +
 
 V <- 28.2; CL_nr <- 2.4; slope <- (8.35 - CL_nr)/70; MIC <- 2; MIC4 <- 8
 plateau <- 190
-crcl <- function(t) 20 + (plateau - 20)/(1 + exp(-(t - 24)/5))
+crcl <- function(t) 20 + (plateau - 20)/(1 + exp(-(t - 22)/2.5))
 CLt  <- function(t) CL_nr + slope * crcl(t)
 CG   <- function(cr_mgdl) (140 - 58) * 70 / (72 * cr_mgdl)
 
 dt <- 0.001; tg <- seq(0, 48, by = dt)
 # ---- creatinine kinetics ----------------------------------------------------
-Vcr <- 42; Pcr <- 50
+# One pool, but sized to THIS patient rather than to a textbook 70 kg man.
+# Creatinine distributes in total body water: 0.6 x 70 kg = 42 L lean, and this
+# patient has been resuscitated for septic shock and has ascites, so the pool is
+# taken as 55 L. Production is constant at 50 mg/h, set so that a clearance of
+# 100 mL/min returns her stated baseline of 0.8 mg/dL.
+# The consequence, and the point of the slide: the plasma level can only approach
+# its new steady state with a half-life of V/CL x ln2, which is 11 h while the
+# clearance is still 60 mL/min and 2.3 h once it reaches 190. The creatinine
+# therefore reports a change in GFR late, and reports it later the sicker the
+# kidney still is. Daily sampling (0, 24, 48 h) does the rest.
+Vcr <- 55; Pcr <- 50
 Cr <- numeric(length(tg)); Cr[1] <- 21      # mg/L = 2.1 mg/dL
 for (i in 2:length(tg)) Cr[i] <- Cr[i-1] + dt * (Pcr - 0.06 * crcl(tg[i-1]) * Cr[i-1]) / Vcr
+cat(sprintf("Creatinine pool half-life: %.1f h at CrCl 60, %.1f h at the %.0f plateau\n",
+            log(2)*Vcr/(0.06*60), log(2)*Vcr/(0.06*plateau), plateau))
+
 # ---- meropenem --------------------------------------------------------------
 rate_fun <- function(t, starts, dose, tinf) {
   r <- numeric(length(t)); for (s in starts) r <- r + ifelse(t >= s & t < s + tinf, dose/tinf, 0); r
@@ -105,8 +120,6 @@ make_frame <- function(tmax, shade = FALSE, comp = FALSE, summary = FALSE, hi = 
     if (nrow(bel)) p1 <- p1 + geom_ribbon(data = bel, aes(x = t, ymin = pmax(table_dose, 0.25), ymax = MIC),
                                           fill = col_red, alpha = 0.30)
   }
-  if (hi)   p1 <- p1 + geom_line(aes(y = hidose), color = col_navy, linewidth = 1.25, linetype = "22")
-  if (comp) p1 <- p1 + geom_line(aes(y = fix), color = col_blue, linewidth = 1.25)
   p1 <- p1 + geom_line(aes(y = table_dose), color = col_red, linewidth = 1.25) +
     scale_y_log10(limits = c(0.25, 190), breaks = c(0.5, 1, 2, 5, 10, 20, 50, 100),
                   labels = c("0.5", "1", "2", "5", "10", "20", "50", "100")) +
@@ -125,14 +138,6 @@ make_frame <- function(tmax, shade = FALSE, comp = FALSE, summary = FALSE, hi = 
   p1 <- p1 + annotate("label", x = 0.3, y = 0.33, hjust = 0, size = 4.6, fontface = "bold", color = col_red,
                       fill = "white", label.r = unit(0, "pt"),
                       label = "Renal-dosing table: 1 g q12h, fixed on the admission creatinine (2 g/day)")
-  if (comp) p1 <- p1 +
-    annotate("label", x = 0.3, y = 0.62, hjust = 0, size = 4.6, fontface = "bold", color = col_blue,
-             fill = "white", label.r = unit(0, "pt"),
-             label = sprintf("The same gram, q8h over 3 h (3 g/day): %.0f%%", 100*last24(C_fix, MIC)))
-  if (hi) p1 <- p1 +
-    annotate("label", x = 0.3, y = 1.16, hjust = 0, size = 4.6, fontface = "bold", color = col_navy,
-             fill = "white", label.r = unit(0, "pt"),
-             label = sprintf("2 g q8h over 3 h (6 g/day): %.0f%%", 100*last24(C_hi, MIC)))
 
   klab <- labs_daily |> filter(t <= tmax + 1e-6)
   p2 <- ggplot(dd, aes(t)) +
@@ -162,9 +167,7 @@ make_frame <- function(tmax, shade = FALSE, comp = FALSE, summary = FALSE, hi = 
 }
 
 frames <- list(list(tmax = 12), list(tmax = 24), list(tmax = 36), list(tmax = 48),
-               list(tmax = 48, shade = TRUE), list(tmax = 48, shade = TRUE, summary = TRUE),
-               list(tmax = 48, shade = TRUE, summary = TRUE, comp = TRUE),
-               list(tmax = 48, shade = TRUE, summary = TRUE, comp = TRUE, hi = TRUE))
+               list(tmax = 48, shade = TRUE), list(tmax = 48, shade = TRUE, summary = TRUE))
 for (i in seq_along(frames)) {
   a <- frames[[i]]
   ggsave(sprintf("figures/aki_sim_%02d.png", i),
