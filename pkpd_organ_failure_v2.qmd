@@ -23,7 +23,7 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
      (deck-level override of the theme's centred 1.6em h2). Sources sit in ::: aside, as in l02.
      Figures: scripts 08-21 write figures/*.png; every plotted number is a published summary statistic
      except the labelled simulation inset on the prolonged-infusion slide (script 11/18).
-     Section 3 now has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
+     RRT nomogram now a main-deck slide in section 2. Section 3 has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
      Original contribution (section 3): the false precision of fixed protein binding and how it
      could alter breakpoints and target attainment in PK/PD analysis.
      All main-deck figures are drawn; the two backup slides still carry "Figure to draw" boxes. -->
@@ -189,6 +189,18 @@ ACLF on CVVHD: [@grensemann2020]. Decompensated cirrhosis: [@bastida2020]. Outco
 This slide carries the loading-dose message. Grensemann 2020: 19 patients on continuous haemodialysis, 8 with ACLF; peripheral volume 38.6 vs 19.7 L (P = 0.05); Monte Carlo simulation from a small cohort. Day-1 PTA for 100% fT \> 8 mg/L: 18% vs 48% with 1 g q8h short infusion; 94% vs 91% with a 2 g loading dose plus 1 g q8h prolonged infusion. Bastida 2020 (n = 54): ACLF affected V; creatinine clearance and MELD affected clearance. Bartoletti 2019 (n = 119, observational): continuous/extended infusion 30-day mortality 16% vs 36%; adjusted HR 0.41. Our patient: Child-Pugh B with ascites and low albumin, so a full loading dose regardless of the creatinine.
 :::
 
+## During renal replacement therapy, urine output and RRT intensity set the dose — and most patients receive more
+
+![](figures/rrt_meropenem_nomogram.png){fig-align="center" height="560"}
+
+::: aside
+Redrawn from [@roberts2025], Table 2 (open access, CC BY): doses transcribed, merged cells expanded to the intensities they cover. Observational PK data: [@roberts2021]. Vancomycin equivalent: [@ulldemolins2026]
+:::
+
+::: notes
+SMARRT, 300 patients, 22 ICUs, 12 countries; population PK models externally validated (mean prediction error -5.2% for meropenem), then Monte Carlo simulation. Read the grid: only two variables move the dose - urine output and RRT intensity - and only when you aim at the higher target. For the standard target (unbound steady state >= 2 mg/L, i.e. 100% fT>MIC and 4xMIC for Enterobacterales) the answer is 1-1.5 g/day by continuous infusion in EVERY cell. The higher target (>= 4-8 mg/L, empirical or 4xMIC for Pseudomonas) needs 2 g if anuric on CRRT, 3 g once urine output reaches 500 mL/24 h or SLED is long and intense, up to 3-4 g. All after a 1 g loading dose over 30 min; all as continuous infusion, which in every simulated scenario reached target with a LOWER daily dose than short infusion. The message for an ICU audience is the red line: the median dose actually prescribed in this cohort was 3 g/day, 18.5% had troughs above 20 mg/L and 1.5% above the 45 mg/L toxicity threshold, while only 1.3% were below the breakpoint. On RRT the risk has inverted - these patients are over-exposed, not under-exposed. Caveats: observational PK, no clinical outcomes, and the authors note the toxicity thresholds come from retrospective data. The piperacillin/tazobactam nomogram is Table 3 of the same paper (6/0.75 g-8/1 g per day CI standard; up to 16/2 g for the higher target). Earlier SMARRT report (Roberts 2021) gives the trough distributions: failure to reach the lower target in 4% meropenem, 4% piperacillin, 55% vancomycin; the higher target in 26%, 36% and 72%.
+:::
+
 ## Creatinine-based equations get the average right and the individual patient wrong in critical illness
 
 ![](figures/gfr_estimates_baptista.png){fig-align="center" width="980"}
@@ -317,20 +329,6 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 
 ::: notes
 Closing slide repeats the mapping images (assertion-evidence convention). Thank you; questions.
-:::
-
-## Backup: During renal replacement therapy, urine output and RRT intensity set the dose requirement {visibility="uncounted"}
-
-::: todo-fig
-**Figure to draw.** Redraw the meropenem or piperacillin dosing nomogram from Roberts 2025 (dose by urine output and RRT intensity; needs the full text and permission or a "redrawn from" statement), or the SMARRT trough distributions: troughs failed to reach the lower target in 4% (meropenem), 4% (piperacillin) and 55% (vancomycin), and failed to reach the higher target in 26%, 36% and 72%.
-:::
-
-::: aside
-SMARRT observational data: [@roberts2021]. Dosing regimens: [@roberts2025; @ulldemolins2026]
-:::
-
-::: notes
-SMARRT (381 patients, 29 ICUs, 14 countries): 4- to 8-fold variability in dose, RRT prescription and residual renal function; median estimated total renal clearance 50 mL/min (IQR 35-65). Roberts 2025 (300 patients, 22 ICUs, 12 countries): requirements depend on urine output and RRT intensity and duration; extended or continuous infusion reached targets with lower daily doses. Ulldemolins 2026 (vancomycin, 65 patients): body weight and RRT intensity and duration drive requirements.
 :::
 
 ## Backup: In cirrhosis, creatinine-based equations overestimate GFR by about 20 mL/min when true GFR is below 60 {visibility="uncounted"}
