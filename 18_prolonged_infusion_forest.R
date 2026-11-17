@@ -37,8 +37,10 @@ pa <- ggplot(fo, aes(est, study, color = type)) +
 sim <- read.csv("figures/infusion_benefit_by_clearance.csv") |>
   filter(target == "100% fT>MIC") |>
   mutate(stratum = factor(sub("\n.*", "", stratum), c("Typical CL", "High CL")),
-         regimen = factor(regimen, unique(regimen)),
-         short = factor(sub("\n.*", "", regimen), unique(sub("\n.*", "", regimen))))
+         short = recode(gsub("\n", " ", regimen),
+                        "1 g q8h 0.5 h" = "q8h bolus", "1 g q8h 3 h" = "q8h, 3-h",
+                        "0.75 g q6h 3 h" = "q6h, 3-h", "3 g/24 h continuous" = "continuous"),
+         short = factor(short, c("q8h bolus", "q8h, 3-h", "q6h, 3-h", "continuous")))
 pb <- ggplot(sim, aes(stratum, PTA, fill = short)) +
   geom_col(position = position_dodge(0.8), width = 0.72) +
   scale_fill_manual(values = c(col_grey, col_blue, "#5fa8d3", col_navy), name = NULL) +
