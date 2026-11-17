@@ -23,6 +23,7 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
      (deck-level override of the theme's centred 1.6em h2). Sources sit in ::: aside, as in l02.
      Figures: scripts 08-21 write figures/*.png; every plotted number is a published summary statistic
      except the labelled simulation inset on the prolonged-infusion slide (script 11/18).
+     Section 3 now has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
      Original contribution (section 3): the false precision of fixed protein binding and how it
      could alter breakpoints and target attainment in PK/PD analysis.
      All main-deck figures are drawn; the two backup slides still carry "Figure to draw" boxes. -->
@@ -212,7 +213,7 @@ Prevalence: [@hefny2022; @udy2014]. Exposure: [@udy2012; @abdulla2020; @wong2018
 Udy 2012 (n = 52): trough \>= MIC in only 58% overall; CrCl \>= 130 associated with trough \< MIC in 82% and \< 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT\>MIC(ECOFF); eGFR \>= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT\>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
 :::
 
-## TDM-guided dosing raised target attainment in two of three randomised trials but improved no clinical outcome
+## TDM-guided dosing raised target attainment in two of three randomised trials but did not improve clinical outcomes
 
 ![](figures/tdm_rct_target_attainment.png){fig-align="center" width="950"}
 
@@ -248,6 +249,18 @@ Arithmetic on published values: [@schleibinger2015; @gijsen2021]. Bias in popula
 
 ::: notes
 The original angle of the talk. At a total trough of 20 mg/L the assumed 10% gives 2.0 mg/L free (below a 4 mg/L target); the ICU-measured fraction gives 6.6 mg/L (IQR 4.0-8.9). Toutain 2023: scaling total concentrations by a single fu biases PTA and underestimates the PK/PD cutoff, because total concentrations are more variable than free ones. Heffernan 2022: albumin \<= 20 g/L lowered ceftriaxone PTA by up to 20%; binding is saturable, so the band understates the spread at high totals. Jager 2020: flucloxacillin binding is non-linear; dose on unbound concentrations.
+:::
+
+## Cohorts link hypoalbuminaemia to failure of ertapenem and ceftriaxone; only one had a low-binding comparator
+
+![](figures/hypoalbuminaemia_outcomes.png){fig-align="center" height="560"}
+
+::: aside
+Adjusted estimates: [@zusman2015; @baalbaki2022; @shah2025; @shah2026]. Crude cohorts: [@steere2023; @arensman2024; @gavaghan2022; @chung2026]; drug comparison [@vandorf2024]. Review: [@acbo2025]. Guidance: [@idsa2024]
+:::
+
+::: notes
+Answer to the question "is there outcome evidence?": yes, consistently in one direction, and almost all of it confounded. Albumin is one of the strongest prognostic markers in hospital medicine, so every cohort compares sick with sicker. Zusman 2015 is the exception that proves the point: prospective, 279 patients, the association between hypoalbuminaemia and 30-day death was OR 4.6 (2.1-10.1) with ertapenem and 1.2 (0.5-2.7) with imipenem or meropenem in the same cohort (P = 0.02 for the interaction). That design has not been repeated. Against it: Shah 2026 finds the same slower sterilisation with cefazolin, which is less bound and given q8h; Moser 2021 (measured unbound flucloxacillin) found the deaths among patients with HIGH free concentrations (14.8 vs 1.7 mg/L). The pharmacology (Benet and Hoener 2002; Gandia 2023) predicts exactly this: average unbound exposure is preserved when albumin falls; what changes is the trough, which matters for once-daily time-dependent drugs - ertapenem 1 g and ceftriaxone 1 g - and far less for q6h or continuous dosing. Ackerman 2020: 2 g ceftriaxone removed the excess failure in the hypoalbuminaemic subgroup (30.4% vs 9.7%). IDSA 2024 prefers meropenem over ertapenem in hypoalbuminaemic critically ill patients on this evidence. No outcome study measured unbound drug; that is the study still to be done. Full table: hypoalbuminaemia_outcomes_evidence_table.md in the repo.
 :::
 
 ## An albumin correction of the phenytoin type fails for β-lactams, and performs poorly even for phenytoin in the ICU
