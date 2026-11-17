@@ -26,8 +26,7 @@ csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
      RRT nomogram now a main-deck slide in section 2. Section 3 has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
      Original contribution (section 3): the false precision of fixed protein binding and how it
      could alter breakpoints and target attainment in PK/PD analysis.
-     All main-deck figures are drawn; only the cirrhosis-GFR backup slide still carries a "Figure to draw" box
-     (needs the Singapura 2021 full text). -->
+     Every slide carries a finished figure; no "Figure to draw" placeholders remain. -->
 ```
 
 ```{=html}
@@ -214,6 +213,18 @@ Redrawn from [@baptista2014]: Fig. 3 medians digitised from the published chart 
 Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary clearances; 12 nested cut-off subgroups): no difference in means (8-h CrCl 135.5 vs CG 135.7), but R = 0.2 and all equations underestimated when measured CrCl \>120 and overestimated when \<120. Carlier 2015 (inulin reference, n = 68): creatinine equations biased and imprecise; measured urinary CrCl overestimated GFR; cystatin C equations unbiased but still imprecise. Barreto 2023: eGFRcr-cysC was the best predictor of cefepime clearance (n = 120). Hanna 2023 (n = 1,869 cancer patients): eGFRcys \>30% lower than eGFRcr in 29%; vancomycin \>30 mg/L 24% vs 9%, adjusted OR 2.59 (1.08-7.03). Present measured CrCl and cystatin C as better, not as the answer.
 :::
 
+## In cirrhosis, creatinine-based equations overestimate GFR by about 20 mL/min once true GFR falls below 60
+
+![](figures/cirrhosis_gfr_bias.png){fig-align="center" height="560"}
+
+::: aside
+Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the <60 subset is 6 studies, 467 patients). Consensus definitions of HRS-AKI: [@nadim2024]
+:::
+
+::: notes
+The liver counterpart of the creatinine-equation slide in this section, and the place where narrow-index drugs get overdosed. Singapura 2021: across all levels of GFR, creatinine-based equations overestimate (SMD 0.51), cystatin C-based equations underestimate (SMD -0.3), and the combined creatinine-cystatin C equation is least biased (-3.6 mL/min/1.73 m2) but imprecise. The clinically important subset is measured GFR below 60, where decisions about dosing and about simultaneous liver-kidney transplantation are made: every equation overestimated, pooled +21.7 (17.7-25.7). The least biased were CKD-EPI cystatin C +10.3 and GRAIL +12.6, but GRAIL was evaluated in a single study and the confidence intervals overlap, so do not present any equation as the solution. Say the consequence aloud: a true GFR of 30 is reported as about 50, and that is the number a nomogram or a pharmacy system uses to pick an aminoglycoside or vancomycin dose. Ascites alone adds about +8.3. Practical line: in decompensated cirrhosis with suspected kidney dysfunction, measure - urinary creatinine clearance or cystatin C - rather than trusting a creatinine equation, and use HRS-AKI terminology from the 2024 ADQI-ICA consensus.
+:::
+
 ## Four in ten ICU patients have augmented renal clearance, which predicts sub-MIC β-lactam troughs
 
 ![](figures/arc_prevalence_exposure.png){fig-align="center" width="950"}
@@ -330,20 +341,6 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 
 ::: notes
 Closing slide repeats the mapping images (assertion-evidence convention). Thank you; questions.
-:::
-
-## Backup: In cirrhosis, creatinine-based equations overestimate GFR by about 20 mL/min when true GFR is below 60 {visibility="uncounted"}
-
-::: todo-fig
-**Figure to draw.** Forest-style bias plot from Singapura 2021 (25 studies, n = 4,565): overestimate at measured GFR \< 60: all equations +21.7 (17.7-25.7); CKD-EPI cystatin C +10.3 (2.1-18.4); GRAIL +12.6 (7.2-18.0) mL/min/1.73 m².
-:::
-
-::: aside
-Meta-analysis: [@singapura2021]. Consensus definitions: [@nadim2024]
-:::
-
-::: notes
-This is where renally cleared, narrow-index drugs (aminoglycosides, vancomycin) are overdosed. Singapura 2021: creatinine equations overestimate (SMD 0.51), cystatin C equations underestimate (SMD -0.3), combined equations least biased. Use HRS-AKI terminology from the 2024 ADQI-ICA consensus.
 :::
 
 ## References {.smaller visibility="uncounted"}
