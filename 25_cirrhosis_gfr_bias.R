@@ -45,9 +45,9 @@ p <- ggplot(d, aes(est, eq, color = grp)) +
   scale_y_discrete(expand = expansion(add = c(0.75, 0.6))) +
   coord_cartesian(clip = "off") +
   labs(x = "Bias vs measured GFR (mL/min/1.73 m\u00b2); positive = overestimates kidney function", y = NULL,
-       title = "When true GFR is below 60, every equation reads about 20 mL/min too high",
+       title = "When true GFR is below 60, every equation overestimates it - by 10 to 22 mL/min",
        subtitle = "Cirrhosis; meta-analysis of 25 studies, 4,565 patients (Singapura 2021). Subgroup: measured GFR 22.6-56.8",
-       caption = "Consequence at the bedside: a patient whose true GFR is 30 is reported at about 50, and the dose of a renally cleared,\nnarrow-index drug (aminoglycoside, vancomycin) is set from the higher number.") +
+       caption = "Consequence at the bedside: a patient whose true GFR is 30 is reported as 40 to 52 depending on the equation,\nand the dose of a renally cleared, narrow-index drug (aminoglycoside, vancomycin) is set from the higher number.") +
   theme_minimal(base_size = 17) +
   theme(panel.grid.minor = element_blank(), panel.grid.major.y = element_blank(),
         axis.text.y = element_text(size = 12, color = col_navy, lineheight = 1.15, hjust = 1),
