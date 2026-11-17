@@ -78,6 +78,29 @@ Admission AKI and 48-h resolution: [@crass2019]. AKI in 57.3% of ICU patients: [
 Hook. Dose-adjustment tables come from stable chronic kidney disease; our patients have unstable kidney function. Crass 2019 abstract: AKI on admission in 27.1% (pneumonia), 19.5% (intra-abdominal), 20.0% (urinary), 9.7% (skin); resolved by 48 h in 57.2%. AKI-EPI: 1032 of 1802 ICU patients (57.3%, 95% CI 55.0-59.6) had AKI. In cirrhosis with septic shock, renal dysfunction was present in 71.5% vs 54.8% without cirrhosis (Galbois 2014). Introduce the patient: we come back to her at 48 h.
 :::
 
+
+## Change the interval when the urine returns, not when the creatinine falls: held at 1 g q12h, she ends the second day at 38% fT\>MIC
+
+::: r-stack
+![](figures/aki_sim_01.png){width="980"}
+
+![](figures/aki_sim_02.png){.fragment width="980"}
+
+![](figures/aki_sim_03.png){.fragment width="980"}
+
+![](figures/aki_sim_04.png){.fragment width="980"}
+
+![](figures/aki_sim_05.png){.fragment width="980"}
+
+![](figures/aki_sim_06.png){.fragment width="980"}
+:::
+
+<br> <br>
+
+::: aside
+Mechanistic simulation of the patient introduced at the start, not data. Meropenem model V 28.2 L, typical CL 8.35 L/h: [@bastida2020]. The recovery trajectory and the creatinine pool are assumed; timing of resolution [@crass2019], ARC prevalence [@hefny2022; @udy2014]. MIC 2 mg/L (EUCAST breakpoint); meropenem is \~2% bound, so unbound = total
+:::
+
 ## Reducing β-lactam doses for kidney injury in the first 24–48 hours is associated with worse outcomes
 
 ![](figures/early_dose_reduction.png){fig-align="center" width="950"}
@@ -266,7 +289,7 @@ The question every pharmacist asks: why not a Sheiner-Tozer correction, as taugh
 
 ## Change the interval when the urine returns, not when the creatinine falls: held at 1 g q12h, she ends the second day at 38% fT\>MIC
 
-::: {.r-stack}
+::: r-stack
 ![](figures/aki_sim_01.png){width="980"}
 
 ![](figures/aki_sim_02.png){.fragment width="980"}

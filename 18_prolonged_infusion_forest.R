@@ -4,7 +4,7 @@
 #   BLING III Dulhunty 2024, JAMA        n = 7,031 90-day mortality  OR 0.91 (0.81-1.01), P = 0.08
 #   Meta-analysis Abdul-Aziz 2024, JAMA  18 RCTs, n = 9,108, 90-day mortality RR 0.86 (95 % CrI 0.72-0.98)
 #   Focused update Hong 2026, Pharmacotherapy  28 RCTs, mortality RR 0.91 (0.85-0.97)
-# Inset: mechanistic simulation at MIC 2 mg/L from 11_infusion_benefit_by_clearance.R
+# Inset (50% fT>MIC both strata; 100% fT>MIC high CL): mechanistic simulation at MIC 2 mg/L from 11_infusion_benefit_by_clearance.R
 # (structural model Bastida 2020; variability and strata assumed) - clearly labelled.
 # =============================================================================
 suppressPackageStartupMessages({library(dplyr); library(ggplot2); library(patchwork)})
@@ -35,22 +35,24 @@ pa <- ggplot(fo, aes(est, study, color = type)) +
   base_theme(16) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 12.5, color = col_navy, lineheight = 0.9, hjust = 1))
 
 sim <- read.csv("figures/infusion_benefit_by_clearance.csv") |>
-  filter(target == "100% fT>MIC") |>
-  mutate(stratum = factor(sub("\n.*", "", stratum), c("Typical CL", "High CL")),
+  mutate(cl = sub("\n.*", "", stratum)) |>
+  filter((target == "50% fT>MIC") | (target == "100% fT>MIC" & cl == "High CL")) |>
+  mutate(group = factor(paste0(cl, "\n", target),
+                        c("Typical CL\n50% fT>MIC", "High CL\n50% fT>MIC", "High CL\n100% fT>MIC")),
          short = recode(gsub("\n", " ", regimen),
                         "1 g q8h 0.5 h" = "q8h bolus", "1 g q8h 3 h" = "q8h, 3-h",
                         "0.75 g q6h 3 h" = "q6h, 3-h", "3 g/24 h continuous" = "continuous"),
          short = factor(short, c("q8h bolus", "q8h, 3-h", "q6h, 3-h", "continuous")))
-pb <- ggplot(sim, aes(stratum, PTA, fill = short)) +
+pb <- ggplot(sim, aes(group, PTA, fill = short)) +
   geom_col(position = position_dodge(0.8), width = 0.72) +
   scale_fill_manual(values = c(col_grey, col_blue, "#5fa8d3", col_navy), name = NULL) +
   scale_y_continuous(limits = c(0, 105), breaks = seq(0, 100, 50), expand = c(0, 0), labels = \(x) paste0(x, "%")) +
-  labs(x = NULL, y = "P(100% fT>MIC), MIC 2 mg/L",
+  labs(x = NULL, y = "Target attainment, MIC 2 mg/L",
        title = "Why heterogeneous? (simulation)",
-       subtitle = "All arms 3 g/day; the gap is a trough\neffect and shrinks at q6h or at 50% fT>MIC") +
+       subtitle = "All arms 3 g/day; the arms separate only\nat the strict 100% fT>MIC target") +
   base_theme(14) + theme(legend.position = "bottom", legend.text = element_text(size = 9.5),
                          legend.key.size = unit(0.8, "lines"), plot.margin = margin(8, 22, 8, 4),
-                         panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 11.5))
+                         panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 9.5, lineheight = 0.9))
 
 p <- pa + pb + plot_layout(widths = c(1.8, 1))
 ggsave("figures/prolonged_infusion_forest.png", p, width = 13.5, height = 5.8, dpi = 200, bg = "white")
