@@ -17,7 +17,7 @@ lightbox: true
 csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
 ---
 
-# Optimizing antimicrobial therapy <br> in patients with liver and kidney dysfunction {.light-text background-color="#b20e10"}
+# Optimizing antimicrobial therapy <br> in patients with liver and kidney dysfunction {.light-text background-color="#b20e10" background-image="figures/icu_pt.png" background-opacity="0.2" background-size="cover"}
 
 <center>
 
@@ -215,7 +215,7 @@ Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary cl
 
 ## In cirrhosis, every GFR equation overestimates once the true value falls below 60 — by 10 to 22 mL/min
 
-![](figures/cirrhosis_gfr_bias.png){fig-align="center" width="650" height="560"}
+![](figures/cirrhosis_gfr_bias.png){fig-align="center" width="950"}
 
 ::: aside
 Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the \<60 subset is 6 studies, 467 patients). Consensus definitions of HRS-AKI: [@nadim2024]
