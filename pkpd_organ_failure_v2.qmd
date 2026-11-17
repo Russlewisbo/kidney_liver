@@ -64,7 +64,7 @@ Mapping slide. The same three images return at the end. Each section opens with 
 
 ## More than half of the acute kidney injury present when infection is diagnosed resolves within 48 hours
 
-::: vignette
+::: callout
 **Hypothetical patient.** 58-year-old, alcohol-related cirrhosis (Child-Pugh B, albumin 22 g/L), septic shock from secondary peritonitis. Creatinine 2.1 mg/dL (baseline 0.8), no urine for 6 h. Meropenem is ordered; the renal-dosing table proposes 1 g q12h.
 :::
 
@@ -180,7 +180,7 @@ Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary cl
 
 ## In cirrhosis, every GFR equation overestimates once the true value falls below 60 — by 10 to 22 mL/min
 
-![](figures/cirrhosis_gfr_bias.png){fig-align="center" height="560"}
+![](figures/cirrhosis_gfr_bias.png){fig-align="center" width="650" height="560"}
 
 ::: aside
 Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the \<60 subset is 6 studies, 467 patients). Consensus definitions of HRS-AKI: [@nadim2024]
@@ -264,12 +264,46 @@ Answer to the question "is there outcome evidence?": yes, consistently in one di
 The question every pharmacist asks: why not a Sheiner-Tozer correction, as taught for phenytoin? Three answers. (1) The equation assumes linear binding to one site with albumin as the only variable. Wong 2013 (ICU, 7 β-lactams): unbound concentrations predicted from published binding were biased by +83.3% for ceftriaxone, +56.8% for flucloxacillin, +25% for benzylpenicillin and -12.1% for meropenem; total and unbound were linearly related for every drug EXCEPT ceftriaxone and flucloxacillin, whose binding is saturable. (2) Even the textbook case fails in our patients: Cheng 2016 found albumin explained 9% and total phenytoin 53% of the variance in free phenytoin, and all equations performed poorly in critical care; Parikh 2018 tested four equations in a medical ICU, R² \< 0.4 for all, biased and imprecise. ter Heine 2019 showed phenytoin binding itself is concentration-dependent; a mechanistic non-linear model beat Winter-Tozer in 4 of 5 external datasets. (3) What does work is a binding model built in the right population with albumin AND concentration as covariates (Gijsen 2021 for ceftriaxone) - that is model-informed dosing, not a bedside formula. Practical message: for highly bound drugs in hypoalbuminaemic ICU patients, measure the unbound concentration or use a validated saturable-binding model; do not divide by a textbook fraction and do not apply a Sheiner-Tozer-style correction. Antifungals: voriconazole (\~58% bound) and posaconazole (\~98%) have the same problem and even fewer data.
 :::
 
+## Change the interval when the urine returns, not when the creatinine falls: held at 1 g q12h, she ends the second day at 40% fT\>MIC
+
+::: {.r-stack}
+![](figures/aki_sim_01.png){width="980"}
+
+![](figures/aki_sim_02.png){.fragment width="980"}
+
+![](figures/aki_sim_03.png){.fragment width="980"}
+
+![](figures/aki_sim_04.png){.fragment width="980"}
+
+![](figures/aki_sim_05.png){.fragment width="980"}
+
+![](figures/aki_sim_06.png){.fragment width="980"}
+
+![](figures/aki_sim_07.png){.fragment width="980"}
+
+![](figures/aki_sim_08.png){.fragment width="980"}
+:::
+
+::: aside
+Mechanistic simulation of the patient introduced at the start, not data. Meropenem model V 28.2 L, typical CL 8.35 L/h: [@bastida2020]. Creatinine kinetics, and a recovery that overshoots into augmented clearance, are assumed; timing of resolution [@crass2019], ARC prevalence [@hefny2022; @udy2014]. MIC 2 mg/L (EUCAST breakpoint); meropenem is \~2% bound, so unbound = total
+:::
+
+::: notes
+The payoff for the patient we met at the start. Three coupled models. Kidney: measured creatinine clearance rises from 21 to 190 mL/min, half-recovered at 24 h - assumed, but the overshoot into augmented clearance is what happens in about four of ten ICU patients, and the hyperdynamic circulation of cirrhosis favours it. Creatinine: one compartment, 42 L, constant production set so that a clearance of 100 returns her stated baseline of 0.8 mg/dL; sampled once a day as in practice. Meropenem: V 28.2 L from Bastida's decompensated-cirrhosis model, clearance 2.4 L/h non-renal plus 0.085 L/h per mL/min, calibrated so CrCl 70 returns Bastida's typical 8.35 L/h. Half-life falls from 4.6 h to 1.1 h.
+
+Click through. Hour 12: the table dose looks perfect, 100% of the interval above MIC. Hour 24 is the slide that matters - the morning creatinine is 1.6, Cockcroft-Gault reads 49, the table says keep 1 g q12h, and her measured clearance that morning is already 105 and climbing. Nobody is wrong at the bedside; the creatinine is a lagging, production-limited signal, and at that moment it is reporting the kidney she had yesterday. Hours 24-36: 53% of the interval above MIC. Hours 36-48: 40%. By the time the creatinine finally reads 0.5 she has had two days of a dose chosen for a kidney that no longer exists, and she sits below even the classical 40% fT\>MIC carbapenem target, let alone the 100% fT\>MIC used in critical illness. Against 4x MIC the four intervals are 80, 60, 30 and 21%. Thirteen and a half of the 48 hours are spent below MIC, the first gap opening at hour 23.
+
+The fix is the interval, not only the dose. The same gram given q8h over 3 h takes the last interval from 40% to 71%; 2 g q8h over 3 h takes it to 89%; at a measured clearance of 190, 100% fT\>MIC needs continuous infusion. The trigger to act was the urine output and the measured clearance, both of which turned twelve to twenty-four hours before the creatinine did.
+
+If challenged. One deterministic patient, no between-patient variability, and the recovery trajectory is mine, not data. The plateau drives the headline number: at a plateau of 160 mL/min the last interval is 46% rather than 40%, at 130 it is about 55%. Concede that and keep the structural point, which does not depend on the exact plateau - serum creatinine cannot fall faster than its own clearance allows, so it always reports the recovery late, and a dose fixed on the admission creatinine is a dose fixed on the worst kidney function the patient will have.
+:::
+
 ## In the first 48 hours dose for the infection; after 48 hours dose for the measured organ function
 
 ![](figures/dosing_timeline.png){fig-align="center" width="980"}
 
 ::: vignette
-**The same patient at 48 h:** creatinine 1.2 mg/dL, urine output 90 mL/h — the AKI resolved; the q12h table dose would have under-dosed her for two days. **At 72 h:** creatinine rising again, CRRT started — measure (urine output, effluent dose, hours on the filter) and re-dose.
+**The same patient at 48 h:** creatinine 0.5 mg/dL, urine output 180 mL/h — the AKI resolved and overshot into augmented clearance; two days of the q12h table dose ended at 40% fT\>MIC. **At 72 h:** creatinine rising again, CRRT started — measure (urine output, effluent dose, hours on the filter) and re-dose.
 :::
 
 ::: notes
