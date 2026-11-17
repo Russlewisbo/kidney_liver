@@ -151,16 +151,16 @@ The counterweight: the first-48-h argument is not a licence for sustained overex
 
 <br> <br>
 
-## Child-Pugh class does not predict caspofungin exposure in critically ill patients
+## Do not reduce caspofungin for a Child-Pugh B score driven by hypoalbuminaemia, not by cirrhosis
 
 ![](figures/child_pugh_caspofungin.png){fig-align="center" width="950"}
 
 ::: aside
-ICU cohort: [@kurland2019]. Simulated regimens: [@martial2016]
+ICU cohort: [@kurland2019]. Population PK and simulated regimens: [@martial2016]. Both authors' explicit recommendation, not our inference
 :::
 
 ::: notes
-Section image. Kurland 2019: 40 of 46 ICU patients were Child-Pugh B, so the label would reduce the dose in most of them, yet the score did not correlate with AUC, clearance or volume (r = 0.03, P = 0.84); hypoalbuminaemia correlated with LOW AUC (r = 0.45, P = 0.005). Martial 2016 (n = 21, all Child-Pugh B through low albumin): the label 70/35 mg regimen gave the lowest exposure. Both groups advise against dose reduction in ICU patients without cirrhosis.
+Section image, and the one slide in the talk that ends in a direct instruction. The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encephalopathy to predict surgical mortality in cirrhosis. In a septic ICU patient all five move for reasons that have nothing to do with cirrhosis, so the score reads B - in Kurland 2019, 40 of 46 patients - and the label then tells you to cut the maintenance dose from 50 to 35 mg. Left panel: in those same patients the score did not correlate with AUC(0-24) at steady state (r = 0.03, P = 0.84), with clearance (r = -0.07) or with volume (r = 0.19), while albumin did (r = 0.45, P = 0.005) and in the direction that matters - LOW albumin went with LOW exposure. So the one component of the score that does track exposure points the opposite way to the label. Right panel is Martial 2016's own Monte Carlo simulation, not ours: at MIC 0.125 the licensed 70/50-70 regimen attained target in 47%, and the label's Child-Pugh B reduction to 70/35 in 14%, with median day-14 AUC falling from 105 to 65 mg.h/L. At MIC 0.03 every regimen reached 100%, so this only bites for the less susceptible isolates. Say the recommendation as the authors wrote it. Kurland: the caspofungin dose should not be reduced in critically ill patients in the absence of cirrhosis, and they advise against using the Child-Pugh score at all in trauma- or sepsis-induced liver injury. Martial: do not reduce the maintenance dose in non-cirrhotic ICU patients when the Child-Pugh B classification is driven by hypoalbuminaemia, and a 70 mg maintenance dose gives over 90% attainment up to MIC 0.125. Caveats to concede: 46 and 21 patients, a preclinical PK/PD target, and genuine cirrhosis is still a reason to follow the label.
 :::
 
 ## Few antimicrobials carry a hepatic dose adjustment; <br> for β-lactams, kidney function and albumin matter more
@@ -341,7 +341,7 @@ State the exception from the slide: aminoglycosides, vancomycin, polymyxins and 
 Closing slide repeats the mapping images (assertion-evidence convention). Thank you; questions.
 :::
 
-## Backup: extended and continuous infusion are equivalent at 50% fT>MIC; they separate only under stricter targets {visibility="uncounted"}
+## Backup: extended and continuous infusion are equivalent at 50% fT\>MIC; they separate only under stricter targets {visibility="uncounted"}
 
 ![](figures/infusion_benefit_by_clearance.png){fig-align="center" height="540"}
 
@@ -350,7 +350,7 @@ Mechanistic simulation; structural model from [@bastida2020], variability and st
 :::
 
 ::: notes
-Pull this up if anyone asks whether continuous infusion is really better than a 3-4 h extended infusion - many published comparisons find them equivalent, and this slide shows why. All four arms deliver the same 3 g/day; 20,000 simulated patients per cell; MIC 2 mg/L. At 50% fT>MIC all three prolonged regimens reach 99-100% in both clearance strata: no difference. The separation appears only at 100% fT>MIC (typical clearance 75 / 89 / 98 / 100%; high clearance 11 / 24 / 54 / 100% for q8h bolus, q8h 3-h, q6h 3-h, continuous) and is extreme at 100% fT>4xMIC. The mechanism is the trough, not the infusion mode: meropenem's half-life is 2.3 h at typical clearance and 1.2 h at augmented clearance, so an 8-hour interval leaves nothing at the trough, and a target defined on the trough necessarily favours an infusion with no trough. At the same daily dose, moving from q8h to q6h recovers most of the gap. Conclusion to state plainly: the evidence supports PROLONGED versus bolus infusion, which is what the trials randomised; it does not support continuous over extended infusion, and this simulation should not be used to claim it.
+Pull this up if anyone asks whether continuous infusion is really better than a 3-4 h extended infusion - many published comparisons find them equivalent, and this slide shows why. All four arms deliver the same 3 g/day; 20,000 simulated patients per cell; MIC 2 mg/L. At 50% fT\>MIC all three prolonged regimens reach 99-100% in both clearance strata: no difference. The separation appears only at 100% fT\>MIC (typical clearance 75 / 89 / 98 / 100%; high clearance 11 / 24 / 54 / 100% for q8h bolus, q8h 3-h, q6h 3-h, continuous) and is extreme at 100% fT\>4xMIC. The mechanism is the trough, not the infusion mode: meropenem's half-life is 2.3 h at typical clearance and 1.2 h at augmented clearance, so an 8-hour interval leaves nothing at the trough, and a target defined on the trough necessarily favours an infusion with no trough. At the same daily dose, moving from q8h to q6h recovers most of the gap. Conclusion to state plainly: the evidence supports PROLONGED versus bolus infusion, which is what the trials randomised; it does not support continuous over extended infusion, and this simulation should not be used to claim it.
 :::
 
 ## References {.smaller visibility="uncounted"}
