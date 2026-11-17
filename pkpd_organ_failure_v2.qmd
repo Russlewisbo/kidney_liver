@@ -140,11 +140,11 @@ How to dose in the first 48 h: a full loading dose, then prolonged infusion. MER
 ![](figures/cefepime_neurotoxicity.png){fig-align="center" width="950"}
 
 ::: aside
-Thresholds: [@boschungpasquier2020; @imani2017]. Randomised comparison: [@qian2023]
+Thresholds: [@boschungpasquier2020; @imani2017]. Time course: [@payne2017]. Randomised comparison: [@qian2023]
 :::
 
 ::: notes
-The counterweight: the first-48-h argument is not a licence for sustained overexposure. Medians and IQRs as reported; patient-level data are not public, so no points are drawn. Boschung-Pasquier 2020 (n = 319 with troughs): neurotoxicity in 23.2%; eGFR 35 vs 82 mL/min/1.73 m² in those with vs without neurotoxicity; 6.3 (4.1-8.6) vs 21.6 (17.0-28.6) mg/L; none below 7.7, all above 38.1. ACORN (n = 2,511): cefepime vs piperacillin-tazobactam, no difference in AKI or death (OR 0.95, 0.80-1.13); fewer days alive and free of delirium and coma with cefepime (OR 0.79, 0.65-0.95). Deliberately cefepime-only; vancomycin and aminoglycoside toxicity belong to the narrow-index exception at the end.
+The counterweight: the first-48-h argument is not a licence for sustained overexposure. Medians and IQRs as reported; patient-level data are not public, so no points are drawn. Boschung-Pasquier 2020 (n = 319 with troughs): neurotoxicity in 23.2%; eGFR 35 vs 82 mL/min/1.73 m² in those with vs without neurotoxicity; 6.3 (4.1-8.6) vs 21.6 (17.0-28.6) mg/L; none below 7.7, all above 38.1. ACORN (n = 2,511): cefepime vs piperacillin-tazobactam, no difference in AKI or death (OR 0.95, 0.80-1.13); fewer days alive and free of delirium and coma with cefepime (OR 0.79, 0.65-0.95). Time course, if asked: Payne 2017 (systematic review, 37 reports, 135 patients; median age 69, renal dysfunction in 80%, ICU in 81%) found neurotoxicity a median of 4 days (IQR 2-6) after starting cefepime - late enough that it is usually attributed to the sepsis or to ICU delirium rather than to the drug - and clinical improvement a median of 2 days (IQR 1-3) after the intervention, which in 81% of cases was simply stopping the drug. All 135 had altered mental status; reduced consciousness 47%, myoclonus 42%, confusion 42%, seizures 13%; every one of the 98 patients who had an EEG had abnormalities, a quarter of them non-convulsive status epilepticus. 26% occurred on doses appropriate for renal function, so a correct dose does not exclude it. 87% survived and 89% improved once the drug was stopped. Deliberately cefepime-only; vancomycin and aminoglycoside toxicity belong to the narrow-index exception at the end.
 :::
 
 # 2 · Measure, do not estimate {background-color="#b20e10"}
