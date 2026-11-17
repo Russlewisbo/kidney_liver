@@ -35,17 +35,20 @@ pa <- ggplot(fo, aes(est, study, color = type)) +
   base_theme(16) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 12.5, color = col_navy, lineheight = 0.9, hjust = 1))
 
 sim <- read.csv("figures/infusion_benefit_by_clearance.csv") |>
-  filter(MIC == 2) |>
-  mutate(stratum = sub("\n.*", "", stratum), stratum = factor(stratum, c("Low clearance", "Typical clearance", "High clearance")),
-         regimen = factor(regimen, c("0.5-h infusion", "3-h infusion", "Continuous")))
-pb <- ggplot(sim, aes(stratum, PTA, fill = regimen)) +
-  geom_col(position = position_dodge(0.75), width = 0.68) +
-  scale_fill_manual(values = c("0.5-h infusion" = col_grey, "3-h infusion" = col_blue, "Continuous" = col_navy), name = NULL) +
-  scale_y_continuous(labels = \(x) paste0(100 * x, "%"), limits = c(0, 1.05), expand = c(0, 0)) +
-  scale_x_discrete(labels = c("Low\n(kidney failure)", "Typical", "High\n(augmented)")) +
-  labs(x = "Clearance stratum", y = "P(100% fT > MIC), MIC 2 mg/L",
-       title = "Why heterogeneous? (simulation)", subtitle = "Meropenem 1 g q8h unreduced;\nmodel Bastida 2020") +
-  base_theme(14) + theme(legend.position = "bottom", legend.text = element_text(size = 10.5), legend.key.size = unit(0.9, "lines"), plot.margin = margin(8, 22, 8, 4), panel.grid.major.x = element_blank(),
-                         axis.text.x = element_text(size = 11.5, lineheight = 0.9))
+  filter(target == "100% fT>MIC") |>
+  mutate(stratum = factor(sub("\n.*", "", stratum), c("Typical CL", "High CL")),
+         regimen = factor(regimen, unique(regimen)),
+         short = factor(sub("\n.*", "", regimen), unique(sub("\n.*", "", regimen))))
+pb <- ggplot(sim, aes(stratum, PTA, fill = short)) +
+  geom_col(position = position_dodge(0.8), width = 0.72) +
+  scale_fill_manual(values = c(col_grey, col_blue, "#5fa8d3", col_navy), name = NULL) +
+  scale_y_continuous(limits = c(0, 105), breaks = seq(0, 100, 50), expand = c(0, 0), labels = \(x) paste0(x, "%")) +
+  labs(x = NULL, y = "P(100% fT>MIC), MIC 2 mg/L",
+       title = "Why heterogeneous? (simulation)",
+       subtitle = "All arms 3 g/day; the gap is a trough\neffect and shrinks at q6h or at 50% fT>MIC") +
+  base_theme(14) + theme(legend.position = "bottom", legend.text = element_text(size = 9.5),
+                         legend.key.size = unit(0.8, "lines"), plot.margin = margin(8, 22, 8, 4),
+                         panel.grid.major.x = element_blank(), axis.text.x = element_text(size = 11.5))
+
 p <- pa + pb + plot_layout(widths = c(1.8, 1))
 ggsave("figures/prolonged_infusion_forest.png", p, width = 13.5, height = 5.8, dpi = 200, bg = "white")
