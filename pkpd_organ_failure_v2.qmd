@@ -40,7 +40,7 @@ russelledward.lewis\@unipd.it
 
 <br> <br>
 
-:::columns
+:::::: columns
 ::: {.column width="33%"}
 Dose for the infection first
 :::
@@ -52,13 +52,15 @@ Better to measure than estimate
 ::: {.column width="33%"}
 Protein binding is not constant
 :::
-::::
+::::::
 
 ::: notes
 Mapping slide. The same three images return at the end. Each section opens with the image shown here.
 :::
 
 # 1 · Dose for the infection first {background-color="#b20e10"}
+
+<br> <br>
 
 ## More than half of the acute kidney injury present when infection is diagnosed resolves within 48 hours
 
@@ -322,4 +324,3 @@ Pull this up if anyone asks whether continuous infusion is really better than a 
 
 ::: {#refs}
 :::
-
