@@ -6,7 +6,7 @@
 $font-family-sans-serif: 'Jost', 'DejaVu Sans', Helvetica, Arial, sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace !default;
-$presentation-font-size-root: 24px !default;
+$presentation-font-size-root: 22px !default;
 $presentation-font-smaller: 0.7 !default;
 $presentation-line-height: 1.05 !default;
 
@@ -48,7 +48,7 @@ $presentation-block-margin: 12px !default;
 
 // text alignment
 $presentation-slide-text-align: left !default;
-$presentation-title-slide-text-align: center !default;
+$presentation-title-slide-text-align: left !default;
 $reveal-slide-text-align: $presentation-slide-text-align !default;
 $reveal-title-slide-text-align: $presentation-title-slide-text-align !default;
 
@@ -73,8 +73,8 @@ $input-panel-bg: rgba(248, 249, 250, 1) !default;
 // alternate colors for when the background changes
 $light-bg-text-color: #222 !default;
 $dark-bg-text-color: #fff !default;
-$light-bg-link-color: #2a76dd !default;
-$dark-bg-link-color: #42affa !default;
+$light-bg-link-color: #000 !default;
+$dark-bg-link-color: #fff !default;
 $light-bg-code-color: #4758ab !default;
 $dark-bg-code-color: #ffa07a !default;
 

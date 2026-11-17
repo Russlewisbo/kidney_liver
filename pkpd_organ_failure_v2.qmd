@@ -16,78 +16,43 @@ bibliography: [refs.bib, refs_additions.bib]
 csl: diagnostic-microbiology-and-infectious-disease-author-year.csl
 ---
 
-```{=html}
-<!-- v2, restructured 16 Nov 2026 to the assertion-evidence form (Alley) in the house style of
-     l02-spectrum-slides.qmd. Three sections, each opened by an image that appears on the mapping
-     slide and again on the closing slide. Headlines are sentence assertions, left-aligned, <= 2 lines
-     (deck-level override of the theme's centred 1.6em h2). Sources sit in ::: aside, as in l02.
-     Figures: scripts 08-21 write figures/*.png; every plotted number is a published summary statistic
-     except the labelled simulation inset on the prolonged-infusion slide (script 11/18).
-     RRT nomogram now a main-deck slide in section 2. Section 3 has four slides (unbound range, total-to-free, outcome cohorts, albumin correction).
-     Original contribution (section 3): the false precision of fixed protein binding and how it
-     could alter breakpoints and target attainment in PK/PD analysis.
-     Every slide carries a finished figure; no "Figure to draw" placeholders remain. -->
-```
-
-```{=html}
-<style>
-/* Assertion-evidence headline rules (Alley): sentence headline, left-justified, at most two lines. */
-.reveal h2 {text-align: left; font-size: 1.2em; line-height: 1.2; margin-bottom: 0.45em;}
-.reveal .slide aside, .reveal .slide div.aside {font-size: 0.5em; color: #7a7a7a;}
-.reveal .slide aside a {color: #7a7a7a;}
-.vignette {font-size: 0.62em; color: #222; background: #f7f1f1; border-left: 4px solid #b20e10;
-           padding: 0.35em 0.8em; margin: 0.2em auto 0.4em auto; width: 94%; line-height: 1.25; text-align: left;}
-.mapcap {font-size: 0.68em; color: #222; line-height: 1.25; text-align: left; margin-top: 0.3em;}
-.mapcap b {color: #9B0014;}
-.light-text, .light-text h2 {color: #fff;}
-</style>
-```
-
-## Optimizing antimicrobial therapy in patients <br> with liver and kidney failure {.light-text background-color="#b20e10"}
+# Optimizing antimicrobial therapy <br> in patients with liver and kidney dysfunction {.light-text background-color="#b20e10"}
 
 <center>
 
-**Russell E. Lewis, Pharm.D., FCCP** <br> Associate Professor of Infectious Diseases <br> Department of Molecular Medicine, University of Padua <br>
+<br>
+
+**Russell E. Lewis, Pharm.D., FCCP** <br> Associate Professor of Infectious Diseases <br>
 
 <br>
 
 ![](DMM_newlogo.png){fig-align="center" width="330"}
 
-<br> russelledward.lewis\@unipd.it
+![](lewis-lab-hex-sticker-white-transparent.png){fig-align="center" width="100"}
+
+russelledward.lewis\@unipd.it
+
+[https://lewis-id-lab.github.io](https://lewis-id-lab.github.io/)
 
 </center>
 
-::: notes
-Scope, said aloud: this talk is about β-lactams and the drugs for which under-dosing is the main risk. Narrow-therapeutic-index drugs (aminoglycosides, vancomycin, polymyxins) are the exception, and they come at the end.
+## This talk makes three assertions about antimicrobial <br> dosing in patients with impaired kidney or liver impairment
+
+<br> <br>
+
+:::columns
+::: {.column width="33%"}
+Dose for the infection first
 :::
 
-## This talk makes three claims about dosing when the kidney or the liver fails
-
-::::::::: columns
-:::: {.column width="33%"}
-![](figures/aki_resolution.png){width="100%"}
-
-::: mapcap
-**1 · Dose for the infection first.** Kidney injury present at diagnosis is usually transient; dose reductions in the first 48 h cost cures.
+::: {.column width="33%"}
+Better to measure than estimate
 :::
-::::
 
-:::: {.column width="33%"}
-![](figures/child_pugh_caspofungin.png){width="100%"}
-
-::: mapcap
-**2 · Measure, do not estimate.** Creatinine equations, Child-Pugh class and label tables estimate exposure badly in the ICU.
+::: {.column width="33%"}
+Protein binding is not constant
 :::
 ::::
-
-:::: {.column width="33%"}
-![](figures/unbound_fraction_range.png){width="100%"}
-
-::: mapcap
-**3 · Binding is not a constant.** The unbound fraction cannot be assumed or calculated; it has to be measured or modelled.
-:::
-::::
-:::::::::
 
 ::: notes
 Mapping slide. The same three images return at the end. Each section opens with the image shown here.
@@ -147,7 +112,7 @@ Thresholds: [@boschungpasquier2020; @imani2017]. Time course: [@payne2017]. Rand
 The counterweight: the first-48-h argument is not a licence for sustained overexposure. Medians and IQRs as reported; patient-level data are not public, so no points are drawn. Boschung-Pasquier 2020 (n = 319 with troughs): neurotoxicity in 23.2%; eGFR 35 vs 82 mL/min/1.73 m² in those with vs without neurotoxicity; 6.3 (4.1-8.6) vs 21.6 (17.0-28.6) mg/L; none below 7.7, all above 38.1. ACORN (n = 2,511): cefepime vs piperacillin-tazobactam, no difference in AKI or death (OR 0.95, 0.80-1.13); fewer days alive and free of delirium and coma with cefepime (OR 0.79, 0.65-0.95). Time course, if asked: Payne 2017 (systematic review, 37 reports, 135 patients; median age 69, renal dysfunction in 80%, ICU in 81%) found neurotoxicity a median of 4 days (IQR 2-6) after starting cefepime - late enough that it is usually attributed to the sepsis or to ICU delirium rather than to the drug - and clinical improvement a median of 2 days (IQR 1-3) after the intervention, which in 81% of cases was simply stopping the drug. All 135 had altered mental status; reduced consciousness 47%, myoclonus 42%, confusion 42%, seizures 13%; every one of the 98 patients who had an EEG had abnormalities, a quarter of them non-convulsive status epilepticus. 26% occurred on doses appropriate for renal function, so a correct dose does not exclude it. 87% survived and 89% improved once the drug was stopped. Deliberately cefepime-only; vancomycin and aminoglycoside toxicity belong to the narrow-index exception at the end.
 :::
 
-# 2 · Measure, do not estimate {background-color="#b20e10"}
+# 2 · Better to measure than estimate {background-color="#b20e10"}
 
 <br> <br>
 
@@ -160,7 +125,7 @@ ICU cohort: [@kurland2019]. Population PK and simulated regimens: [@martial2016]
 :::
 
 ::: notes
-Section image, and the one slide in the talk that ends in a direct instruction. The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encephalopathy to predict surgical mortality in cirrhosis. In a septic ICU patient all five move for reasons that have nothing to do with cirrhosis, so the score reads B - in Kurland 2019, 40 of 46 patients - and the label then tells you to cut the maintenance dose from 50 to 35 mg. Left panel: in those same patients the score did not correlate with AUC(0-24) at steady state (r = 0.03, P = 0.84), with clearance (r = -0.07) or with volume (r = 0.19), while albumin did (r = 0.45, P = 0.005) and in the direction that matters - LOW albumin went with LOW exposure. So the one component of the score that does track exposure points the opposite way to the label. Right panel is Martial 2016's own Monte Carlo simulation, not ours: at MIC 0.125 the licensed 70/50-70 regimen attained target in 47%, and the label's Child-Pugh B reduction to 70/35 in 14%, with median day-14 AUC falling from 105 to 65 mg.h/L. At MIC 0.03 every regimen reached 100%, so this only bites for the less susceptible isolates. Say the recommendation as the authors wrote it. Kurland: the caspofungin dose should not be reduced in critically ill patients in the absence of cirrhosis, and they advise against using the Child-Pugh score at all in trauma- or sepsis-induced liver injury. Martial: do not reduce the maintenance dose in non-cirrhotic ICU patients when the Child-Pugh B classification is driven by hypoalbuminaemia, and a 70 mg maintenance dose gives over 90% attainment up to MIC 0.125. Caveats to concede: 46 and 21 patients, a preclinical PK/PD target, and genuine cirrhosis is still a reason to follow the label.
+The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encephalopathy to predict surgical mortality in cirrhosis. In a septic ICU patient all five move for reasons that have nothing to do with cirrhosis, so the score reads B - in Kurland 2019, 40 of 46 patients - and the label then tells you to cut the maintenance dose from 50 to 35 mg. Left panel: in those same patients the score did not correlate with AUC(0-24) at steady state (r = 0.03, P = 0.84), with clearance (r = -0.07) or with volume (r = 0.19), while albumin did (r = 0.45, P = 0.005) and in the direction that matters - LOW albumin went with LOW exposure. So the one component of the score that does track exposure points the opposite way to the label. Right panel is Martial 2016's own Monte Carlo simulation, not ours: at MIC 0.125 the licensed 70/50-70 regimen attained target in 47%, and the label's Child-Pugh B reduction to 70/35 in 14%, with median day-14 AUC falling from 105 to 65 mg.h/L. At MIC 0.03 every regimen reached 100%, so this only bites for the less susceptible isolates. Say the recommendation as the authors wrote it. Kurland: the caspofungin dose should not be reduced in critically ill patients in the absence of cirrhosis, and they advise against using the Child-Pugh score at all in trauma- or sepsis-induced liver injury. Martial: do not reduce the maintenance dose in non-cirrhotic ICU patients when the Child-Pugh B classification is driven by hypoalbuminaemia, and a 70 mg maintenance dose gives over 90% attainment up to MIC 0.125. Caveats to concede: 46 and 21 patients, a preclinical PK/PD target, and genuine cirrhosis is still a reason to follow the label.
 :::
 
 ## Few antimicrobials carry a hepatic dose adjustment; <br> for β-lactams, kidney function and albumin matter more
@@ -357,3 +322,4 @@ Pull this up if anyone asks whether continuous infusion is really better than a 
 
 ::: {#refs}
 :::
+
