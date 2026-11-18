@@ -19,8 +19,8 @@ p1 <- ggplot(icons, aes(x, y, fill = status)) +
   labs(title = "100 patients with AKI at diagnosis",
        subtitle = "57.2% have resolved by 48 h") +
   theme(legend.position = "bottom", legend.text = element_text(size = 14),
-        plot.title = element_text(face = "bold", color = col_navy, size = 16),
-        plot.subtitle = element_text(color = col_blue, face = "bold", size = 15),
+        plot.title = element_text(face = "bold", color = col_navy, size = 16, hjust = 0.5),
+        plot.subtitle = element_text(color = col_blue, face = "bold", size = 15, hjust = 0.5),
         plot.margin = margin(8, 14, 8, 8))
 
 # Right: how common is AKI at presentation, by infection type
