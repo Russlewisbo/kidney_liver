@@ -16,7 +16,7 @@ p1 <- ggplot(icons, aes(x, y, fill = status)) +
   geom_tile(width = 0.82, height = 0.82, color = NA) +
   scale_fill_manual(values = c("Resolved by 48 h" = col_blue, "Persistent at 48 h" = col_grey), name = NULL) +
   coord_equal() + theme_void(base_size = 17) +
-  labs(title = "100 patients with AKI when infection is diagnosed",
+  labs(title = "100 patients with AKI at diagnosis",
        subtitle = "57.2% have resolved by 48 h") +
   theme(legend.position = "bottom", legend.text = element_text(size = 14),
         plot.title = element_text(face = "bold", color = col_navy, size = 16),
@@ -35,5 +35,5 @@ p2 <- ggplot(aki, aes(pct, site)) +
        title = "AKI is present at diagnosis in 1 of 4 pneumonias") +
   base_theme(17) + theme(panel.grid.major.y = element_blank(), axis.text.y = element_text(size = 15, color = col_dark))
 
-p <- p1 + p2 + plot_layout(widths = c(1, 1.15))
+p <- p2 + p1 + plot_layout(widths = c(1.15, 1))
 ggsave("figures/aki_resolution.png", p, width = 12.5, height = 5.6, dpi = 300, bg = "white")
