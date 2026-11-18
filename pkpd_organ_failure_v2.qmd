@@ -75,8 +75,6 @@ Mapping slide. The same three images return at the end. Each section opens with 
 
 - **Meropenem is ordered; the renal-dosing table in package labeling proposes 1 g q12h.**
 
-
-
 ## Dose adjustment in the first 24-48 hours: A good idea?
 
 ::: r-stack
@@ -163,17 +161,73 @@ The counterweight: the first-48-h argument is not a licence for sustained overex
 
 <br> <br>
 
-## Do not reduce caspofungin for a Child-Pugh B score driven by hypoalbuminaemia, not by cirrhosis
+## Creatinine-based equations get the average right and the individual patient wrong in critical illness
 
-![](figures/child_pugh_caspofungin.png){fig-align="center" width="950"}
+![](figures/gfr_estimates_baptista.png){fig-align="center" width="980"}
 
 ::: aside
-ICU cohort: [@kurland2019]. Population PK and simulated regimens: [@martial2016]. Both authors' explicit recommendation, not our inference
+Redrawn from [@baptista2014]: Fig. 3 medians digitised from the published chart (about 0.3 mL/min resolution), Fig. 2 values as printed. Inulin reference: [@carlier2015]. Cystatin C: [@barreto2023; @hanna2023]
 :::
 
 ::: notes
-The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encephalopathy to predict surgical mortality in cirrhosis. In a septic ICU patient all five move for reasons that have nothing to do with cirrhosis, so the score reads B - in Kurland 2019, 40 of 46 patients - and the label then tells you to cut the maintenance dose from 50 to 35 mg. Left panel: in those same patients the score did not correlate with AUC(0-24) at steady state (r = 0.03, P = 0.84), with clearance (r = -0.07) or with volume (r = 0.19), while albumin did (r = 0.45, P = 0.005) and in the direction that matters - LOW albumin went with LOW exposure. So the one component of the score that does track exposure points the opposite way to the label. Right panel is Martial 2016's own Monte Carlo simulation, not ours: at MIC 0.125 the licensed 70/50-70 regimen attained target in 47%, and the label's Child-Pugh B reduction to 70/35 in 14%, with median day-14 AUC falling from 105 to 65 mg.h/L. At MIC 0.03 every regimen reached 100%, so this only bites for the less susceptible isolates. Say the recommendation as the authors wrote it. Kurland: the caspofungin dose should not be reduced in critically ill patients in the absence of cirrhosis, and they advise against using the Child-Pugh score at all in trauma- or sepsis-induced liver injury. Martial: do not reduce the maintenance dose in non-cirrhotic ICU patients when the Child-Pugh B classification is driven by hypoalbuminaemia, and a 70 mg maintenance dose gives over 90% attainment up to MIC 0.125. Caveats to concede: 46 and 21 patients, a preclinical PK/PD target, and genuine cirrhosis is still a reason to follow the label.
+Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary clearances; 12 nested cut-off subgroups): no difference in means (8-h CrCl 135.5 vs CG 135.7), but R = 0.2 and all equations underestimated when measured CrCl \>120 and overestimated when \<120. Carlier 2015 (inulin reference, n = 68): creatinine equations biased and imprecise; measured urinary CrCl overestimated GFR; cystatin C equations unbiased but still imprecise. Barreto 2023: eGFRcr-cysC was the best predictor of cefepime clearance (n = 120). Hanna 2023 (n = 1,869 cancer patients): eGFRcys \>30% lower than eGFRcr in 29%; vancomycin \>30 mg/L 24% vs 9%, adjusted OR 2.59 (1.08-7.03). Present measured CrCl and cystatin C as better, not as the answer.
 :::
+
+## In cirrhosis, every GFR equation overestimates once the true value falls below 60 — by 10 to 22 mL/min
+
+![](figures/cirrhosis_gfr_bias.png){fig-align="center" width="950"}
+
+::: aside
+Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the \<60 subset is 6 studies, 467 patients). Consensus definitions of HRS-AKI: [@nadim2024]
+:::
+
+::: notes
+The liver counterpart of the creatinine-equation slide in this section, and the place where narrow-index drugs get overdosed. Singapura 2021: across all levels of GFR, creatinine-based equations overestimate (SMD 0.51), cystatin C-based equations underestimate (SMD -0.3), and the combined creatinine-cystatin C equation is least biased (-3.6 mL/min/1.73 m2) but imprecise. The clinically important subset is measured GFR below 60, where decisions about dosing and about simultaneous liver-kidney transplantation are made: every equation overestimated, pooled +21.7 (17.7-25.7). The least biased were CKD-EPI cystatin C +10.3 and GRAIL +12.6, but GRAIL was evaluated in a single study and the confidence intervals overlap, so do not present any equation as the solution. Say the consequence aloud: a true GFR of 30 is reported as 40 to 52 depending on the equation, and that is the number a nomogram or a pharmacy system uses to pick an aminoglycoside or vancomycin dose. Ascites alone adds about +8.3. Practical line: in decompensated cirrhosis with suspected kidney dysfunction, measure - urinary creatinine clearance or cystatin C - rather than trusting a creatinine equation, and use HRS-AKI terminology from the 2024 ADQI-ICA consensus.
+:::
+
+
+## Four in ten ICU patients have augmented renal clearance, which predicts sub-MIC β-lactam troughs
+
+![](figures/arc_prevalence_exposure.png){fig-align="center" width="950"}
+
+::: aside
+Prevalence: [@hefny2022; @udy2014]. Exposure: [@udy2012; @abdulla2020; @wong2018]. Outcome with high-dose continuous infusion: [@carrie2018]
+:::
+
+::: notes
+Udy 2012 (n = 52): trough \>= MIC in only 58% overall; CrCl \>= 130 associated with trough \< MIC in 82% and \< 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT\>MIC(ECOFF); eGFR \>= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT\>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
+:::
+
+## During RRT, urine output and RRT intensity set the dose 
+
+![](figures/rrt_meropenem_nomogram.png){fig-align="center" height="560"}
+
+::: aside
+Redrawn from [@roberts2025], Table 2 (open access, CC BY): doses transcribed, merged cells expanded to the intensities they cover. Observational PK data: [@roberts2021]. Vancomycin equivalent: [@ulldemolins2026]
+:::
+
+::: notes
+SMARRT, 300 patients, 22 ICUs, 12 countries; population PK models externally validated (mean prediction error -5.2% for meropenem), then Monte Carlo simulation. Read the grid: only two variables move the dose - urine output and RRT intensity - and only when you aim at the higher target. For the standard target (unbound steady state \>= 2 mg/L, i.e. 100% fT\>MIC and 4xMIC for Enterobacterales) the answer is 1-1.5 g/day by continuous infusion in EVERY cell. The higher target (\>= 4-8 mg/L, empirical or 4xMIC for Pseudomonas) needs 2 g if anuric on CRRT, 3 g once urine output reaches 500 mL/24 h or SLED is long and intense, up to 3-4 g. All after a 1 g loading dose over 30 min; all as continuous infusion, which in every simulated scenario reached target with a LOWER daily dose than short infusion. The message for an ICU audience is the red line: the median dose actually prescribed in this cohort was 3 g/day, 18.5% had troughs above 20 mg/L and 1.5% above the 45 mg/L toxicity threshold, while only 1.3% were below the breakpoint. On RRT the risk has inverted - these patients are over-exposed, not under-exposed. Caveats: observational PK, no clinical outcomes, and the authors note the toxicity thresholds come from retrospective data. The piperacillin/tazobactam nomogram is Table 3 of the same paper (6 g/0.725 g-8 g/1 g per day CI standard; up to 16/2 g for the higher target). Earlier SMARRT report (Roberts 2021) gives the trough distributions: failure to reach the lower target in 4% meropenem, 4% piperacillin, 55% vancomycin; the higher target in 26%, 36% and 72%.
+:::
+
+::: notes
+Measuring is necessary but, so far, not sufficient. Targets differ between trials; compare arms within a trial. TARGET: 14.6% to 37.3%, SOFA unchanged. Right Dose, Right Now: ciprofloxacin 3% to 69%; attainment did not improve for vancomycin, meropenem or ceftriaxone; clinical endpoints unchanged. DOLPHIN: 59.5% vs 60.4% at day 3; ICU stay IRR 1.16 (0.96-1.41). Surviving Sepsis 2026: TDM suggested case by case (conditional, very low certainty). Exposure changed but outcome did not, so either the targets, the timing (day 3 is late) or the populations were wrong. Candidates for benefit: augmented clearance, RRT, highly bound drugs, toxicity risk. And one more reason, which is section 3: most of these trials measured TOTAL concentrations.
+:::
+
+## TDM and model-informed precision dosing (MIPD)
+
+<br> <br>
+
+![](antibiotic-dosing-workflow-single-tdm.png){fig-align="center"}
+
+## TDM-guided dosing raised target attainment in two of three randomised trials, but did not improve clinical outcomes
+
+![](figures/tdm_rct_target_attainment.png){fig-align="center" width="950"}
+
+::: aside
+Published trial percentages: [@hagel2022; @ewoldt2022; @roggeveen2022]. Meta-analysis: [@paimangalore2022]. Guideline: [@prescott2026]
+:::
+
 
 ## Few antimicrobials carry a hepatic dose adjustment; <br> for β-lactams, kidney function and albumin matter more
 
@@ -199,64 +253,16 @@ ACLF on CVVHD: [@grensemann2020]. Decompensated cirrhosis: [@bastida2020]. Outco
 This slide carries the loading-dose message. Grensemann 2020: 19 patients on continuous haemodialysis, 8 with ACLF; peripheral volume 38.6 vs 19.7 L (P = 0.05); Monte Carlo simulation from a small cohort. Day-1 PTA for 100% fT \> 8 mg/L: 18% vs 48% with 1 g q8h short infusion; 94% vs 91% with a 2 g loading dose plus 1 g q8h prolonged infusion. Bastida 2020 (n = 54): ACLF affected V; creatinine clearance and MELD affected clearance. Bartoletti 2019 (n = 119, observational): continuous/extended infusion 30-day mortality 16% vs 36%; adjusted HR 0.41. Our patient: Child-Pugh B with ascites and low albumin, so a full loading dose regardless of the creatinine.
 :::
 
-## During renal replacement therapy, urine output and RRT intensity set the dose — and most patients receive more
+## Do not reduce caspofungin for a Child-Pugh B score driven by hypoalbuminaemia, not by cirrhosis
 
-![](figures/rrt_meropenem_nomogram.png){fig-align="center" height="560"}
+![](figures/child_pugh_caspofungin.png){fig-align="center" width="950"}
 
 ::: aside
-Redrawn from [@roberts2025], Table 2 (open access, CC BY): doses transcribed, merged cells expanded to the intensities they cover. Observational PK data: [@roberts2021]. Vancomycin equivalent: [@ulldemolins2026]
+ICU cohort: [@kurland2019]. Population PK and simulated regimens: [@martial2016]. Both authors' explicit recommendation, not our inference
 :::
 
 ::: notes
-SMARRT, 300 patients, 22 ICUs, 12 countries; population PK models externally validated (mean prediction error -5.2% for meropenem), then Monte Carlo simulation. Read the grid: only two variables move the dose - urine output and RRT intensity - and only when you aim at the higher target. For the standard target (unbound steady state \>= 2 mg/L, i.e. 100% fT\>MIC and 4xMIC for Enterobacterales) the answer is 1-1.5 g/day by continuous infusion in EVERY cell. The higher target (\>= 4-8 mg/L, empirical or 4xMIC for Pseudomonas) needs 2 g if anuric on CRRT, 3 g once urine output reaches 500 mL/24 h or SLED is long and intense, up to 3-4 g. All after a 1 g loading dose over 30 min; all as continuous infusion, which in every simulated scenario reached target with a LOWER daily dose than short infusion. The message for an ICU audience is the red line: the median dose actually prescribed in this cohort was 3 g/day, 18.5% had troughs above 20 mg/L and 1.5% above the 45 mg/L toxicity threshold, while only 1.3% were below the breakpoint. On RRT the risk has inverted - these patients are over-exposed, not under-exposed. Caveats: observational PK, no clinical outcomes, and the authors note the toxicity thresholds come from retrospective data. The piperacillin/tazobactam nomogram is Table 3 of the same paper (6 g/0.725 g-8 g/1 g per day CI standard; up to 16/2 g for the higher target). Earlier SMARRT report (Roberts 2021) gives the trough distributions: failure to reach the lower target in 4% meropenem, 4% piperacillin, 55% vancomycin; the higher target in 26%, 36% and 72%.
-:::
-
-## Creatinine-based equations get the average right and the individual patient wrong in critical illness
-
-![](figures/gfr_estimates_baptista.png){fig-align="center" width="980"}
-
-::: aside
-Redrawn from [@baptista2014]: Fig. 3 medians digitised from the published chart (about 0.3 mL/min resolution), Fig. 2 values as printed. Inulin reference: [@carlier2015]. Cystatin C: [@barreto2023; @hanna2023]
-:::
-
-::: notes
-Baptista 2014 (54 ICU patients with normal creatinine, 644 paired 8-h urinary clearances; 12 nested cut-off subgroups): no difference in means (8-h CrCl 135.5 vs CG 135.7), but R = 0.2 and all equations underestimated when measured CrCl \>120 and overestimated when \<120. Carlier 2015 (inulin reference, n = 68): creatinine equations biased and imprecise; measured urinary CrCl overestimated GFR; cystatin C equations unbiased but still imprecise. Barreto 2023: eGFRcr-cysC was the best predictor of cefepime clearance (n = 120). Hanna 2023 (n = 1,869 cancer patients): eGFRcys \>30% lower than eGFRcr in 29%; vancomycin \>30 mg/L 24% vs 9%, adjusted OR 2.59 (1.08-7.03). Present measured CrCl and cystatin C as better, not as the answer.
-:::
-
-## In cirrhosis, every GFR equation overestimates once the true value falls below 60 — by 10 to 22 mL/min
-
-![](figures/cirrhosis_gfr_bias.png){fig-align="center" width="950"}
-
-::: aside
-Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the \<60 subset is 6 studies, 467 patients). Consensus definitions of HRS-AKI: [@nadim2024]
-:::
-
-::: notes
-The liver counterpart of the creatinine-equation slide in this section, and the place where narrow-index drugs get overdosed. Singapura 2021: across all levels of GFR, creatinine-based equations overestimate (SMD 0.51), cystatin C-based equations underestimate (SMD -0.3), and the combined creatinine-cystatin C equation is least biased (-3.6 mL/min/1.73 m2) but imprecise. The clinically important subset is measured GFR below 60, where decisions about dosing and about simultaneous liver-kidney transplantation are made: every equation overestimated, pooled +21.7 (17.7-25.7). The least biased were CKD-EPI cystatin C +10.3 and GRAIL +12.6, but GRAIL was evaluated in a single study and the confidence intervals overlap, so do not present any equation as the solution. Say the consequence aloud: a true GFR of 30 is reported as 40 to 52 depending on the equation, and that is the number a nomogram or a pharmacy system uses to pick an aminoglycoside or vancomycin dose. Ascites alone adds about +8.3. Practical line: in decompensated cirrhosis with suspected kidney dysfunction, measure - urinary creatinine clearance or cystatin C - rather than trusting a creatinine equation, and use HRS-AKI terminology from the 2024 ADQI-ICA consensus.
-:::
-
-## Four in ten ICU patients have augmented renal clearance, which predicts sub-MIC β-lactam troughs
-
-![](figures/arc_prevalence_exposure.png){fig-align="center" width="950"}
-
-::: aside
-Prevalence: [@hefny2022; @udy2014]. Exposure: [@udy2012; @abdulla2020; @wong2018]. Outcome with high-dose continuous infusion: [@carrie2018]
-:::
-
-::: notes
-Udy 2012 (n = 52): trough \>= MIC in only 58% overall; CrCl \>= 130 associated with trough \< MIC in 82% and \< 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT\>MIC(ECOFF); eGFR \>= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT\>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
-:::
-
-## TDM-guided dosing raised target attainment in two of three randomised trials but did not improve clinical outcomes
-
-![](figures/tdm_rct_target_attainment.png){fig-align="center" width="950"}
-
-::: aside
-Published trial percentages: [@hagel2022; @ewoldt2022; @roggeveen2022]. Meta-analysis: [@paimangalore2022]. Guideline: [@prescott2026]
-:::
-
-::: notes
-Measuring is necessary but, so far, not sufficient. Targets differ between trials; compare arms within a trial. TARGET: 14.6% to 37.3%, SOFA unchanged. Right Dose, Right Now: ciprofloxacin 3% to 69%; attainment did not improve for vancomycin, meropenem or ceftriaxone; clinical endpoints unchanged. DOLPHIN: 59.5% vs 60.4% at day 3; ICU stay IRR 1.16 (0.96-1.41). Surviving Sepsis 2026: TDM suggested case by case (conditional, very low certainty). Exposure changed but outcome did not, so either the targets, the timing (day 3 is late) or the populations were wrong. Candidates for benefit: augmented clearance, RRT, highly bound drugs, toxicity risk. And one more reason, which is section 3: most of these trials measured TOTAL concentrations.
+The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encephalopathy to predict surgical mortality in cirrhosis. In a septic ICU patient all five move for reasons that have nothing to do with cirrhosis, so the score reads B - in Kurland 2019, 40 of 46 patients - and the label then tells you to cut the maintenance dose from 50 to 35 mg. Left panel: in those same patients the score did not correlate with AUC(0-24) at steady state (r = 0.03, P = 0.84), with clearance (r = -0.07) or with volume (r = 0.19), while albumin did (r = 0.45, P = 0.005) and in the direction that matters - LOW albumin went with LOW exposure. So the one component of the score that does track exposure points the opposite way to the label. Right panel is Martial 2016's own Monte Carlo simulation, not ours: at MIC 0.125 the licensed 70/50-70 regimen attained target in 47%, and the label's Child-Pugh B reduction to 70/35 in 14%, with median day-14 AUC falling from 105 to 65 mg.h/L. At MIC 0.03 every regimen reached 100%, so this only bites for the less susceptible isolates. Say the recommendation as the authors wrote it. Kurland: the caspofungin dose should not be reduced in critically ill patients in the absence of cirrhosis, and they advise against using the Child-Pugh score at all in trauma- or sepsis-induced liver injury. Martial: do not reduce the maintenance dose in non-cirrhotic ICU patients when the Child-Pugh B classification is driven by hypoalbuminaemia, and a 70 mg maintenance dose gives over 90% attainment up to MIC 0.125. Caveats to concede: 46 and 21 patients, a preclinical PK/PD target, and genuine cirrhosis is still a reason to follow the label.
 :::
 
 # 3 · Protein binding is not a constant {background-color="#b20e10"}
@@ -285,6 +291,28 @@ Arithmetic on published values: [@schleibinger2015; @gijsen2021]. Bias in popula
 The original angle of the talk. At a total trough of 20 mg/L the assumed 10% gives 2.0 mg/L free (below a 4 mg/L target); the ICU-measured fraction gives 6.6 mg/L (IQR 4.0-8.9). Toutain 2023: scaling total concentrations by a single fu biases PTA and underestimates the PK/PD cutoff, because total concentrations are more variable than free ones. Heffernan 2022: albumin \<= 20 g/L lowered ceftriaxone PTA by up to 20%; binding is saturable, so the band understates the spread at high totals. Jager 2020: flucloxacillin binding is non-linear; dose on unbound concentrations.
 :::
 
+## Low albumin empties the trough and leaves the average untouched: shorten the interval or raise the dose
+
+![](figures/binding_trough_mechanism.png){fig-align="center" width="980"}
+
+::: aside
+Mechanistic simulation, not data. Structural premise — unbound intrinsic clearance is unchanged by binding — from [@benet2002; @gandia2023]; ICU unbound fractions [@tjollyn2018]. Clinical corollaries: 2 g ceftriaxone in hypoalbuminaemia [@ackerman2020]; meropenem preferred over ertapenem [@idsa2024]
+:::
+
+::: notes
+This is the pharmacology behind the cohorts on the next slide, and it is worth stating as an identity rather than an opinion. For a restrictively cleared, low-extraction drug the unbound intrinsic clearance belongs to the kidney, not to the albumin. So when binding falls, clearance rises by exactly the same factor as the unbound fraction, and the unbound AUC - dose divided by unbound intrinsic clearance - does not move at all. In the simulation it is 36.1 mg.h/L and an average of 1.50 mg/L in every arm, identical to three figures, whatever the albumin and whatever the interval. Nothing is lost on average.
+
+What does move is the volume, which also rises with the unbound fraction, so the unbound curve decays faster: half-life 4.0 h becomes 2.7 h. The whole loss lands on the trough. At 1 g once daily the unbound trough falls five-fold, 0.10 to 0.02 mg/L, and fT>MIC falls from 62% to 48%.
+
+The right-hand panel is the actionable part. The same gram a day, given five ways: as the interval shortens the albumin penalty shrinks - trough ratio 0.19 at q24h, 0.50 at q12h, 0.66 at q8h, 0.75 at q6h - and at continuous infusion it is exactly 1.0, the two points sit on top of each other, because with no trough there is nothing left for binding to take. fT>MIC goes from 62/48% at q24h to 100/100% at q6h and on continuous infusion.
+
+Say the three clinical consequences. One: this is why hypoalbuminaemia is a problem for the once-daily highly bound drugs, ertapenem 1 g and ceftriaxone 1 g, and much less for anything given six-hourly or by infusion. Two: Ackerman 2020 is the mechanism confirmed - going from 1 g to 2 g of ceftriaxone removed the excess failure in the hypoalbuminaemic subgroup, 30.4% down to 9.7%. Three: IDSA 2024 prefers meropenem over ertapenem in hypoalbuminaemic critically ill patients on exactly this reasoning.
+
+And the honest gap, which belongs on this slide rather than buried: no outcome study has measured unbound drug. Every cohort on the next slide inferred the mechanism you have just seen simulated. That is the study still to be done.
+
+If challenged: one deterministic patient, parameters chosen so that the normal-albumin case reproduces ertapenem's textbook 4 h half-life; the 5% to 15% shift in unbound fraction is within the ICU range on the earlier slide. The identity - unbound AUC independent of binding - is not a parameter choice, it is algebra, and it is the only part of the figure you need to defend.
+:::
+
 ## Cohorts link hypoalbuminaemia to failure of ertapenem and ceftriaxone; only one had a low-binding comparator
 
 ![](figures/hypoalbuminaemia_outcomes.png){fig-align="center" height="560"}
@@ -294,7 +322,7 @@ Adjusted estimates: [@zusman2015; @baalbaki2022; @shah2025; @shah2026]. Crude co
 :::
 
 ::: notes
-Answer to the question "is there outcome evidence?": yes, consistently in one direction, and almost all of it confounded. Albumin is one of the strongest prognostic markers in hospital medicine, so every cohort compares sick with sicker. Zusman 2015 is the exception that proves the point: prospective, 279 patients, the association between hypoalbuminaemia and 30-day death was OR 4.6 (2.1-10.1) with ertapenem and 1.2 (0.5-2.7) with imipenem or meropenem in the same cohort (P = 0.02 for the interaction). That design has not been repeated. Against it: Shah 2026 finds the same slower sterilisation with cefazolin, which is less bound and given q8h; Moser 2021 (measured unbound flucloxacillin) found the deaths among patients with HIGH free concentrations (14.8 vs 1.7 mg/L). The pharmacology (Benet and Hoener 2002; Gandia 2023) predicts exactly this: average unbound exposure is preserved when albumin falls; what changes is the trough, which matters for once-daily time-dependent drugs - ertapenem 1 g and ceftriaxone 1 g - and far less for q6h or continuous dosing. Ackerman 2020: 2 g ceftriaxone removed the excess failure in the hypoalbuminaemic subgroup (30.4% vs 9.7%). IDSA 2024 prefers meropenem over ertapenem in hypoalbuminaemic critically ill patients on this evidence. No outcome study measured unbound drug; that is the study still to be done. Full table: hypoalbuminaemia_outcomes_evidence_table.md in the repo.
+Answer to the question "is there outcome evidence?": yes, consistently in one direction, and almost all of it confounded. Albumin is one of the strongest prognostic markers in hospital medicine, so every cohort compares sick with sicker. Zusman 2015 is the exception that proves the point: prospective, 279 patients, the association between hypoalbuminaemia and 30-day death was OR 4.6 (2.1-10.1) with ertapenem and 1.2 (0.5-2.7) with imipenem or meropenem in the same cohort (P = 0.02 for the interaction). That design has not been repeated. Against it: Shah 2026 finds the same slower sterilisation with cefazolin, which is less bound and given q8h; Moser 2021 (measured unbound flucloxacillin) found the deaths among patients with HIGH free concentrations (14.8 vs 1.7 mg/L). Both findings fit the mechanism on the previous slide: the average unbound exposure is preserved, the trough is not, so the signal concentrates in the once-daily highly bound drugs and fades with shorter intervals and with lower-bound agents. Note that every study here is a total-concentration study - no outcome study measured unbound drug, which is the study still to be done. Full table: hypoalbuminaemia_outcomes_evidence_table.md in the repo.
 :::
 
 ## An albumin correction of the phenytoin type fails for β-lactams, and performs poorly even for phenytoin in the ICU
