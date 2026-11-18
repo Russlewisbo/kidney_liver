@@ -17,8 +17,8 @@ p1 <- ggplot(icons, aes(x, y, fill = arc)) +
   coord_equal() + theme_void(base_size = 17) +
   labs(title = "39 of 100 ICU patients have ARC", subtitle = "Pooled prevalence, 70 studies (Hefny 2022)\nCrCl >= 130 mL/min/1.73 m\u00b2") +
   theme(legend.position = "bottom", legend.text = element_text(size = 13.5),
-        plot.title = element_text(face = "bold", color = col_navy, size = 16),
-        plot.subtitle = element_text(color = col_dark, size = 12.5), plot.margin = margin(8, 14, 8, 8))
+        plot.title = element_text(face = "bold", color = col_navy, size = 16, hjust = 0.5),
+        plot.subtitle = element_text(color = col_dark, size = 12.5, hjust = 0.5), plot.margin = margin(8, 14, 8, 8))
 
 exp <- tribble(~grp, ~metric, ~pct,
   "All patients",       "Trough < MIC",      42,
