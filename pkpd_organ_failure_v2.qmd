@@ -43,7 +43,7 @@ russelledward.lewis\@unipd.it
 
 :::::: columns
 ::: {.column width="33%"}
-<center> Dose for the infection first </center>
+<center>Dose for the infection first</center>
 
 ![](figures/infection-first-icon.png){fig-align="left"}
 :::
@@ -227,7 +227,7 @@ Measuring is necessary but, so far, not sufficient. Targets differ between trial
 
 <br> <br>
 
-![](antibiotic-dosing-workflow-single-tdm.png){fig-align="center"}
+![](antibiotic-dosing-workflow-single-tdm-fixed.png){fig-align="center"}
 
 ## TDM-guided dosing raised target attainment in two of three randomised trials, but did not improve clinical outcomes
 
