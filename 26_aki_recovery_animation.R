@@ -41,7 +41,7 @@ base_theme <- function(bs = 17) theme_minimal(base_size = bs) +
         plot.margin = margin(6, 10, 4, 8))
 
 V <- 28.2; CL_nr <- 2.4; slope <- (8.35 - CL_nr)/70; MIC <- 2; MIC4 <- 8
-plateau <- 190
+plateau <- 160
 crcl <- function(t) 20 + (plateau - 20)/(1 + exp(-(t - 22)/2.5))
 CLt  <- function(t) CL_nr + slope * crcl(t)
 CG   <- function(cr_mgdl) (140 - 58) * 70 / (72 * cr_mgdl)
