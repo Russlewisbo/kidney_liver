@@ -43,15 +43,21 @@ russelledward.lewis\@unipd.it
 
 :::::: columns
 ::: {.column width="33%"}
-Dose for the infection first
+<center> Dose for the infection first </center>
+
+![](figures/infection-first-icon.png){fig-align="left"}
 :::
 
 ::: {.column width="33%"}
 Better to measure than estimate
+
+![](figures/better-to-measure-icon-v2.png){fig-align="center"}
 :::
 
 ::: {.column width="33%"}
-Protein binding is not constant
+Protein binding is not a constant
+
+![](figures/antibiotic-albumin-binding-icon.png){fig-align="left"}
 :::
 ::::::
 
@@ -62,6 +68,8 @@ Mapping slide. The same three images return at the end. Each section opens with 
 # 1 · Dose for the infection first {background-color="#b20e10"}
 
 <br> <br>
+
+![](figures/infection-first-icon.png){fig-align="center"}
 
 ## Hypothetical patient
 
@@ -159,6 +167,8 @@ The counterweight: the first-48-h argument is not a licence for sustained overex
 
 # 2 · Better to measure than estimate {background-color="#b20e10"}
 
+![](figures/better-to-measure-icon-v2.png){fig-align="center" width="500"}
+
 <br> <br>
 
 ## Creatinine-based equations get the average right and the individual patient wrong in critical illness
@@ -185,7 +195,6 @@ Meta-analysis: [@singapura2021] (25 studies, 4,565 patients; the \<60 subset is 
 The liver counterpart of the creatinine-equation slide in this section, and the place where narrow-index drugs get overdosed. Singapura 2021: across all levels of GFR, creatinine-based equations overestimate (SMD 0.51), cystatin C-based equations underestimate (SMD -0.3), and the combined creatinine-cystatin C equation is least biased (-3.6 mL/min/1.73 m2) but imprecise. The clinically important subset is measured GFR below 60, where decisions about dosing and about simultaneous liver-kidney transplantation are made: every equation overestimated, pooled +21.7 (17.7-25.7). The least biased were CKD-EPI cystatin C +10.3 and GRAIL +12.6, but GRAIL was evaluated in a single study and the confidence intervals overlap, so do not present any equation as the solution. Say the consequence aloud: a true GFR of 30 is reported as 40 to 52 depending on the equation, and that is the number a nomogram or a pharmacy system uses to pick an aminoglycoside or vancomycin dose. Ascites alone adds about +8.3. Practical line: in decompensated cirrhosis with suspected kidney dysfunction, measure - urinary creatinine clearance or cystatin C - rather than trusting a creatinine equation, and use HRS-AKI terminology from the 2024 ADQI-ICA consensus.
 :::
 
-
 ## Four in ten ICU patients have augmented renal clearance, which predicts sub-MIC β-lactam troughs
 
 ![](figures/arc_prevalence_exposure.png){fig-align="center" width="950"}
@@ -198,7 +207,7 @@ Prevalence: [@hefny2022; @udy2014]. Exposure: [@udy2012; @abdulla2020; @wong2018
 Udy 2012 (n = 52): trough \>= MIC in only 58% overall; CrCl \>= 130 associated with trough \< MIC in 82% and \< 4x MIC in 72% (subgroup size not in the abstract). Abdulla 2020 (EXPAT, n = 147): 63.3% attained 100% fT\>MIC(ECOFF); eGFR \>= 90 was a risk factor for non-attainment. Wong 2018: ARC raised the odds of missing 100% fT\>MIC (OR 2.47). Carrie 2018: with high-dose continuous infusion the underdosing rate was 12%.
 :::
 
-## During RRT, urine output and RRT intensity set the dose 
+## During RRT, urine output and RRT intensity set the dose
 
 ![](figures/rrt_meropenem_nomogram.png){fig-align="center" height="560"}
 
@@ -227,7 +236,6 @@ Measuring is necessary but, so far, not sufficient. Targets differ between trial
 ::: aside
 Published trial percentages: [@hagel2022; @ewoldt2022; @roggeveen2022]. Meta-analysis: [@paimangalore2022]. Guideline: [@prescott2026]
 :::
-
 
 ## Few antimicrobials carry a hepatic dose adjustment; <br> for β-lactams, kidney function and albumin matter more
 
@@ -267,7 +275,15 @@ The trap: Child-Pugh was built from albumin, bilirubin, INR, ascites and encepha
 
 # 3 · Protein binding is not a constant {background-color="#b20e10"}
 
-## The unbound fraction is not a constant: in ICU patients it spans up to tenfold around the textbook value
+![](figures/antibiotic-albumin-binding-icon.png){fig-align="center" width="600"}
+
+## The complexity of protein binding
+
+<br>
+
+![](figures/antimicrobial-protein-binding.png){fig-align="center"}
+
+## In ICU patients, protein binding spans up to tenfold around the textbook value
 
 ![](figures/unbound_fraction_range.png){fig-align="center" width="950"}
 
@@ -291,7 +307,19 @@ Arithmetic on published values: [@schleibinger2015; @gijsen2021]. Bias in popula
 The original angle of the talk. At a total trough of 20 mg/L the assumed 10% gives 2.0 mg/L free (below a 4 mg/L target); the ICU-measured fraction gives 6.6 mg/L (IQR 4.0-8.9). Toutain 2023: scaling total concentrations by a single fu biases PTA and underestimates the PK/PD cutoff, because total concentrations are more variable than free ones. Heffernan 2022: albumin \<= 20 g/L lowered ceftriaxone PTA by up to 20%; binding is saturable, so the band understates the spread at high totals. Jager 2020: flucloxacillin binding is non-linear; dose on unbound concentrations.
 :::
 
-## Low albumin empties the trough and leaves the average untouched: shorten the interval or raise the dose
+## Hypoalbuminaemia linked to failure of ertapenem and ceftriaxone
+
+![](figures/hypoalbuminaemia_outcomes.png){fig-align="center" height="560"}
+
+::: aside
+Adjusted estimates: [@zusman2015; @baalbaki2022; @shah2025; @shah2026]. Crude cohorts: [@steere2023; @arensman2024; @gavaghan2022; @chung2026]; drug comparison [@vandorf2024]. Review: [@acbo2025]. Guidance: [@idsa2024]
+:::
+
+::: notes
+Answer to the question "is there outcome evidence?": yes, consistently in one direction, and almost all of it confounded. Albumin is one of the strongest prognostic markers in hospital medicine, so every cohort compares sick with sicker. Zusman 2015 is the exception that proves the point: prospective, 279 patients, the association between hypoalbuminaemia and 30-day death was OR 4.6 (2.1-10.1) with ertapenem and 1.2 (0.5-2.7) with imipenem or meropenem in the same cohort (P = 0.02 for the interaction). That design has not been repeated. Against it: Shah 2026 finds the same slower sterilisation with cefazolin, which is less bound and given q8h; Moser 2021 (measured unbound flucloxacillin) found the deaths among patients with HIGH free concentrations (14.8 vs 1.7 mg/L). Both findings fit the mechanism on the previous slide: the average unbound exposure is preserved, the trough is not, so the signal concentrates in the once-daily highly bound drugs and fades with shorter intervals and with lower-bound agents. Note that every study here is a total-concentration study - no outcome study measured unbound drug, which is the study still to be done. Full table: hypoalbuminaemia_outcomes_evidence_table.md in the repo.
+:::
+
+## Low albumin empties the trough and leaves the average: <br>shorten the interval or raise the dose
 
 ![](figures/binding_trough_mechanism.png){fig-align="center" width="980"}
 
@@ -302,27 +330,15 @@ Mechanistic simulation, not data. Structural premise — unbound intrinsic clear
 ::: notes
 This is the pharmacology behind the cohorts on the next slide, and it is worth stating as an identity rather than an opinion. For a restrictively cleared, low-extraction drug the unbound intrinsic clearance belongs to the kidney, not to the albumin. So when binding falls, clearance rises by exactly the same factor as the unbound fraction, and the unbound AUC - dose divided by unbound intrinsic clearance - does not move at all. In the simulation it is 36.1 mg.h/L and an average of 1.50 mg/L in every arm, identical to three figures, whatever the albumin and whatever the interval. Nothing is lost on average.
 
-What does move is the volume, which also rises with the unbound fraction, so the unbound curve decays faster: half-life 4.0 h becomes 2.7 h. The whole loss lands on the trough. At 1 g once daily the unbound trough falls five-fold, 0.10 to 0.02 mg/L, and fT>MIC falls from 62% to 48%.
+What does move is the volume, which also rises with the unbound fraction, so the unbound curve decays faster: half-life 4.0 h becomes 2.7 h. The whole loss lands on the trough. At 1 g once daily the unbound trough falls five-fold, 0.10 to 0.02 mg/L, and fT\>MIC falls from 62% to 48%.
 
-The right-hand panel is the actionable part. The same gram a day, given five ways: as the interval shortens the albumin penalty shrinks - trough ratio 0.19 at q24h, 0.50 at q12h, 0.66 at q8h, 0.75 at q6h - and at continuous infusion it is exactly 1.0, the two points sit on top of each other, because with no trough there is nothing left for binding to take. fT>MIC goes from 62/48% at q24h to 100/100% at q6h and on continuous infusion.
+The right-hand panel is the actionable part. The same gram a day, given five ways: as the interval shortens the albumin penalty shrinks - trough ratio 0.19 at q24h, 0.50 at q12h, 0.66 at q8h, 0.75 at q6h - and at continuous infusion it is exactly 1.0, the two points sit on top of each other, because with no trough there is nothing left for binding to take. fT\>MIC goes from 62/48% at q24h to 100/100% at q6h and on continuous infusion.
 
 Say the three clinical consequences. One: this is why hypoalbuminaemia is a problem for the once-daily highly bound drugs, ertapenem 1 g and ceftriaxone 1 g, and much less for anything given six-hourly or by infusion. Two: Ackerman 2020 is the mechanism confirmed - going from 1 g to 2 g of ceftriaxone removed the excess failure in the hypoalbuminaemic subgroup, 30.4% down to 9.7%. Three: IDSA 2024 prefers meropenem over ertapenem in hypoalbuminaemic critically ill patients on exactly this reasoning.
 
 And the honest gap, which belongs on this slide rather than buried: no outcome study has measured unbound drug. Every cohort on the next slide inferred the mechanism you have just seen simulated. That is the study still to be done.
 
 If challenged: one deterministic patient, parameters chosen so that the normal-albumin case reproduces ertapenem's textbook 4 h half-life; the 5% to 15% shift in unbound fraction is within the ICU range on the earlier slide. The identity - unbound AUC independent of binding - is not a parameter choice, it is algebra, and it is the only part of the figure you need to defend.
-:::
-
-## Cohorts link hypoalbuminaemia to failure of ertapenem and ceftriaxone; only one had a low-binding comparator
-
-![](figures/hypoalbuminaemia_outcomes.png){fig-align="center" height="560"}
-
-::: aside
-Adjusted estimates: [@zusman2015; @baalbaki2022; @shah2025; @shah2026]. Crude cohorts: [@steere2023; @arensman2024; @gavaghan2022; @chung2026]; drug comparison [@vandorf2024]. Review: [@acbo2025]. Guidance: [@idsa2024]
-:::
-
-::: notes
-Answer to the question "is there outcome evidence?": yes, consistently in one direction, and almost all of it confounded. Albumin is one of the strongest prognostic markers in hospital medicine, so every cohort compares sick with sicker. Zusman 2015 is the exception that proves the point: prospective, 279 patients, the association between hypoalbuminaemia and 30-day death was OR 4.6 (2.1-10.1) with ertapenem and 1.2 (0.5-2.7) with imipenem or meropenem in the same cohort (P = 0.02 for the interaction). That design has not been repeated. Against it: Shah 2026 finds the same slower sterilisation with cefazolin, which is less bound and given q8h; Moser 2021 (measured unbound flucloxacillin) found the deaths among patients with HIGH free concentrations (14.8 vs 1.7 mg/L). Both findings fit the mechanism on the previous slide: the average unbound exposure is preserved, the trough is not, so the signal concentrates in the once-daily highly bound drugs and fades with shorter intervals and with lower-bound agents. Note that every study here is a total-concentration study - no outcome study measured unbound drug, which is the study still to be done. Full table: hypoalbuminaemia_outcomes_evidence_table.md in the repo.
 :::
 
 ## An albumin correction of the phenytoin type fails for β-lactams, and performs poorly even for phenytoin in the ICU
@@ -341,38 +357,30 @@ The question every pharmacist asks: why not a Sheiner-Tozer correction, as taugh
 
 ![](figures/dosing_timeline.png){fig-align="center" width="980"}
 
-::: vignette
-**The same patient at 48 h:** creatinine 0.5 mg/dL, urine output 150 mL/h — the AKI resolved and overshot into augmented clearance; two days of the q12h table dose ended at 44% fT\>MIC. **At 72 h:** creatinine rising again, CRRT started — measure (urine output, effluent dose, hours on the filter) and re-dose.
-:::
-
-::: notes
-State the exception from the slide: aminoglycosides, vancomycin, polymyxins and the highly bound β-lactams are individualised from the first dose. Return to the patient: at 48 h her kidney function had recovered, at 72 h it had failed again; both changes are invisible to a dose chosen from the admission creatinine.
-:::
-
 ## Three claims to take home
 
 ::::::::: columns
 :::: {.column width="33%"}
-![](figures/aki_resolution.png){width="100%"}
-
 ::: mapcap
 **1 · Dose for the infection first.** Full loading dose, unreduced wide-index β-lactam, prolonged infusion; re-measure at 48 h.
+
+![](figures/infection-first-icon.png){fig-align="center"}
 :::
 ::::
 
 :::: {.column width="33%"}
-![](figures/child_pugh_caspofungin.png){width="100%"}
-
 ::: mapcap
 **2 · Measure, do not estimate.** Urinary CrCl or cystatin C, urine output and RRT dose; not Cockcroft-Gault, Child-Pugh or the label table.
+
+![](figures/better-to-measure-icon-v2.png){fig-align="center"}
 :::
 ::::
 
 :::: {.column width="33%"}
-![](figures/unbound_fraction_range.png){width="100%"}
-
 ::: mapcap
 **3 · Binding is not a constant.** For highly bound drugs, measure unbound drug or use a saturable-binding model; no fixed fraction, no albumin formula.
+
+![](figures/antibiotic-albumin-binding-icon.png){fig-align="center"}
 :::
 ::::
 :::::::::
