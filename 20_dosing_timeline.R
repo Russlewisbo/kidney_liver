@@ -12,7 +12,7 @@ events <- tribble(~x, ~y, ~lab, ~hj,
   0,  2.55, "Full loading dose\n(set by volume, not by kidney)", 0,
   2,  1.75, "Unreduced maintenance dose of a wide-index beta-lactam\nprolonged infusion after the load", 0,
   48, 2.55, "Re-measure, do not estimate:\nurinary CrCl or cystatin C;\nurine output + RRT dose and hours", 0,
-  49, 1.75, "Then adjust the dose up (ARC)\nor down (persistent AKI)", 0,
+  48, 1.75, "Then adjust the maintenance dose\nup (ARC) or down (persistent AKI)", 0,
   72, 2.55, "Re-check whenever organ function\nor RRT settings change", 0)
 p <- ggplot() +
   geom_rect(data = bands, aes(xmin = xmin, xmax = xmax, ymin = 3.0, ymax = 3.5, fill = fill)) +
