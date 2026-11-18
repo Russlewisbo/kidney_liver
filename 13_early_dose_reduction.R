@@ -23,11 +23,11 @@ lab <- tribble(~drug, ~arm, ~n, ~N,
   "Ceftolozane/\ntazobactam\nCrCl > 50 (reference)", "Meropenem", 355, 404) |>
   mutate(pct = 100 * n / N, drug = factor(drug, unique(drug)[c(3, 1, 2)]),
          arm = factor(arm, c("New agent", "Meropenem")),
-         lab = sprintf("%.0f%%\n(%d/%d)", pct, n, N))
+         lab = sprintf("%.0f%%\n%d/%d", pct, n, N))
 
 pa <- ggplot(lab, aes(drug, pct, fill = arm)) +
-  geom_col(position = position_dodge(0.7), width = 0.62) +
-  geom_text(aes(label = lab), position = position_dodge(0.7), vjust = -0.25, size = 4.2, lineheight = 0.9, color = col_navy) +
+  geom_col(position = position_dodge(0.84), width = 0.56) +
+  geom_text(aes(label = lab), position = position_dodge(0.84), vjust = -0.25, size = 3.9, lineheight = 0.9, color = col_navy) +
   scale_fill_manual(values = c("New agent" = col_blue, "Meropenem" = col_grey), name = NULL,
                     labels = c("Renally adjusted new agent", "Meropenem comparator")) +
   scale_y_continuous(limits = c(0, 108), breaks = seq(0, 100, 25), expand = c(0, 0), labels = \(x) paste0(x, "%")) +
